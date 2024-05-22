@@ -1,0 +1,32 @@
+{
+    "games": [
+        {
+            "id": "1", 
+            "name": "Cirno's Perfect Snowbash", 
+            "url": "https://async-fish.itch.io/cirnos-perfect-snowbash",
+            "description": "",
+            "thumbnail": ""
+        },
+        {
+            "id": "2", 
+            "name": "Be Good", 
+            "url": "https://async-fish.itch.io/be-good",
+            "description": "",
+            "thumbnail": ""
+        },
+        {
+            "id": "3", 
+            "name": "Cirno's Rythm Revenge", 
+            "url": "https://async-fish.itch.io/cirnos-rythm-revenge",
+            "description": "",
+            "thumbnail": ""
+        },
+        {
+            "id": "4", 
+            "name": "Retros-Bear-tic", 
+            "url": "https://async-fish.itch.io/retros-bear-tic",
+            "description": "",
+            "thumbnail": ""
+        }
+    ]
+}

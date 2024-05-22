@@ -14,7 +14,7 @@ export default function ImageCard({ id, height, width, src }: Props) {
     let cardSpan = Math.ceil(cardHeight / 10) + padding;
     
     return (
-        <div className="justify-self-center rounded-lg" style={{ gridRow: `span ${cardSpan}` }}>
+        <div className="justify-self-center rounded-lg" style={{ gridRow: `span ${cardSpan}`, width: "100%" }}>
             <div
                 id={id}
                 style={{
@@ -23,7 +23,7 @@ export default function ImageCard({ id, height, width, src }: Props) {
                 }}
             >
                 <Image src={src} alt='' width={width} height={height}
-                sizes="250px" />
+                sizes="250px" className="rounded-lg" />
             </div>
         </div>
     );

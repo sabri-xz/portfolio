@@ -1,0 +1,32 @@
+{
+    "placeholders": [
+        {
+            "src": "https://raw.githubusercontent.com/sabri-xz/art-portfolio/main/art-portfolio/imgs/bird1.jpg",
+            "alt": ""
+        },
+        {
+            "src": "https://raw.githubusercontent.com/sabri-xz/art-portfolio/main/art-portfolio/imgs/bird2.jpg",
+            "alt": ""
+        },
+        {
+            "src": "https://raw.githubusercontent.com/sabri-xz/art-portfolio/main/art-portfolio/imgs/bird3.jpg",
+            "alt": ""
+        },
+        {
+            "src": "https://raw.githubusercontent.com/sabri-xz/art-portfolio/main/art-portfolio/imgs/bunny1.jpg",
+            "alt": ""
+        },
+        {
+            "src": "https://raw.githubusercontent.com/sabri-xz/art-portfolio/main/art-portfolio/imgs/bunny2.jpg",
+            "alt": ""
+        },
+        {
+            "src": "https://raw.githubusercontent.com/sabri-xz/art-portfolio/main/art-portfolio/imgs/bunny3.jpg",
+            "alt": ""
+        }
+    ],
+    "sketches": [],
+    "cute-doodles": [],
+    "animations": [],
+    "fit-checks": []
+}
