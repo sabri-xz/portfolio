@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 type Props = {
-    id: string;
+    id: number;
     height: number;
     width: number;
     src: string;
@@ -14,16 +14,13 @@ export default function ImageCard({ id, height, width, src }: Props) {
     let cardSpan = Math.ceil(cardHeight / 10) + padding;
     
     return (
-        <div className="justify-self-center rounded-lg" style={{ gridRow: `span ${cardSpan}`, width: "100%" }}>
-            <div
-                id={id}
-                style={{
-                    height: height,
-                    width: width,
-                }}
-            >
-                <Image src={src} alt='' width={width} height={height}
-                sizes="250px" className="rounded-lg" />
+        <div key={id} className='justify-self-center w-[250px]'
+             style={ {gridRow: `span ${cardSpan}`}}> 
+            <div className="rounded-xl overflow-hidden group">        
+                <Image src={src} alt="" 
+                width={width} height={cardHeight} sizes="250px"
+                className='group-hover:opacity-60' 
+                placeholder='blur' blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII='/>
             </div>
         </div>
     );

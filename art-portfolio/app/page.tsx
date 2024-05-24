@@ -1,6 +1,7 @@
 import Gallery from "./components/Gallery";
 import path from 'path';
 import fs from "fs";
+import Image from "next/image";
 
 type Image = {
   id: string;
@@ -16,17 +17,21 @@ const getImages = async (): Promise<Image[]> => {
   return images;
 };
 
+const getSrcs = (imgs:Image[]): string[] => {
+  return imgs.map(img => img.src);
+}
 
 export default async function Home() {
   const images = await getImages();
-  console.log(images);
+  const srcs = getSrcs(images);
+  // console.log(images);
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1 className="text-6xl font-bold"> Hello World! </h1>
+    <main className="flex min-h-screen flex-col justify-between p-16">
+      <h1 className="text-6xl font-bold text-center"> Portfolio </h1>
 
-      <Gallery images={images} />
-      
+      <Gallery srcs={srcs} galleryName="test" />
+
       <div className="grid grid-cols-3 gap-4"> ${process.cwd()} </div>
     </main>
   );
