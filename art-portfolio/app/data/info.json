@@ -1,0 +1,48 @@
+{
+    "name": "Xinzhi (Sabrina) Liang",
+    "socials": [
+        {
+            "id": "1", 
+            "name": "Github", 
+            "url": "https://github.com/sabri-xz", 
+            "icon": "https://raw.githubusercontent.com/sabri-xz/art-portfolio/main/art-portfolio/imgs/bird1.jpg"
+        },
+        {
+            "id": "2", 
+            "name": "LinkedIn", 
+            "url": "https://www.linkedin.com/in/xinzhi-liang/"
+        },
+        {
+            "id": "3", 
+            "name": "Email", 
+            "url": "mailto:xinzhi.liang34@gmail.com"
+        }
+    ],
+    "education": [
+        {
+            "id": "1", 
+            "school": "University of Massachesetts, Amherst", 
+            "degree": "Bachelor of Science", 
+            "graduation_date": "2022", 
+            "major": "Computer Science", 
+            "concentration":""
+        },
+        {
+            "id": "2", 
+            "school": "University of Massachesetts, Amherst", 
+            "degree": "Bachelor of Science", 
+            "graduation_date": "2022", 
+            "major": "Mathematics", 
+            "concentration":"Statistics and Data Science"
+        },
+        {
+            "id": "3", 
+            "school": "University of Massachesetts, Amherst", 
+            "degree": "Master of Science", 
+            "graduation_date": "2024", 
+            "major": "Computer Science", 
+            "concentration":"Data Science"
+        }
+    ],
+    "intro": "H ello there, this is Sabrina. \nI am an aspiring UI/UX developer. \nWelcome to my portfolio :)\n"
+}

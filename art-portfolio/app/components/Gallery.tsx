@@ -35,8 +35,6 @@ const Gallery: React.FC<{srcs: string[], galleryName: string}> = ({ srcs, galler
     fetchImageDimensions();
   }, [srcs]);
 
-  console.log(images);
-
   if (!images) {
     return <div> gallery {galleryName} installation in progress </div>;
   }
