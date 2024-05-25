@@ -1,6 +1,9 @@
 'use client'
 import { useEffect, useState, useRef, Dispatch, SetStateAction } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
+import "../styles/animation.css"
+import ThemeSwitcher from './ThemeSwitcher';
 
 const TypingEffect: React.FC<{ text: string, inView: boolean, setFinished: Dispatch<SetStateAction<boolean>>}> = ({ text, inView, setFinished }) => {
     const [displayedText, setDisplayedText] = useState('');
@@ -19,12 +22,12 @@ const TypingEffect: React.FC<{ text: string, inView: boolean, setFinished: Dispa
                 clearInterval(typingInterval);
                 setFinished(true);
             }
-        }, 50);
+        }, 15);
         return () => clearInterval(typingInterval);
     }, [inView, text, setFinished]);
 
-    return <p className="text-left text-xl whitespace-pre-line"
-        style={{fontSize: "1.5em"}}>
+    return <p className="text-left text-xl whitespace-pre-line font-medium"
+        style={{fontSize: "1.5em", lineHeight: "2em"}}>
         {displayedText}
     </p>;
 };
@@ -65,18 +68,41 @@ const StartPage: React.FC<{ info: any }> = ({ info }) => {
                 <h1 className="text-6xl font-bold text-center">Portfolio</h1>
             </section>
 
-            <section ref={textSectionRef} className='h-screen flex snap-start pt-16'>
-                <div className='w-full static'>
+            <section ref={textSectionRef} className='h-screen flex snap-start'>
+                <div className='w-full relative pt-48'>
                     <TypingEffect text={intro} inView={inView} setFinished={setFinishedTyping}/>
                     {finishedTyping &&
-                    <div>
-                        <Link href={socials[0].url}> github </Link>
-                        <Link href={socials[1].url}> linkedIn </Link>
-                        <Link href={socials[2].url}> email </Link>    
-                    </div>}
+                    <div className='flex pt-4 px-4' style={{ animation: 'expandItems 0.3s forwards' }}>
+                        <Link href={socials[0].url} target='_blank'> 
+                            <Image src={socials[0].icon} alt="" width={25} height={25}/> 
+                        </Link>
+                        <Link href={socials[1].url} target='_blank'> 
+                            <Image src={socials[1].icon} alt="" width={25} height={25}/> 
+                        </Link>
+                        <Link href={socials[2].url} target='_blank'> 
+                            <Image src={socials[2].icon} alt="" width={25} height={25}/> 
+                        </Link>
+                    </div>
+                    }
+                    {finishedTyping &&
+                    <div className='flex pt-24 px-4' style={{ animation: 'expandItems 0.3s forwards' }}>
+                        <Link href="/about" replace> 
+                            <div> About </div>
+                        </Link>
+                        <Link href="/files/resume.pdf" target="_blank"> 
+                            <div> Resume </div>
+                        </Link>
+                        <Link href={socials[2].url} replace> 
+                            <div> Projects </div>
+                        </Link>
+                        <Link href="/arts" replace> 
+                            <div> Arts </div>
+                        </Link>
+                    </div>
+                    } 
                 </div>
                 
-                
+                <ThemeSwitcher/>
             </section>
         </div>
     )

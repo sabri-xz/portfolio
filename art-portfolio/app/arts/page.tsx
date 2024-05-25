@@ -23,9 +23,11 @@ const getSrcs = (imgs:Image[]): string[] => {
 export default async function Home() {
     const images = await getImages();
     const srcs = getSrcs(images);
-    // above is for the gallery component
   
     return (
-      <Gallery srcs={srcs} galleryName="placeholder"/>
+        <div>
+            <h1 className='justify-self-center text-xl'>Placeholder Gallery</h1>
+            <Gallery srcs={srcs} galleryName="placeholder"/>
+        </div>
     );
   }

@@ -5,17 +5,19 @@
             "id": "1", 
             "name": "Github", 
             "url": "https://github.com/sabri-xz", 
-            "icon": "https://raw.githubusercontent.com/sabri-xz/art-portfolio/main/art-portfolio/imgs/bird1.jpg"
+            "icon": "https://raw.githubusercontent.com/sabri-xz/art-portfolio/main/art-portfolio/imgs/icons/github.png"
         },
         {
             "id": "2", 
             "name": "LinkedIn", 
-            "url": "https://www.linkedin.com/in/xinzhi-liang/"
+            "url": "https://www.linkedin.com/in/xinzhi-liang/",
+            "icon": "https://raw.githubusercontent.com/sabri-xz/art-portfolio/main/art-portfolio/imgs/icons/linkedIn.png"
         },
         {
             "id": "3", 
             "name": "Email", 
-            "url": "mailto:xinzhi.liang34@gmail.com"
+            "url": "mailto:xinzhi.liang34@gmail.com",
+            "icon": "https://raw.githubusercontent.com/sabri-xz/art-portfolio/main/art-portfolio/imgs/icons/gmail.png"
         }
     ],
     "education": [

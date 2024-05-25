@@ -1,0 +1,9 @@
+@keyframes expandItems {
+    from {
+        gap: 5px;
+    }
+    to {
+        gap: 64px;
+    }
+}
+

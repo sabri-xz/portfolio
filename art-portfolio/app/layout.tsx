@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { TSProvider } from "./providers";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Portfolio",
-  description: "art display :D",
+  description: ":D",
 };
 
 export default function RootLayout({
@@ -15,8 +16,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} mx-auto px-4 min-h-screen justify-center items-center`}>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${inter.className} mx-auto px-4 min-h-screen justify-center items-center
+      bg-th-background text-th-foreground`}>
+        <TSProvider> {children} </TSProvider>
+      </body>
     </html>
   );
 }
