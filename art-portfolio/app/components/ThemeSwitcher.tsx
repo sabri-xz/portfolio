@@ -16,7 +16,6 @@ const ThemeSwitcher: React.FC<{}> = () => {
         return <div> aaaa </div>;
     }
     
-    console.log(theme);
     switch (theme) {
         case 'light':
             return <div onClick={() => setTheme('dark')}> dark </div>

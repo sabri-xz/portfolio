@@ -4,20 +4,17 @@
         {
             "id": "1", 
             "name": "Github", 
-            "url": "https://github.com/sabri-xz", 
-            "icon": "https://raw.githubusercontent.com/sabri-xz/art-portfolio/main/art-portfolio/imgs/icons/github.png"
+            "url": "https://github.com/sabri-xz"
         },
         {
             "id": "2", 
             "name": "LinkedIn", 
-            "url": "https://www.linkedin.com/in/xinzhi-liang/",
-            "icon": "https://raw.githubusercontent.com/sabri-xz/art-portfolio/main/art-portfolio/imgs/icons/linkedIn.png"
+            "url": "https://www.linkedin.com/in/xinzhi-liang/"
         },
         {
             "id": "3", 
             "name": "Email", 
-            "url": "mailto:xinzhi.liang34@gmail.com",
-            "icon": "https://raw.githubusercontent.com/sabri-xz/art-portfolio/main/art-portfolio/imgs/icons/gmail.png"
+            "url": "mailto:xinzhi.liang34@gmail.com"
         }
     ],
     "education": [

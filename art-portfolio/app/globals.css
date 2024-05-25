@@ -6,13 +6,13 @@
   /* default color palette is light theme */
   --foreground-color: #3D4927;
   --background-color: #F1E7D3;
-  --secondary-color: #8B916E;
+  --secondary-color: #958B57;
   --tertiary-color: #F3CC4A;
 }
 
 body {
-  color: var(--foreground-color-d);
-  background-color: var(--background-color-d);
+  color: var(--foreground-color);
+  background-color: var(--background-color);
 }
 
 @layer utilities {
@@ -32,6 +32,6 @@ body {
 [data-theme="light"] {
   --foreground-color: #3D4927;
   --background-color: #F1E7D3;
-  --secondary-color: #8B916E;
+  --secondary-color: #958B57;
   --tertiary-color: #F3CC4A;
 }

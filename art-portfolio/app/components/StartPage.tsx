@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import "../styles/animation.css"
 import ThemeSwitcher from './ThemeSwitcher';
+import { GithubIcon, LinkedInIcon, GmailIcon } from './icons';
 
 const TypingEffect: React.FC<{ text: string, inView: boolean, setFinished: Dispatch<SetStateAction<boolean>>}> = ({ text, inView, setFinished }) => {
     const [displayedText, setDisplayedText] = useState('');
@@ -74,29 +75,29 @@ const StartPage: React.FC<{ info: any }> = ({ info }) => {
                     {finishedTyping &&
                     <div className='flex pt-4 px-4' style={{ animation: 'expandItems 0.3s forwards' }}>
                         <Link href={socials[0].url} target='_blank'> 
-                            <Image src={socials[0].icon} alt="" width={25} height={25}/> 
+                            <GithubIcon className='text-th-foreground hover:text-th-secondary' width={25} height={25}/>
                         </Link>
                         <Link href={socials[1].url} target='_blank'> 
-                            <Image src={socials[1].icon} alt="" width={25} height={25}/> 
+                            <LinkedInIcon className='text-th-foreground hover:text-th-secondary' width={25} height={25}/>
                         </Link>
                         <Link href={socials[2].url} target='_blank'> 
-                            <Image src={socials[2].icon} alt="" width={25} height={25}/> 
+                            <GmailIcon className='text-th-foreground hover:text-th-secondary' width={25} height={25}/>
                         </Link>
                     </div>
                     }
                     {finishedTyping &&
                     <div className='flex pt-24 px-4' style={{ animation: 'expandItems 0.3s forwards' }}>
                         <Link href="/about" replace> 
-                            <div> About </div>
+                            <div className='text-th-foreground hover:text-th-secondary font-normal'> About </div>
                         </Link>
                         <Link href="/files/resume.pdf" target="_blank"> 
-                            <div> Resume </div>
+                            <div className='text-th-foreground hover:text-th-secondary font-normal'> Resume </div>
                         </Link>
-                        <Link href={socials[2].url} replace> 
-                            <div> Projects </div>
+                        <Link href="/projects" replace> 
+                            <div className='text-th-foreground hover:text-th-secondary font-normal'> Projects </div>
                         </Link>
                         <Link href="/arts" replace> 
-                            <div> Arts </div>
+                            <div className='text-th-foreground hover:text-th-secondary font-normal'> Arts </div>
                         </Link>
                     </div>
                     } 
