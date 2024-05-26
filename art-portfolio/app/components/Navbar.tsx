@@ -13,7 +13,7 @@ const Navbar: React.FC<{}> = () => {
 
     return (
         <>
-          <div className="w-full h-20 bg-th-foreground sticky top-0">
+          <div className="w-full h-16 bg-th-foreground sticky top-0">
             <div className="container mx-auto px-4 h-full">
               <div className="flex justify-between items-center h-full">
                 <ul className="hidden md:flex gap-x-24 text-th-background">

@@ -1,33 +1,28 @@
 import path from 'path';
 import fs from "fs";
-import Gallery from '../components/Gallery';
+import GamePage from './components/GamePage';
 
-type Image = {
-    id: string;
-    height: number;
-    width: number;
-    src: string;
+type Game = {
+    name: string;
+    thumbnailSrc: string;
+    gameLink: string;
+    description: string;
 }
   
-const getImages = async (): Promise<Image[]> => {
-    const filePath = path.join(process.cwd(), 'app/data', 'imgSources.json');
+const getGames = async ( jsonFile: string, section: string ): Promise<Game[]> => {
+    const filePath = path.join(process.cwd(), 'app/data', jsonFile);
     const jsonData = fs.readFileSync(filePath, 'utf-8');
-    const images: Image[] = JSON.parse(jsonData)['placeholders'];
-    return images;
+    const games: Game[] = await JSON.parse(jsonData)[section];
+    return games;
 };
 
-const getSrcs = (imgs:Image[]): string[] => {
-    return imgs.map(img => img.src);
-}
-
-export default async function Home() {
-    const images = await getImages();
-    const srcs = getSrcs(images);
+export default async function Home() { 
+    const games = await getGames('gameData.json', 'games');
   
     return (
         <div>
-            <h1 className='justify-self-center text-xl'>Placeholder Gallery</h1>
-            <Gallery srcs={srcs} galleryName="placeholder"/>
+            <h1 className='justify-self-center text-xl'>Welcome to my personal art gallery </h1>
+            <GamePage gamesInfo={games}/>
         </div>
     );
   }
