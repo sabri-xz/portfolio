@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { TSProvider } from "./providers";
 import Navbar from "./components/Navbar";
+import NewCursor from "./components/NewCursor";
+import './styles/cursor.css'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +23,7 @@ export default function RootLayout({
       <body className={`${inter.className} mx-auto min-h-screen justify-center items-center
       bg-th-background text-th-foreground`}>
         <TSProvider> 
+          <NewCursor />
           <Navbar />
           {children} 
         </TSProvider>

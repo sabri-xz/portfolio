@@ -9,9 +9,9 @@ type Game = {
 
 const GamePage: React.FC<{gamesInfo: Game[]}> = ({ gamesInfo }) => {
     return (
-        <div>
-            <h1 className='justify-self-center text-xl'> Games </h1>
-            <p> Here are some games that I am the artist for </p>
+        <div className="m-5 px-12">
+            <h1 className='justify-self-center text-5xl'> Games </h1>
+            <p> Here are some games that I have produced art for </p>
             <GameGallery gamesInfo={gamesInfo}/>
         </div>
     );
