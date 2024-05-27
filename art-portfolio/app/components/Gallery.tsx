@@ -43,7 +43,13 @@ const Gallery: React.FC<{srcs: string[], galleryName: string}> = ({ srcs, galler
     <GalleryContainer>
       <section className="grid grid-cols-gallery auto-rows-[10px]">
           {images.map(image => (
-            <ImageCard id={i++} src={image.src} height={image.height} width={image.width} />
+            <ImageCard 
+              id={i++} 
+              src={image.src} 
+              height={image.height} 
+              width={image.width}
+              imageWidth={250}
+            />
           ))}
       </section>
     </GalleryContainer>

@@ -1,7 +1,7 @@
 'use client'
+
 import { useEffect, useState, useRef, Dispatch, SetStateAction } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import "../styles/animation.css"
 import ThemeSwitcher from './ThemeSwitcher';
 import { GithubIcon, LinkedInIcon, GmailIcon } from './icons';

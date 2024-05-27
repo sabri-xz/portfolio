@@ -20,8 +20,13 @@ const GameSection: React.FC<{ game: NewGame }> = ({ game }) => {
 
     return (
         <div className="px-4 py-8">
-            <Link href={game.gameLink}>
-                <ImageCard id={i} src={game.thumbnail.src} height={game.thumbnail.height} width={game.thumbnail.width} />
+            <Link href={game.gameLink} className="">
+                <ImageCard id={i} 
+                    src={game.thumbnail.src} 
+                    height={game.thumbnail.height} 
+                    width={game.thumbnail.width} 
+                    imageWidth={350}
+                />
             </Link>
             <p>{game.description}</p>
         </div>

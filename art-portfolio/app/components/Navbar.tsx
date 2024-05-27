@@ -3,6 +3,8 @@
 import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import ThemeSwitcher from "./ThemeSwitcher";
+import { GithubIcon } from "./icons";
 
 const Navbar: React.FC<{}> = () => {
     const pathname = usePathname();
@@ -13,15 +15,13 @@ const Navbar: React.FC<{}> = () => {
 
     return (
         <>
-          <div className="w-full h-16 bg-th-foreground sticky top-0">
-            <div className="container mx-auto px-4 h-full">
+          <div className="w-full h-16 bg-th-foreground sticky top-0 px-16">
+            {/* <div className="container w-full px-4 h-full justify-between items-center"> */}
               <div className="flex justify-between items-center h-full">
-                <ul className="hidden md:flex gap-x-24 text-th-background">
-                  <li>
-                    <Link href="/">
-                      <p>Home</p>
-                    </Link>
-                  </li>
+                <Link href="/">
+                  <GithubIcon className='text-th-background hover:text-th-secondary' width={40} height={40}/>
+                </Link>
+                <ul className="hidden md:flex gap-x-6 text-th-background text-base">
                   <li>
                     <Link href="/about">
                       <p>About</p>
@@ -42,11 +42,11 @@ const Navbar: React.FC<{}> = () => {
                       <p>Arts</p>
                     </Link>
                   </li>
-                  <li> {pathname} </li>
+                  <li><ThemeSwitcher /></li>
                 </ul>
               </div>
             </div>
-          </div>
+          {/* </div> */}
         </>
       );
 }

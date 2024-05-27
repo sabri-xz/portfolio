@@ -5,22 +5,29 @@ type Props = {
     height: number;
     width: number;
     src: string;
+    imageWidth: number;
 }
 
-export default function ImageCard({ id, height, width, src }: Props) {
+export default function ImageCard({ id, height, width, src, imageWidth }: Props) {
     let whRatio = height / width;
-    let cardHeight = Math.ceil(250 * whRatio);
+    let cardHeight = Math.ceil(imageWidth * whRatio);
     let padding = 1;
     let cardSpan = Math.ceil(cardHeight / 10) + padding;
     
     return (
-        <div key={id} className='justify-self-center w-[250px]'
+        <div key={id} className={`justify-self-center w-[${imageWidth}px]`}
              style={ {gridRow: `span ${cardSpan}`}}> 
-            <div className="rounded-xl overflow-hidden group">        
-                <Image src={src} alt="" 
-                width={width} height={cardHeight} sizes="250px"
-                className='group-hover:opacity-60' 
-                placeholder='blur' blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII='/>
+            <div className="rounded-xl overflow-hidden group" 
+                 style={{width: `${imageWidth}px`, height: `${cardHeight}px`, position: 'relative'}}>
+                <Image 
+                    src={src} 
+                    alt="" 
+                    layout="fill"
+                    objectFit="cover"
+                    className='group-hover:opacity-60' 
+                    placeholder='blur' 
+                    blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII='
+                />
             </div>
         </div>
     );

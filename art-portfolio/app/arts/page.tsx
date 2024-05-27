@@ -21,7 +21,7 @@ export default async function Home() {
   
     return (
         <div>
-            <h1 className='justify-self-center text-xl'>Welcome to my personal art gallery </h1>
+            <h1 className='justify-self-center text-xl'> Welcome to my personal art gallery </h1>
             <GamePage gamesInfo={games}/>
         </div>
     );
