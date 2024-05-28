@@ -35,3 +35,10 @@ body {
   --secondary-color: #958B57;
   --tertiary-color: #F3CC4A;
 }
+
+.theme-switcher-container {
+  position: fixed;
+  top: 16px;
+  right: 64px;
+  z-index: 1000;
+}

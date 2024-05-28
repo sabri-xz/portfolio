@@ -3,7 +3,6 @@
 import { useEffect, useState, useRef, Dispatch, SetStateAction } from 'react';
 import Link from 'next/link';
 import "../styles/animation.css"
-import ThemeSwitcher from './ThemeSwitcher';
 import { GithubIcon, LinkedInIcon, GmailIcon } from './icons';
 import CoverLogo from './CoverLogo'
 
@@ -87,10 +86,9 @@ const StartPage: React.FC<{ info: any }> = ({ info }) => {
     return (
         <div className='snap-y snap-mandatory h-screen overflow-y-auto relative'> 
             <section className='h-screen flex snap-start justify-center'>
-                <CoverLogo className='text-th-foreground w-auto h-[160%] absolute'
+                <CoverLogo className='text-th-foreground w-auto h-[180%] absolute'
                            style={{ top: '12.5%' }}
                            ref={logoRef}/>
-                <ThemeSwitcher/>
             </section>
 
             <section ref={textSectionRef} className='h-screen flex snap-start'>

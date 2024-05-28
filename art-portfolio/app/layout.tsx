@@ -4,6 +4,7 @@ import "./globals.css";
 import { TSProvider } from "./providers";
 import Navbar from "./components/Navbar";
 import NewCursor from "./components/NewCursor";
+import ThemeSwitcher from "./components/ThemeSwitcher";
 import './styles/cursor.css'
 
 const inter = Inter({ subsets: ["latin"] });
@@ -21,8 +22,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className} mx-auto min-h-screen justify-center items-center
-      bg-th-background text-th-foreground`}>
+      bg-th-background text-th-foreground transition-colors duration-500`}>
         <TSProvider> 
+          <div className="theme-switcher-container"> <ThemeSwitcher /> </div>
           <NewCursor />
           <Navbar />
           {children} 
