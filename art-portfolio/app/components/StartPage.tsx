@@ -5,6 +5,7 @@ import Link from 'next/link';
 import "../styles/animation.css"
 import ThemeSwitcher from './ThemeSwitcher';
 import { GithubIcon, LinkedInIcon, GmailIcon } from './icons';
+import CoverLogo from './CoverLogo'
 
 const TypingEffect: React.FC<{ text: string, inView: boolean, setFinished: Dispatch<SetStateAction<boolean>>}> = ({ text, inView, setFinished }) => {
     const [displayedText, setDisplayedText] = useState('');
@@ -35,8 +36,11 @@ const TypingEffect: React.FC<{ text: string, inView: boolean, setFinished: Dispa
 
 const StartPage: React.FC<{ info: any }> = ({ info }) => {
     const textSectionRef = useRef<HTMLDivElement>(null);
+    const logoRef = useRef<SVGSVGElement>(null);
     const [inView, setInView] = useState(false);
     const [finishedTyping, setFinishedTyping] = useState(false);
+    const [logoWidth, setLogoWidth] = useState(0);
+    const [logoX, setLogoX] = useState(0);
 
     useEffect(() => {
       const observer = new IntersectionObserver(
@@ -59,18 +63,38 @@ const StartPage: React.FC<{ info: any }> = ({ info }) => {
       };
     }, []);
 
+    useEffect(() => {
+        const updateLogoInfo = () => {
+            if (logoRef.current) {
+                const w = logoRef.current.clientWidth;
+                const x = logoRef.current.getBoundingClientRect().x;
+                setLogoWidth(w);
+                setLogoX(x);
+            }
+        }
+
+        window.addEventListener('resize', updateLogoInfo);
+
+        updateLogoInfo();
+
+        return () => { window.removeEventListener('resize', updateLogoInfo) };
+    }, []);
+
     let intro: string = info.intro;
     let socials: any[] = info.socials
     let name: string = info.name;
 
     return (
-        <div className='snap-y snap-mandatory h-screen overflow-y-auto px-16 relative'>
-            <section className='h-screen flex items-center justify-center snap-start'>
-                <h1 className="text-6xl font-bold text-center">Portfolio</h1>
+        <div className='snap-y snap-mandatory h-screen overflow-y-auto relative'> 
+            <section className='h-screen flex snap-start justify-center'>
+                <CoverLogo className='text-th-foreground w-auto h-[160%] absolute'
+                           style={{ top: '12.5%' }}
+                           ref={logoRef}/>
+                <ThemeSwitcher/>
             </section>
 
             <section ref={textSectionRef} className='h-screen flex snap-start'>
-                <div className='w-full relative pt-48'>
+                <div className='w-full relative pt-48' style={{ width: logoWidth, left: `${logoX}px` }}>
                     <TypingEffect text={intro} inView={inView} setFinished={setFinishedTyping}/>
                     {finishedTyping &&
                     <div className='flex pt-4 px-4' style={{ animation: 'expandItems 0.3s forwards' }}>
@@ -103,7 +127,6 @@ const StartPage: React.FC<{ info: any }> = ({ info }) => {
                     } 
                 </div>
                 
-                <ThemeSwitcher/>
             </section>
         </div>
     )
