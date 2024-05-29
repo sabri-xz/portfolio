@@ -5,6 +5,7 @@ import Link from 'next/link';
 import "../styles/animation.css"
 import { GithubIcon, LinkedInIcon, GmailIcon } from './icons';
 import CoverLogo from './CoverLogo'
+import Sparkles from './Sparkles';
 
 const TypingEffect: React.FC<{ text: string, inView: boolean, setFinished: Dispatch<SetStateAction<boolean>>}> = ({ text, inView, setFinished }) => {
     const [displayedText, setDisplayedText] = useState('');
@@ -85,10 +86,11 @@ const StartPage: React.FC<{ info: any }> = ({ info }) => {
 
     return (
         <div className='snap-y snap-mandatory h-screen overflow-y-auto relative'> 
-            <section className='h-screen flex snap-start justify-center'>
+            <section className='h-screen flex snap-start justify-center relative'>
                 <CoverLogo className='text-th-foreground w-auto h-[180%] absolute'
-                           style={{ top: '12.5%' }}
+                           style={{ top: '12.5%'}}
                            ref={logoRef}/>
+                <Sparkles logoWidth={logoWidth} logoX={logoX}/>
             </section>
 
             <section ref={textSectionRef} className='h-screen flex snap-start'>

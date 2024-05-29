@@ -7,3 +7,26 @@
     }
 }
 
+@keyframes sparkle {
+    0%, 20%, 100% {
+        transform: scale(0);
+    }
+    50%, 70% {
+        transform: scale(1);
+    }
+    60% {
+        transform: scale(1.3);
+    }
+}
+
+.sparkle1 {
+    animation: sparkle 1.5s ease-out forwards;
+}
+
+.sparkle2 {
+    animation: sparkle 1.5s ease-out 1s forwards;
+}
+
+.sparkle3 {
+    animation: sparkle 1.5s ease-out 1.5s forwards;
+}

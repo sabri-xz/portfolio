@@ -14,7 +14,7 @@ export default async function Home() {
 
     return (
       <div className="page-container">
-        <h1>Hello World</h1>
+        <h1>ABouT me</h1>
       </div>
     );
   }
