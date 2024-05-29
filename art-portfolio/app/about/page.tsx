@@ -1,5 +1,6 @@
 import path from "path";
 import fs from "fs";
+import '../styles/pages.css'
 
 const getInfo = async (): Promise<any[]> => {
   const filePath = path.join(process.cwd(), 'app/data', 'info.json');
@@ -10,9 +11,9 @@ const getInfo = async (): Promise<any[]> => {
 
 export default async function Home() {
     const info = await getInfo();
-    
+
     return (
-      <div>
+      <div className="page-container">
         <h1>Hello World</h1>
       </div>
     );

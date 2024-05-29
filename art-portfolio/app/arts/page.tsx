@@ -1,6 +1,7 @@
 import path from 'path';
 import fs from "fs";
 import GamePage from './components/GamePage';
+import '../styles/pages.css'
 
 type Game = {
     name: string;
@@ -20,7 +21,7 @@ export default async function Home() {
     const games = await getGames('gameData.json', 'games');
   
     return (
-        <div>
+        <div className='page-container'>
             <h1 className='justify-self-center text-xl'> Welcome to my personal art gallery </h1>
             <GamePage gamesInfo={games}/>
         </div>

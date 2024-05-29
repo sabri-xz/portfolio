@@ -1,0 +1,22 @@
+/* the format of each pages */
+
+.page-container {
+    padding-left: 6.3vh;
+    padding-right: 6.3vh;
+    /* width: 100vh; */
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 600px) {
+    .page-container {
+        width: 100vw; 
+        height: 100vh;
+      }
+}
+
+@media only screen and (max-height: 600px) and (orientation: landscape) {
+    .page-container {
+        width: 100vh;
+        margin: 0 auto;
+    }
+}

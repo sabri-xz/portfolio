@@ -14,7 +14,7 @@ const Navbar: React.FC<{}> = () => {
 
     return (
         <>
-          <div className="w-full h-14 bg-th-foreground sticky top-0 px-16 transition-colors duration-500">
+          <div className="w-full h-14 bg-th-foreground sticky top-0 px-16 transition-colors duration-500 z-50">
             {/* <div className="container w-full px-4 h-full justify-between items-center"> */}
               <div className="flex justify-between items-center h-full overflow-hidden">
                 <Link href="/">
