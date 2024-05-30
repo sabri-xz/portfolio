@@ -41,6 +41,7 @@ const StartPage: React.FC<{ info: any }> = ({ info }) => {
     const [finishedTyping, setFinishedTyping] = useState(false);
     const [logoWidth, setLogoWidth] = useState(0);
     const [logoX, setLogoX] = useState(0);
+    const [scrollable, setScrollable] = useState(false);
 
     useEffect(() => {
       const observer = new IntersectionObserver(
@@ -80,12 +81,20 @@ const StartPage: React.FC<{ info: any }> = ({ info }) => {
         return () => { window.removeEventListener('resize', updateLogoInfo) };
     }, []);
 
+    useEffect(() => {
+        const scrollTimeout = setTimeout(() => {
+            setScrollable(true);
+        }, 2500);
+
+        return () => clearTimeout(scrollTimeout);
+    }, []);
+
     let intro: string = info.intro;
     let socials: any[] = info.socials
     let name: string = info.name;
 
     return (
-        <div className='snap-y snap-mandatory h-screen overflow-y-auto relative'> 
+        <div className={`snap-y snap-mandatory h-screen ${scrollable? 'overflow-y-auto':'overflow-hidden'} relative`}> 
             <section className='h-screen flex snap-start justify-center relative'>
                 <CoverLogo className='text-th-foreground w-auto h-[180%] absolute'
                            style={{ top: '12.5%'}}
@@ -97,7 +106,7 @@ const StartPage: React.FC<{ info: any }> = ({ info }) => {
                 <div className='w-full relative pt-48' style={{ width: logoWidth, left: `${logoX}px` }}>
                     <TypingEffect text={intro} inView={inView} setFinished={setFinishedTyping}/>
                     {finishedTyping &&
-                    <div className='flex pt-4 px-4' style={{ animation: 'expandItems 0.3s forwards' }}>
+                    <div className='flex pt-4 px-1' style={{ animation: 'expandItems 0.3s forwards' }}>
                         <Link href={socials[0].url} target='_blank'> 
                             <GithubIcon className='text-th-foreground hover:text-th-secondary' width={25} height={25}/>
                         </Link>
@@ -110,7 +119,7 @@ const StartPage: React.FC<{ info: any }> = ({ info }) => {
                     </div>
                     }
                     {finishedTyping &&
-                    <div className='flex pt-24 px-4' style={{ animation: 'expandItems 0.3s forwards' }}>
+                    <div className='flex pt-24 px-1' style={{ animation: 'expandItems 0.3s forwards' }}>
                         <Link href="/about" replace> 
                             <div className='text-th-foreground hover:text-th-secondary font-normal'> About </div>
                         </Link>

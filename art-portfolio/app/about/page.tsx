@@ -1,6 +1,7 @@
 import path from "path";
 import fs from "fs";
 import '../styles/pages.css'
+import AboutGrid from "./components/AboutGrid";
 
 const getInfo = async (): Promise<any[]> => {
   const filePath = path.join(process.cwd(), 'app/data', 'info.json');
@@ -14,7 +15,8 @@ export default async function Home() {
 
     return (
       <div className="page-container">
-        <h1>ABouT me</h1>
+        <h1 className="text-6xl">ABouT me</h1>
+        <AboutGrid />
       </div>
     );
   }
