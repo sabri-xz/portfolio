@@ -13,11 +13,19 @@
 body {
   color: var(--foreground-color);
   background-color: var(--background-color);
+  min-width: 1028px;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    min-width: 100vw;
+    min-height: 100vh;
   }
 }
 

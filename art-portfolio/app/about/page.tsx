@@ -14,9 +14,13 @@ export default async function Home() {
     const info = await getInfo();
 
     return (
-      <div className="page-container">
-        <h1 className="text-6xl">ABouT me</h1>
+      <div className="page-container flex md:items-center flex-col">
+        <section className="md:w-[900px] flex items-end">
+          <h1 className="text-9xl text-left w-auto">ABouT</h1>
+          <h1 className="text-5xl mb-3">me</h1>
+        </section>
         <AboutGrid />
+        <section className="md:w-[900px] m-4"> footer </section>
       </div>
     );
   }

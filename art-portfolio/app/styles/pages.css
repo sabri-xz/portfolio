@@ -6,6 +6,7 @@
     padding-right: 6.3vw;
     width: 87.4vw;
     margin: 0 auto;
+    min-width: 800px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -22,8 +23,36 @@
     }
 }
 
+.aspect-16-9 {
+    max-width: 1028px;
+    min-width: 1028px;
+}
+
+/* @media (max-width: 600px) {
+    .aspect-16-9 {
+        background-color: bisque;
+    }
+} */
+
 .aspect-16-9 > * {
-    position: relative;
-    width: 20vw; 
-    height: calc(20vw * 16 / 9);
+    /* position: relative; */
+    /* max-width: 270px;
+    max-height: 480px; */
+    width: 300px; 
+    height: 480px;
+    /* border-color: blue; */
+    /* border-width: 1px; */
+}
+
+.polaroid-frame {
+    border-bottom: 64px solid white;
+    border-top: 15px solid white;
+    border-right: 15px solid white;
+    border-left: 15px solid white;
+    top: 15px; /* Adjust to control the frame thickness */
+    left: 15px; /* Adjust to control the frame thickness */
+    right: 15px; /* Adjust to control the frame thickness */
+    bottom: 64px; /* Adjust to control the frame thickness */
+    top: 0;
+    left: 0;
 }

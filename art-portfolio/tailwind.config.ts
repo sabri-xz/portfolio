@@ -17,6 +17,9 @@ const config: Config = {
         "th-secondary": "var(--secondary-color)",
         "th-tertiary": "var(--tertiary-color)",
       },
+      screens: {
+        "md": "600px",
+      }
     },
   },
   plugins: [],
