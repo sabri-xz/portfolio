@@ -1,0 +1,66 @@
+{
+    "education": [
+        {
+            "id": "1", 
+            "school": "University of Massachesetts, Amherst", 
+            "degree": "Bachelor of Science", 
+            "graduation_date": "2022", 
+            "major": "Computer Science", 
+            "concentration":""
+        },
+        {
+            "id": "2", 
+            "school": "University of Massachesetts, Amherst", 
+            "degree": "Bachelor of Science", 
+            "graduation_date": "2022", 
+            "major": "Mathematics", 
+            "concentration":"Statistics and Data Science"
+        },
+        {
+            "id": "3", 
+            "school": "University of Massachesetts, Amherst", 
+            "degree": "Master of Science", 
+            "graduation_date": "2024", 
+            "major": "Computer Science", 
+            "concentration":"Data Science"
+        }
+    ],
+    "courses": [
+        "Reasoning Under Uncertainty", 
+        "Data Visualization and Exploration",
+        "Search Engines",
+        "Statistical Computing", 
+        "Advanced Algorithms",
+        "Reinforcement Learning", 
+        "Augmented & Virtual Reality Design", 
+        "Applied Stastical Learning", 
+        "Systems for Data Science", 
+        "Theory and Practice of Software Engineering", 
+        "Randomized Algorithms and Applications to Data Science", 
+        "Fundamentals of Graphic Design"
+    ],
+    "experiences": [
+        {
+            "role": "",
+            "company": "",
+            "description": ""
+        }
+    ],
+    "art-displays": [
+        {
+            "src": "https://raw.githubusercontent.com/sabri-xz/portfolio/main/art-portfolio/imgs/bird1.jpg", 
+            "alt": "birb"
+        },
+        {
+            "src": "https://raw.githubusercontent.com/sabri-xz/portfolio/main/art-portfolio/imgs/bird2.jpg",
+            "alt": "birb"
+        },
+        {
+            "src": "https://raw.githubusercontent.com/sabri-xz/portfolio/main/art-portfolio/imgs/bird3.jpg", 
+            "alt": "birb"
+        }
+    ],
+    "plant-displays": [
+        "src1"
+    ]
+}
