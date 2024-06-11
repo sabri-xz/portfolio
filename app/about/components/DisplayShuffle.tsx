@@ -24,7 +24,13 @@ const DisplayShuffle: React.FC<{arts: Art[]}> = ({arts}) => {
     return (
         <div className="absolute w-full h-full bg-slate-400 cursor-pointer"
             onClick={randomSrc}>
-            <Image src={art.src} layout="fill" objectFit="cover" alt={art.alt} />
+            <Image 
+                src={art.src} 
+                fill={true}
+                alt={art.alt} 
+                sizes="(max-width: 1000px) 100vw, 1000px"
+                className="object-cover"
+            />
         </div>
     )
 }

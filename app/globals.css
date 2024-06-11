@@ -5,6 +5,7 @@
 :root {
   /* default color palette is light theme */
   --foreground-color: #3D4927;
+  --midground-color: #6e7a4d;
   --background-color: #F1E7D3;
   --secondary-color: #958B57;
   --tertiary-color: #F3CC4A;
@@ -32,13 +33,15 @@ body {
 
 [data-theme="dark"] {
   --foreground-color: #F1E7D3;
+  --midground-color: #6e7a4d;
   --background-color: #3D4927;
-  --secondary-color: #BE8209;
+  --secondary-color: #b67f13;
   --tertiary-color: #F3CC4A;
 }
 
 [data-theme="light"] {
   --foreground-color: #3D4927;
+  --midground-color: #a9ba7a;
   --background-color: #F1E7D3;
   --secondary-color: #958B57;
   --tertiary-color: #F3CC4A;

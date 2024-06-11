@@ -45,14 +45,15 @@
 }
 
 .polaroid-frame {
-    border-bottom: 64px solid white;
-    border-top: 15px solid white;
-    border-right: 15px solid white;
-    border-left: 15px solid white;
-    top: 15px; /* Adjust to control the frame thickness */
-    left: 15px; /* Adjust to control the frame thickness */
-    right: 15px; /* Adjust to control the frame thickness */
-    bottom: 64px; /* Adjust to control the frame thickness */
+    border-bottom: 67px solid var(--foreground-color);
+    border-top: 15px solid var(--foreground-color);
+    border-right: 15px solid var(--foreground-color);
+    border-left: 15px solid var(--foreground-color);
+    top: 15px; 
+    left: 15px; 
+    right: 15px; 
+    bottom: 67px;
     top: 0;
     left: 0;
 }
+

@@ -1,4 +1,4 @@
-{
+{   
     "education": [
         {
             "id": "1", 
@@ -48,23 +48,23 @@
     ],
     "art-displays": [
         {
-            "src": "https://raw.githubusercontent.com/sabri-xz/portfolio/main/art-portfolio/imgs/about-me/art-hist-show/john_singer_sargent_1.jpg", 
+            "src": "https://raw.githubusercontent.com/sabri-xz/portfolio/main/imgs/about-me/art-hist-show/john_singer_sargent_1.jpg", 
             "alt": "birb"
         },
         {
-            "src": "https://raw.githubusercontent.com/sabri-xz/portfolio/main/art-portfolio/imgs/about-me/art-hist-show/john_singer_sargent_2.jpg",
+            "src": "https://raw.githubusercontent.com/sabri-xz/portfolio/main/imgs/about-me/art-hist-show/john_singer_sargent_2.jpg",
             "alt": "birb"
         },
         {
-            "src": "https://raw.githubusercontent.com/sabri-xz/portfolio/main/art-portfolio/imgs/about-me/art-hist-show/klimt_1.jpg", 
+            "src": "https://raw.githubusercontent.com/sabri-xz/portfolio/main/imgs/about-me/art-hist-show/klimt_1.jpg", 
             "alt": "birb"
         },
         {
-            "src": "https://raw.githubusercontent.com/sabri-xz/portfolio/main/art-portfolio/imgs/about-me/art-hist-show/william_morris_1.jpg", 
+            "src": "https://raw.githubusercontent.com/sabri-xz/portfolio/main/imgs/about-me/art-hist-show/william_morris_1.jpg", 
             "alt": "birb"
         },
         {
-            "src": "https://raw.githubusercontent.com/sabri-xz/portfolio/main/art-portfolio/imgs/about-me/art-hist-show/william_morris_2.jpg", 
+            "src": "https://raw.githubusercontent.com/sabri-xz/portfolio/main/imgs/about-me/art-hist-show/william_morris_2.jpg", 
             "alt": "birb"
         }
     ],

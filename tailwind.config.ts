@@ -13,6 +13,7 @@ const config: Config = {
       },
       colors: {
         "th-foreground": "var(--foreground-color)",
+        "th-midground": "var(--midground-color)",
         "th-background": "var(--background-color)",
         "th-secondary": "var(--secondary-color)",
         "th-tertiary": "var(--tertiary-color)",
