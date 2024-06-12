@@ -45,10 +45,10 @@
 }
 
 .polaroid-frame {
-    border-bottom: 67px solid var(--foreground-color);
-    border-top: 15px solid var(--foreground-color);
-    border-right: 15px solid var(--foreground-color);
-    border-left: 15px solid var(--foreground-color);
+    border-bottom: 67px solid white;
+    border-top: 15px solid white;
+    border-right: 15px solid white;
+    border-left: 15px solid white;
     top: 15px; 
     left: 15px; 
     right: 15px; 

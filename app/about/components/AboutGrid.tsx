@@ -27,7 +27,7 @@ const AboutGrid: React.FC<{info: any}> = ({info}) => {
     };
 
     return (
-        <section className="grid md:grid-rows-2 md:grid-cols-3 grid-cols-1 grid-rows-6 grid-flow-col aspect-16-9 gap-[40px] px-6 pt-6">
+        <section className="grid md:grid-rows-2 md:grid-cols-3 grid-cols-1 grid-rows-6 grid-flow-col aspect-16-9 gap-[40px] px-6 pt-6 transition-colors duration-500">
             {/* <div className="bg-th-tertiary justify-center items-center flex flex-col">
                 <p className='mx-5 text-lg/8 font-sans font-semibold whitespace-pre-wrap text-pretty'>
                 My name is Sabrina Liang. I am <br/>a recent graduate from <a href="https://www.umass.edu" target='_blank' className="font-bold underline">UMASS Amherst</a>. 
@@ -50,10 +50,10 @@ const AboutGrid: React.FC<{info: any}> = ({info}) => {
 
             <div className="relative hover:cursor-pointer"
                 onClick={() => toggleCover("exp")}>
-                <div className={`absolute w-full h-full z-10 bg-th-foreground ${divVisibility.exp? "visible" : "hidden"}`}>
-                    <ExpCover className='text-[#f0c741] m-2 mt-3 hover:text-th-secondary transition-colors duration-500'/>
+                <div className={`absolute w-full h-full z-10 bg-th-midground ${divVisibility.exp? "visible" : "hidden"}`}>
+                    <ExpCover className='text-th-foreground m-2 mt-3 hover:text-th-secondary transition-colors duration-500'/>
                 </div>
-                <div className='absolute w-full h-full flex flex-col gap-3'>
+                <div className='absolute w-full h-full flex flex-col gap-3 overflow-y-auto p-4 bg-th-secondary text-th-background transition-colors duration-500'>
                     <span> Teaching Associate & Assistant </span>
                     <span> Software Development Intern </span>
                     <span> Research Assistant </span>
@@ -82,13 +82,13 @@ const AboutGrid: React.FC<{info: any}> = ({info}) => {
                 <MusicComp/>
             </div>
 
-            <div className={`bg-th-tertiary relative hover:cursor-pointer`}
+            <div className={`relative hover:cursor-pointer`}
                 onClick={() => toggleCover("crs")}>
-                    <div className={`absolute w-full h-full z-10 bg-th-foreground ${divVisibility.crs? "visible" : "hidden"}`}>
-                    <CourseCover className='text-th-midground m-2.5 hover:text-th-secondary transition-colors duration-500'/>
+                    <div className={`absolute w-full h-full z-10 bg-th-midground ${divVisibility.crs? "visible" : "hidden"}`}>
+                    <CourseCover className='text-th-foreground m-2.5 hover:text-th-secondary transition-colors duration-500'/>
                 </div>
                 
-                <div className='absolute w-full h-full flex flex-col gap-3 overflow-y-auto py-4'>
+                <div className='absolute w-full h-full flex flex-col gap-3 overflow-y-auto py-4 bg-th-secondary transition-colors duration-500'>
                     {
                         courses.map((course: any, index: number) => {
                             return (
