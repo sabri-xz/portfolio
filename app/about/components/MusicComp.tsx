@@ -1,5 +1,3 @@
-import { useState, useEffect } from "react";
-import { getNowPlaying } from "../spotify/spotify";
 import '../../styles/musicComp.css'
 import Image from "next/image";
 
@@ -26,17 +24,7 @@ function Record({ src, alt }: {src:string, alt:string}) {
   }
 
 
-const MusicComp: React.FC<{}> = () => {
-    const [song, setSong] = useState<SongInfo | null>(null);
-
-    useEffect(() => {
-        const fetchData = async () => {
-            const songInfo = await getNowPlaying();
-            setSong(songInfo);
-        };
-
-        fetchData();
-    }, []);
+const MusicComp: React.FC<{song: SongInfo | null}> = ({ song }) => {
 
     return (
         <div className="px-4 items-center flex flex-col">

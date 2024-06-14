@@ -5,10 +5,19 @@ import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import DisplayShuffle from './DisplayShuffle';
 import MusicComp from './MusicComp';
+
 import { CourseCover, ExpCover } from '../decors';
 
-const AboutGrid: React.FC<{info: any}> = ({info}) => {    
-    // const [info, setInfo]
+interface SongInfo {
+    album: string;
+    albumImageUrl: string;
+    artist: string;
+    isPlaying: boolean;
+    songUrl: string;
+    title: string;
+}
+
+const AboutGrid: React.FC<{info: any, song: SongInfo| null}> = ({info, song}) => { 
     const education = info.education;
     const courses = info.courses;
     const experiences = info.experiences;
@@ -27,21 +36,10 @@ const AboutGrid: React.FC<{info: any}> = ({info}) => {
     };
 
     return (
-        <section className="grid md:grid-rows-2 md:grid-cols-3 grid-cols-1 grid-rows-6 grid-flow-col aspect-16-9 gap-[40px] px-6 pt-6 transition-colors duration-500">
-            {/* <div className="bg-th-tertiary justify-center items-center flex flex-col">
-                <p className='mx-5 text-lg/8 font-sans font-semibold whitespace-pre-wrap text-pretty'>
-                My name is Sabrina Liang. I am <br/>a recent graduate from <a href="https://www.umass.edu" target='_blank' className="font-bold underline">UMASS Amherst</a>. 
-                </p>
-                <p className='mx-4 mt-2 text-lg/8 font-sans font-semibold whitespace-pre-wrap text-pretty'>
-                Where I have just completed my Master's degree in <a className='font-bold'>Computer Science</a>. 
-                </p>
-                <p className='mx-5 my-2 text-lg/8 font-sans font-semibold whitespace-pre-wrap text-pretty'>
-                My interest lies in the intersec-tion of <span className='underline text-xl font-bold'>art and technology</span>, with a passion to make my projects intuitive and visually pleasing :)
-                </p>
-            </div> */}
+        <section className="grid md:grid-rows-2 md:grid-cols-3 grid-cols-1 grid-rows-6 grid-flow-col aspect-16-9 gap-[40px] px-6 pt-6 transition-colors duration-500 pb-8">
             <div className="bg-th-tertiary justify-center items-center flex flex-col">
                 <p className='text-[#3D4927] mx-5 my-3 text-2xl/8 font-sans font-semibold whitespace-pre-wrap text-pretty transition-colors duration-500'>
-                My name is <span className='text-3xl font-bold'>Sabrina</span>. I am a recent graduate from <a href="https://www.umass.edu" target='_blank' className="font-bold underline">UMASS Amherst</a> with a Master's degree in <a href="https://www.cics.umass.edu/" target='_blank' className='font-bold underline'>Computer Science</a>. 
+                My name is <span className='text-3xl font-bold'>Sabrina</span>. <br/>I am a recent graduate from <a href="https://www.umass.edu" target='_blank' className="font-bold underline">UMASS Amherst</a> with a Master's degree in <a href="https://www.cics.umass.edu/" target='_blank' className='font-bold underline'>Computer Science</a>. 
                 </p>
                 <p className='text-[#3D4927] mx-5 my-3 text-2xl/8 font-sans font-semibold whitespace-pre-wrap text-pretty transition-colors duration-500'>
                 My interest lies in the intersection of <span className='text-3xl font-bold'>art and technology</span>, with a passion to make my projects intuitive and visually pleasing :)
@@ -53,11 +51,12 @@ const AboutGrid: React.FC<{info: any}> = ({info}) => {
                 <div className={`absolute w-full h-full z-10 bg-th-midground ${divVisibility.exp? "visible" : "hidden"}`}>
                     <ExpCover className='text-th-foreground m-2 mt-3 hover:text-th-secondary transition-colors duration-500'/>
                 </div>
-                <div className='absolute w-full h-full flex flex-col gap-3 overflow-y-auto p-4 bg-th-secondary text-th-background transition-colors duration-500'>
-                    <span> Teaching Associate & Assistant </span>
-                    <span> Software Development Intern </span>
-                    <span> Research Assistant </span>
-                    <span> Research Assistant </span>
+                <div className='absolute w-full h-full overflow-y-auto bg-th-secondary text-th-background transition-colors duration-500'>
+                    <section className='font-medium text-lg gap-3 p-4 flex flex-col'>
+                        <span> I've worked on diverse research projects exploring human biases and visualization effectiveness, developing surveys and leading a team focusing on older adults' engagement with visual content. </span>
+                        <span> In industry, I interned with the Amazon Alexa Team, collaborating on project design and delivering high-quality code within deadlines. </span>
+                        <span> As a Teaching Assistant, I designed and instructed a first-year seminar for Computer Science freshmen, alongside providing academic support and leading discussions for various core classes. </span>
+                    </section>
                 </div>
             </div>
 
@@ -79,7 +78,7 @@ const AboutGrid: React.FC<{info: any}> = ({info}) => {
             </div>
 
             <div className="bg-th-tertiary">
-                <MusicComp/>
+                <MusicComp song={song} />
             </div>
 
             <div className={`relative hover:cursor-pointer`}
@@ -92,7 +91,7 @@ const AboutGrid: React.FC<{info: any}> = ({info}) => {
                     {
                         courses.map((course: any, index: number) => {
                             return (
-                                <span key={index} className='mx-5 my-[2px]'> 
+                                <span key={index} className='mx-5 my-[2px] font-medium text-lg text-th-background'> 
                                     {course} 
                                 </span>
                             )
