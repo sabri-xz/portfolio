@@ -2,7 +2,7 @@
 
 import '../../styles/pages.css'
 import Image from 'next/image';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import DisplayShuffle from './DisplayShuffle';
 import MusicComp from './MusicComp';
 
@@ -22,7 +22,7 @@ const AboutGrid: React.FC<{info: any, song: SongInfo| null}> = ({info, song}) =>
     const courses = info.courses;
     const experiences = info.experiences;
     const artworks = info['art-displays'];
-    const plants = info['plant-displays'];
+    const song_mock = info['placeholder-music'];
     const [divVisibility, setDivVisibility] = useState<{[key: string]: boolean}>({
         "crs": true,
         "exp": true
@@ -34,6 +34,10 @@ const AboutGrid: React.FC<{info: any, song: SongInfo| null}> = ({info, song}) =>
             [divId]: !divVisibility[divId]
         });
     };
+
+    if (song == null) {
+        song = song_mock
+    }
 
     return (
         <section className="grid md:grid-rows-2 md:grid-cols-3 grid-cols-1 grid-rows-6 grid-flow-col aspect-16-9 gap-[40px] px-6 pt-6 transition-colors duration-500 pb-8">
@@ -53,8 +57,8 @@ const AboutGrid: React.FC<{info: any, song: SongInfo| null}> = ({info, song}) =>
                 </div>
                 <div className='absolute w-full h-full overflow-y-auto bg-th-secondary text-th-background transition-colors duration-500'>
                     <section className='font-medium text-lg gap-3 p-4 flex flex-col'>
-                        <span> I've worked on diverse research projects exploring human biases and visualization effectiveness, developing surveys and leading a team focusing on older adults' engagement with visual content. </span>
-                        <span> In industry, I interned with the Amazon Alexa Team, collaborating on project design and delivering high-quality code within deadlines. </span>
+                        <span> I've worked on various research projects exploring <span className='underline'>human biases</span> and <span className='underline'>visualization effectiveness</span>, developing surveys and leading a team focusing on older adults' engagement with visual content. </span>
+                        <span> In industry, I interned with the <span className='underline'>Amazon Alexa Team</span>, collaborating on project design and delivering high-quality code within deadlines. </span>
                         <span> As a Teaching Assistant, I designed and instructed a first-year seminar for Computer Science freshmen, alongside providing academic support and leading discussions for various core classes. </span>
                     </section>
                 </div>

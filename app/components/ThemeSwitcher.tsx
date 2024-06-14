@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { useTheme } from 'next-themes';
+import { ThemeIcon } from './icons';
 
 
 const ThemeSwitcher: React.FC<{}> = () => {
@@ -18,9 +19,13 @@ const ThemeSwitcher: React.FC<{}> = () => {
     
     switch (theme) {
         case 'light':
-            return <div onClick={() => setTheme('dark')} className='text-th-background'> dark </div>
+            return <div onClick={() => setTheme('dark')} className='text-th-background w-7 h-7'> 
+                <ThemeIcon theme='light' className='text-th-background' />
+            </div>
         case 'dark':
-            return <div onClick={() => setTheme('light')} className='text-th-background'> light </div>
+            return <div onClick={() => setTheme('light')} className='text-th-background w-7 h-7'> 
+                <ThemeIcon theme={theme} className='text-th-background' />
+            </div>
         default:
             return <div> ??????? </div>
     }

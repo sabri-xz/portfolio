@@ -47,7 +47,6 @@ export const getNowPlaying = async () => {
 
     //Extracting the required data from the response into seperate variables
     const song = await response.json();
-    console.log(song)
 
     if (song.item === null) {
       return null;

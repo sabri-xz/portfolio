@@ -68,7 +68,12 @@
             "alt": "birb"
         }
     ],
-    "plant-displays": [
-        "src1"
-    ]
+    "placeholder-music": {
+        "album":"HIT ME HARD AND SOFT",
+        "albumImageUrl": "https://i.scdn.co/image/ab67616d0000b27371d62ea7ea8a5be92d3c1f62",
+        "artist": "Billie Eilish",
+        "isPlaying": false,
+        "songUrl": "https://open.spotify.com/album/7aJuG4TFXa2hmE4z1yxc3n",
+        "title": "BIRDS OF A FEATHER"
+      }
 }

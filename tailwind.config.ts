@@ -19,6 +19,7 @@ const config: Config = {
         "th-tertiary": "var(--tertiary-color)",
       },
       screens: {
+        "sm": "300px",
         "md": "600px",
       }
     },

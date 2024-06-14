@@ -1,8 +1,10 @@
 import path from "path";
 import fs from "fs";
 import '../styles/pages.css'
-import { getNowPlaying } from "./spotify/spotify";
+import { getNowPlaying } from "./api/spotify";
 import AboutGrid from "./components/AboutGrid";
+import Me from "./components/MeText";
+import About from "./components/AboutText";
 
 interface SongInfo {
   album: string;
@@ -26,9 +28,8 @@ export default async function Home() {
 
     return (
       <div className="page-container flex md:items-center flex-col">
-        <section className="md:w-[900px] flex items-end">
-          <h1 className="text-9xl text-left w-auto">ABouT</h1>
-          <h1 className="text-5xl mb-3 ml-5">me</h1>
+        <section className="md:w-[900px] sm:w-[370px] flex items-end">
+          <About/> <Me className="md:h-[128px] sm:h-[72px] -my-4"/>
         </section>
         <AboutGrid info={info} song={song}/>
       </div>
