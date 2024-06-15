@@ -19,14 +19,36 @@
     }
 }
 
+.sparkle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.8);
+    pointer-events: none;
+    animation: sparkle 1.5s ease-out forwards;
+    isolation: isolate;
+    z-index: 10000;
+  }
+
 .sparkle1 {
+    pointer-events: none;
     animation: sparkle 1.5s ease-out forwards;
 }
 
 .sparkle2 {
+    pointer-events: none;
     animation: sparkle 1.5s ease-out 1s forwards;
 }
 
 .sparkle3 {
+    pointer-events: none;
     animation: sparkle 1.5s ease-out 1.5s forwards;
+}
+
+.sparkle-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
 }

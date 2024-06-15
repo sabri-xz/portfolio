@@ -5,6 +5,7 @@ import { getNowPlaying } from "./api/spotify";
 import AboutGrid from "./components/AboutGrid";
 import Me from "./components/MeText";
 import About from "./components/AboutText";
+import PageSparkles from "./components/pageSparkles";
 
 interface SongInfo {
   album: string;
@@ -29,9 +30,10 @@ export default async function Home() {
     return (
       <div className="page-container flex md:items-center flex-col">
         <section className="md:w-[900px] sm:w-[370px] flex items-end">
-          <About/> <Me className="md:h-[128px] sm:h-[72px] -my-4"/>
+          <About className="mr-6 ml-3"/> <Me className="md:h-[108px] sm:h-[72px] -my-4 mr-3"/>
         </section>
         <AboutGrid info={info} song={song}/>
+        <PageSparkles />
       </div>
     );
 }

@@ -8,14 +8,13 @@ import { MyLogo } from "./icons";
 const Navbar: React.FC<{}> = () => {
     const pathname = usePathname();
 
-    if (pathname === "/") {
+    if (pathname === "/") { // do not display on the front page
         return <> </>;
     }
 
     return (
         <>
           <div className="w-full h-14 bg-th-foreground sticky top-0 px-16 transition-colors duration-500 z-50">
-            {/* <div className="container w-full px-4 h-full justify-between items-center"> */}
               <div className="flex justify-between items-center h-full overflow-hidden">
                 <Link href="/">
                   <MyLogo className='text-th-background hover:text-th-secondary transition-colors duration-500' width={95} height={64}/>
@@ -44,7 +43,6 @@ const Navbar: React.FC<{}> = () => {
                 </ul>
               </div>
             </div>
-          {/* </div> */}
         </>
       );
 }
