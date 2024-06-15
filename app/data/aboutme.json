@@ -1,28 +1,25 @@
 {   
     "education": [
         {
-            "id": "1", 
             "school": "University of Massachesetts, Amherst", 
             "degree": "Bachelor of Science", 
-            "graduation_date": "2022", 
-            "major": "Computer Science", 
-            "concentration":""
+            "start_date":"September, 2019",
+            "end_date": "May, 2022", 
+            "gpa":"3.77",
+            "majors": "Mathematics & Computer Science", 
+            "minor": "Art History",
+            "concentration":"",
+            "rewards": "Dean's List, CRC Press Chemistry Achievement Award"
         },
         {
-            "id": "2", 
-            "school": "University of Massachesetts, Amherst", 
-            "degree": "Bachelor of Science", 
-            "graduation_date": "2022", 
-            "major": "Mathematics", 
-            "concentration":"Statistics and Data Science"
-        },
-        {
-            "id": "3", 
             "school": "University of Massachesetts, Amherst", 
             "degree": "Master of Science", 
-            "graduation_date": "2024", 
-            "major": "Computer Science", 
-            "concentration":"Data Science"
+            "start_date":"September, 2022",
+            "end_date": "May, 2024", 
+            "majors": "Computer Science", 
+            "minor": "",
+            "concentration":"Data Science",
+            "rewards": "Bay State Fellowship"
         }
     ],
     "courses": [
@@ -41,8 +38,59 @@
     ],
     "experiences": [
         {
-            "role": "",
-            "company": "",
+            "role": "Research Assistant",
+            "company": "University of Massachesetts, Amherst",
+            "start_date":"September, 2019",
+            "end_date": "May, 2022", 
+            "description": ""
+        },
+        {
+            "role": "Research Assistant",
+            "company": "University of Massachesetts, Amherst",
+            "start_date":"September, 2019",
+            "end_date": "May, 2022", 
+            "description": ""
+        },
+        {
+            "role": "Research Assistant",
+            "company": "University of Massachesetts, Amherst",
+            "start_date":"September, 2019",
+            "end_date": "May, 2022", 
+            "description": ""
+        },
+        {
+            "role": "Research Assistant",
+            "company": "University of Massachesetts, Amherst",
+            "start_date":"September, 2019",
+            "end_date": "May, 2022", 
+            "description": ""
+        },
+        {
+            "role": "Teaching Assistant & Associate",
+            "company": "University of Massachesetts, Amherst",
+            "start_date":"September, 2019",
+            "end_date": "May, 2022", 
+            "description": ""
+        },
+        {
+            "role": "Software Development Engineering Intern",
+            "company": "Amazon",
+            "start_date":"September, 2019",
+            "end_date": "May, 2022", 
+            "description": ""
+        },
+        {
+            "role": "Advanced Algorithms Tutor",
+            "company": "University of Massachesetts, Amherst",
+            "start_date":"September, 2019",
+            "end_date": "May, 2022", 
+            "description": ""
+        },
+        {
+            "role": "Residential Assistant",
+            "company": "University of Massachesetts, Amherst",
+            "start_date":"September, 2019",
+            "end_date": "May, 2022", 
             "description": ""
         }
     ],

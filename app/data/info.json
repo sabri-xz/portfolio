@@ -19,26 +19,26 @@
     ],
     "education": [
         {
-            "id": "1", 
             "school": "University of Massachesetts, Amherst", 
             "degree": "Bachelor of Science", 
-            "graduation_date": "2022", 
+            "start_date":"September, 2019",
+            "graduation_date": "May, 2022", 
             "major": "Computer Science", 
             "concentration":""
         },
         {
-            "id": "2", 
             "school": "University of Massachesetts, Amherst", 
             "degree": "Bachelor of Science", 
-            "graduation_date": "2022", 
+            "start_date":"September, 2019",
+            "graduation_date": "May, 2022", 
             "major": "Mathematics", 
             "concentration":"Statistics and Data Science"
         },
         {
-            "id": "3", 
             "school": "University of Massachesetts, Amherst", 
             "degree": "Master of Science", 
-            "graduation_date": "2024", 
+            "start_date":"September, 2022",
+            "graduation_date": "May, 2024", 
             "major": "Computer Science", 
             "concentration":"Data Science"
         }

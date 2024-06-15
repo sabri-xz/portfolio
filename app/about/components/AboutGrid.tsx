@@ -47,7 +47,7 @@ const AboutGrid: React.FC<{info: any, song: SongInfo| null}> = ({info, song}) =>
             <div className="bg-th-tertiary relative hover:cursor-pointer items-center flex"
                 onClick={() => toggleCover("edu")}>
                 <div className={`absolute w-full h-full z-10 bg-th-midground ${divVisibility.edu? "visible" : "hidden"}`}>
-                    <span className='text-th-background absolute z-20 pt-[360px] w-full text-center pointer-events-none font-bold text-xl'> education </span>
+                    <span className='text-[#3D4927] absolute z-20 pt-[360px] w-full text-center pointer-events-none font-bold text-xl'> education </span>
                     <div className='absolute w-full h-full hover:opacity-0 z-10 transition-opacity duration-200'>
                         <div className='polaroid-frame absolute w-full h-full'/>
                         <Image src="https://raw.githubusercontent.com/sabri-xz/portfolio/main/imgs/about-me/gradpic.png" 
@@ -71,7 +71,7 @@ const AboutGrid: React.FC<{info: any, song: SongInfo| null}> = ({info, song}) =>
             <div className="bg-th-tertiary relative hover:cursor-pointer items-center flex"
                 onClick={() => toggleCover("hello")}>
                 <div className={`absolute w-full h-full z-10 bg-th-midground ${divVisibility.hello? "visible" : "hidden"}`}>
-                    <span className='text-th-background absolute z-20 pt-[360px] w-full text-center pointer-events-none font-bold text-xl'> hello world </span>
+                    <span className='text-[#3D4927] absolute z-20 pt-[360px] w-full text-center pointer-events-none font-bold text-xl'> hello world </span>
                     <div className='absolute w-full h-full hover:opacity-0 z-10 transition-opacity duration-200'>
                         <div className='polaroid-frame absolute w-full h-full'/>
                         <Image src="https://raw.githubusercontent.com/sabri-xz/portfolio/main/imgs/about-me/gradpic.png" 
@@ -95,7 +95,7 @@ const AboutGrid: React.FC<{info: any, song: SongInfo| null}> = ({info, song}) =>
             <div className="bg-th-tertiary relative hover:cursor-pointer items-center flex"
                 onClick={() => toggleCover("exp")}>
                 <div className={`absolute w-full h-full z-10 bg-th-midground ${divVisibility.exp? "visible" : "hidden"}`}>
-                    <span className='text-th-background absolute z-20 pt-[360px] w-full text-center pointer-events-none font-bold text-xl'> experiences </span>
+                    <span className='text-[#3D4927] absolute z-20 pt-[360px] w-full text-center pointer-events-none font-bold text-xl'> experiences </span>
                     <div className='absolute w-full h-full hover:opacity-0 z-10 transition-opacity duration-200'>
                         <div className='polaroid-frame absolute w-full h-full'/>
                         <Image src="https://raw.githubusercontent.com/sabri-xz/portfolio/main/imgs/about-me/gradpic.png" 
@@ -111,7 +111,7 @@ const AboutGrid: React.FC<{info: any, song: SongInfo| null}> = ({info, song}) =>
                             className='w-full h-full object-cover object-center' />
                     </div>
                 </div>
-                <div className='absolute w-full h-full overflow-y-auto bg-th-tertiary text-th-background transition-colors duration-500'>
+                <div className='absolute w-full h-full overflow-y-auto bg-th-tertiary text-[#3D4927] transition-colors duration-500'>
                     <section className='font-medium text-lg gap-3 p-4 flex flex-col'>
                         <span> I've worked on various research projects exploring <span className='underline'>human biases</span> and <span className='underline'>visualization effectiveness</span>, developing surveys and leading a team focusing on older adults' engagement with visual content. </span>
                         <span> In industry, I interned with the <span className='underline'>Amazon Alexa Team</span>, collaborating on project design and delivering high-quality code within deadlines. </span>
