@@ -23,7 +23,7 @@
     }
 }
 
-.aspect-16-9 {
+.grid-things {
     max-width: 1028px;
     min-width: 1028px;
 }
@@ -34,12 +34,12 @@
     }
 } */
 
-.aspect-16-9 > * {
+.grid-things > * {
     /* position: relative; */
     /* max-width: 270px;
     max-height: 480px; */
     width: 300px; 
-    height: 480px;
+    height: 420px;
     /* border-color: blue; */
     /* border-width: 1px; */
 }
