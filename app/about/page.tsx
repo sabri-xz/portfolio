@@ -5,7 +5,7 @@ import { getNowPlaying } from "./api/spotify";
 import AboutGrid from "./components/AboutGrid";
 import Me from "./components/MeText";
 import About from "./components/AboutText";
-import PageSparkles from "./components/pageSparkles";
+import PageSparkles from "./components/PageSparkles";
 
 interface SongInfo {
   album: string;
