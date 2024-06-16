@@ -7,6 +7,7 @@ import Me from "./components/MeText";
 import About from "./components/AboutText";
 import PageSparkles from "./components/PageSparkles";
 import TimeLine from "./components/TimeLine";
+import { ScrollIcon } from '@/app/components/icons';
 
 interface SongInfo {
   album: string;
@@ -35,9 +36,10 @@ export default async function Home() {
             <About className="mr-6 ml-3"/> <Me className="md:h-[108px] sm:h-[72px] -my-4 mr-3"/>
           </section>
           <AboutGrid info={info} song={song}/>
-          <div className="flex justify-center w-full absolute -bottom-3 left-0 right-0">
-            scroll down
+          <div className="flex justify-center w-full absolute -bottom-[425px] left-0 right-0 shake pointer-events-none">
+            <ScrollIcon className="text-th-foreground scale-4 z-40"/>
           </div>
+          <PageSparkles />
         </section>
         
         <section className="h-auto w-[100vw] bg-th-midground flex flex-col items-center py-44">
@@ -56,17 +58,19 @@ export default async function Home() {
             <TimeLine info={info}/>
           </section>
 
-          <section className="flex flex-col md:w-[1028px] sm:w-[370px] ml-24">
+          <section className="flex flex-col md:w-[1028px] sm:w-[370px] ml-24 -mt-8">
             <span className="text-3xl"> skills </span>
           </section>
           
+          {/* <div className="flex justify-center w-full absolute left-0 right-0 shake pointer-events-none">
+            <ScrollIcon className="text-th-foreground scale-4 z-40"/>
+          </div> */}
         </section>
 
         <section className="md:h-[750px] sm:h-[1667px] w-[100vw] flex flex-col">
           <span>In my free time i enjoy knitting and tending to my plants</span>
+          {/* want to add some random pictures here */}
         </section>
-        
-        <PageSparkles />
       </div>
     );
 }

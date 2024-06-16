@@ -3,8 +3,8 @@
         {
             "school": "University of Massachesetts, Amherst", 
             "degree": "Bachelor of Science", 
-            "start_date":"September, 2019",
-            "end_date": "May, 2022", 
+            "start_date":"2019-09",
+            "end_date": "2022-05", 
             "gpa":"3.77",
             "majors": "Mathematics & Computer Science", 
             "minor": "Art History",
@@ -14,8 +14,8 @@
         {
             "school": "University of Massachesetts, Amherst", 
             "degree": "Master of Science", 
-            "start_date":"September, 2022",
-            "end_date": "May, 2024", 
+            "start_date":"2022-09",
+            "end_date": "2024-05", 
             "majors": "Computer Science", 
             "minor": "",
             "concentration":"Data Science",
@@ -38,60 +38,60 @@
     ],
     "experiences": [
         {
+            "id": "1",
             "role": "Research Assistant",
-            "company": "University of Massachesetts, Amherst",
-            "start_date":"September, 2019",
-            "end_date": "May, 2022", 
-            "description": ""
+            "company": "CAV Lab - University of Massachesetts, Amherst",
+            "start_date":"2021-08",
+            "end_date": "2022-05", 
+            "description": "Topic: Quantifying human biases and the effects of visualizations presented\n- Developed and designed interactive surveys, utilizing JavaScript, CSS, HTML, and Qualtrics, aligning with the study’s objectives outlined by the Principal Investigator. \n- Actively participated in weekly meetings, contributing insights on measuring human biases and validating research methodologies, while providing updates on weekly progress. \n- Proactively gathered and analyzed user feedback, proposing enhancements to survey design to optimize user experience and ensure meaningful data collection"
         },
         {
+            "id": "2",
             "role": "Research Assistant",
-            "company": "University of Massachesetts, Amherst",
-            "start_date":"September, 2019",
-            "end_date": "May, 2022", 
-            "description": ""
+            "company": "HCI-VIS Lab - University of Massachesetts, Amherst",
+            "start_date":"2021-05",
+            "end_date": "2021-08", 
+            "description": "Topic: Investigating the effectiveness of visualization in older adults\n- Orchestrated and assigned tasks to a team of six undergraduate students, ensuring seamless collaboration and steady progress.\n- Applied statistical knowledge to extend Cohen’s Kappa for more appropriate and accurate coding analysis.\n- Conducted comprehensive literature reviews on causal inferences, evaluation methodologies, and data visualization tools to inform research strategy"
         },
         {
+            "id": "3",
             "role": "Research Assistant",
-            "company": "University of Massachesetts, Amherst",
-            "start_date":"September, 2019",
-            "end_date": "May, 2022", 
-            "description": ""
+            "company": "CRUNCH Lab - University of Massachesetts, Amherst",
+            "start_date":"2019-12",
+            "end_date": "2020-05", 
+            "description": "Topic: Discuss means of visualization zeolite and its further usage\n- Participated in weekly meetings on updates of different projects in the lab.\n- Read publications previously done to further understanding and written reports on topics of interests."
         },
         {
-            "role": "Research Assistant",
-            "company": "University of Massachesetts, Amherst",
-            "start_date":"September, 2019",
-            "end_date": "May, 2022", 
-            "description": ""
-        },
-        {
+            "id": "4",
             "role": "Teaching Assistant & Associate",
-            "company": "University of Massachesetts, Amherst",
-            "start_date":"September, 2019",
-            "end_date": "May, 2022", 
-            "description": ""
+            "company": " CICS - University of Massachusetts, Amherst",
+            "start_date":"2022-09",
+            "end_date": "2024-05", 
+            "description": "- Independently designed, proposed, and instructed first-year seminar to foster a supportive and welcoming environment for freshmen entering Computer Science.\n- Provide academic support through office hours and timely updates of the course website via Git, addressing conceptual challenges, debugging, and optimization for various core undergraduate classes ensuring solidity in technical knowledge.\n- Lead engaging discussions to reinforce understanding of lecture materials including Git workflow, web development, general programming methodology, and algorithm designs."
         },
         {
+            "id": "5",
             "role": "Software Development Engineering Intern",
             "company": "Amazon",
-            "start_date":"September, 2019",
-            "end_date": "May, 2022", 
-            "description": ""
+            "start_date":"2022-05",
+            "end_date": "2022-08",  
+            "description": "- Collaborated with experienced engineers and managers to design and define an intern project, addressing abstract problems and enhancing existing services.\n- Produced well-structured design documents and knowledge transfer materials to ensure project continuity.\n- Contributed to an agile development environment, delivering high-quality code within specified timelines."
         },
         {
+            "id": "6",
             "role": "Advanced Algorithms Tutor",
-            "company": "University of Massachesetts, Amherst",
-            "start_date":"September, 2019",
-            "end_date": "May, 2022", 
-            "description": ""
+            "company": " CICS - University of Massachusetts, Amherst",
+            "start_date":"2024-02",
+            "end_date": "2024-05", 
+            "description": "- Provided tutoring for CompSci611-Advanced Algorithms for two PhD students.\n-Prepared practice problems and in depth explanation as supplementary supports for the course.\n-Raised both students' performance in class by two letter grades."
         },
         {
+            "id": "7",
             "role": "Residential Assistant",
-            "company": "University of Massachesetts, Amherst",
-            "start_date":"September, 2019",
-            "end_date": "May, 2022", 
-            "description": ""
+            "company": "ResLife - University of Massachesetts, Amherst",
+            "start_date":"2021-08",
+            "end_date": "2022-05", 
+            "description": "- Completed duty as instructed: visible in the office during instructed hours, answer questions that may arise from the residents, and being accessible at all hours through duty hours.\n- Facilitated 35 assigned residents as they adapt to dorm living, addressed conflicts and incidents arising between residents professionally.\n- Led, prepared, and programmed community building activities such as updating bulletin boards, hosting floor meetings, and conducting general check-ins"
         }
     ],
     "art-displays": [

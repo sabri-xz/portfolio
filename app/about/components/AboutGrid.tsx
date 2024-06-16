@@ -3,8 +3,7 @@
 import '../../styles/pages.css'
 import Image from 'next/image';
 import { useState } from 'react';
-import DisplayShuffle from './DisplayShuffle';
-import MusicComp from './MusicComp';
+
 
 import { CourseCover, ExpCover } from '../decors';
 
@@ -74,15 +73,15 @@ const AboutGrid: React.FC<{info: any, song: SongInfo| null}> = ({info, song}) =>
                     <span className='text-[#3D4927] absolute z-20 pt-[360px] w-full text-center pointer-events-none font-bold text-xl'> hello world </span>
                     <div className='absolute w-full h-full hover:opacity-0 z-10 transition-opacity duration-200'>
                         <div className='polaroid-frame absolute w-full h-full'/>
-                        <Image src="https://raw.githubusercontent.com/sabri-xz/portfolio/main/imgs/about-me/gradpic.png" 
-                            alt="Grad Photo Drawing" 
+                        <Image src="https://raw.githubusercontent.com/sabri-xz/portfolio/about-me-reformat/imgs/about-me/flowers.png" 
+                            alt="Drawing" 
                             width={600} height={400}
                             className='w-full h-full object-cover object-center' />
                     </div>
                     <div className='absolute w-full h-full'>
                         <div className='polaroid-frame absolute w-full h-full'/>
-                        <Image src="https://raw.githubusercontent.com/sabri-xz/portfolio/main/imgs/about-me/gradpic1.png"
-                            alt='Grad Photo'
+                        <Image src="https://raw.githubusercontent.com/sabri-xz/portfolio/about-me-reformat/imgs/about-me/flowers1.png"
+                            alt='Photo'
                             width={600} height={400}
                             className='w-full h-full object-cover object-center' />
                     </div>
@@ -98,15 +97,15 @@ const AboutGrid: React.FC<{info: any, song: SongInfo| null}> = ({info, song}) =>
                     <span className='text-[#3D4927] absolute z-20 pt-[360px] w-full text-center pointer-events-none font-bold text-xl'> experiences </span>
                     <div className='absolute w-full h-full hover:opacity-0 z-10 transition-opacity duration-200'>
                         <div className='polaroid-frame absolute w-full h-full'/>
-                        <Image src="https://raw.githubusercontent.com/sabri-xz/portfolio/main/imgs/about-me/gradpic.png" 
-                            alt="Grad Photo Drawing" 
+                        <Image src="https://raw.githubusercontent.com/sabri-xz/portfolio/about-me-reformat/imgs/about-me/flowers.png" 
+                            alt="Drawing" 
                             width={600} height={400}
                             className='w-full h-full object-cover object-center' />
                     </div>
                     <div className='absolute w-full h-full'>
                         <div className='polaroid-frame absolute w-full h-full'/>
-                        <Image src="https://raw.githubusercontent.com/sabri-xz/portfolio/main/imgs/about-me/gradpic1.png"
-                            alt='Grad Photo'
+                        <Image src="https://raw.githubusercontent.com/sabri-xz/portfolio/about-me-reformat/imgs/about-me/flowers1.png"
+                            alt='Photo'
                             width={600} height={400}
                             className='w-full h-full object-cover object-center' />
                     </div>
