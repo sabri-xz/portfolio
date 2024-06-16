@@ -38,16 +38,17 @@ const TimeLine: React.FC<{info: any}> = ( {info} ) => {
             </div>
             <div className="absolute h-full w-4 flex justify-center" 
                 style={{left: '50%', transform: 'translateX(-50%)'}}>
-                divider
+                <svg width="4" height={"550"} viewBox="0 0 4 550">
+                    <path d="M1 1 L1 550 Z" fill="transparent" stroke="#3D4927" strokeWidth="4" />
+                </svg>
             </div>
             <div className="flex flex-col gap-3 w-5/12">
                 {
                     education.map( (edu, index) => {
                         return (
-                            <div key={index}>
+                            <div key={index} className="whitespace-pre-wrap">
                                 {edu.school} <br/>
-                                {edu.degree} in 
-                                {edu.majors}
+                                {edu.degree} in {edu.majors}
                             </div> )
                     })
                 }
