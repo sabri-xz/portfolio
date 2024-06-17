@@ -28,12 +28,6 @@
     min-width: 1028px;
 }
 
-/* @media (max-width: 600px) {
-    .aspect-16-9 {
-        background-color: bisque;
-    }
-} */
-
 .grid-things > * {
     /* position: relative; */
     /* max-width: 270px;
@@ -65,5 +59,47 @@
 
 .timeline-item:hover {
     z-index: 40;
+}
+
+.picture {
+    position: absolute;
+    z-index: 100;
+    width: 220px;
+    height: 380px;
+    transition: transform 0.3s;
+}
+
+.picture:hover {
+    transform: rotate(0deg) !important;
+}
+
+#pic-0 {
+    transform: rotate(-10deg);
+    top: 20px;
+    left: -40px;
+}
+
+#pic-1 {
+    transform: rotate(10deg);
+    top: 10px;
+    left: 345px;
+}
+
+#pic-2 {
+    transform: rotate(-15deg);
+    top: 25px;
+    left: 750px;
+}
+
+#pic-3 {
+    transform: rotate(6deg);
+    top: 340px;
+    left: 160px;
+}
+
+#pic-4 {
+    transform: rotate(-5deg);
+    top: 340px;
+    left: 560px;
 }
 
