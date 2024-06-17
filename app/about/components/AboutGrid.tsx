@@ -16,7 +16,7 @@ interface SongInfo {
     title: string;
 }
 
-const AboutGrid: React.FC<{info: any, song: SongInfo| null}> = ({info, song}) => { 
+const AboutGrid: React.FC<{info: any}> = ({info}) => { 
     const education = info.education;
     const courses = info.courses;
     const experiences = info.experiences;
@@ -34,11 +34,7 @@ const AboutGrid: React.FC<{info: any, song: SongInfo| null}> = ({info, song}) =>
             [divId]: !divVisibility[divId]
         });
     };
-
-    if (song == null) {
-        song = song_mock
-    }
-
+    
     return (
         <section className="grid md:grid-cols-3 md:grid-rows-1 sm:grid-cols-1 sm:grid-rows-3
                             grid-flow-col grid-things gap-[40px] pt-2 pb-8 transition-colors duration-500">

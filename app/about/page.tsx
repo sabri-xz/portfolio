@@ -7,6 +7,7 @@ import Me from "./components/MeText";
 import About from "./components/AboutText";
 import PageSparkles from "./components/PageSparkles";
 import TimeLine from "./components/TimeLine";
+import PicturePile from "./components/PicturePile";
 import { ScrollIcon } from '@/app/components/icons';
 
 interface SongInfo {
@@ -18,6 +19,11 @@ interface SongInfo {
   title: string;
 }
 
+interface Pic {
+  scrs: string,
+  description: string
+}
+
 const getInfo = async (): Promise<any[]> => {
   const filePath = path.join(process.cwd(), 'app/data', 'aboutme.json');
   const jsonData = fs.readFileSync(filePath, 'utf-8');
@@ -27,7 +33,8 @@ const getInfo = async (): Promise<any[]> => {
 
 export default async function Home() {
     const info: any = await getInfo();
-    const song: SongInfo | null = await getNowPlaying();
+    // const song: SongInfo | null = await getNowPlaying();
+    const pics: Pic[] | null = info.pics;
 
     return (
       <div className="page-container flex md:items-center flex-col relative">
@@ -35,7 +42,7 @@ export default async function Home() {
           <section className="flex items-end md:w-[900px] sm:w-[370px] mr-4 my-16 mb-18">
             <About className="mr-6 ml-3"/> <Me className="md:h-[108px] sm:h-[72px] -my-4 mr-3"/>
           </section>
-          <AboutGrid info={info} song={song}/>
+          <AboutGrid info={info}/>
           <div className="flex justify-center w-full absolute -bottom-[425px] left-0 right-0 shake pointer-events-none">
             <ScrollIcon className="text-th-foreground scale-4 z-40"/>
           </div>
@@ -67,9 +74,13 @@ export default async function Home() {
           </div> */}
         </section>
 
-        <section className="md:h-[750px] sm:h-[1667px] w-[100vw] flex flex-col">
-          <span>In my free time i enjoy knitting and tending to my plants</span>
+        <section className="md:h-[750px] sm:h-[1667px] w-[100vw] flex flex-col items-center">
+          <section className="md:h-[950px] sm:h-[1900px] md:w-[1028px] sm:w-[370px] mt-16">
+            <span>In my free time, i enjoy knitting and tending to my plants</span>
+          </section>
+          
           {/* want to add some random pictures here */}
+          <PicturePile pics={[]}/>
         </section>
       </div>
     );
