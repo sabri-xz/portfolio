@@ -53,7 +53,7 @@ export default async function Home() {
         
         <section className="h-auto w-[100vw] bg-th-midground1 flex flex-col items-center py-44">
           
-          <section className="flex flex-col md:w-[1028px] sm:w-[370px] ml-24">
+          <section className="flex flex-col md:w-[1028px] sm:w-[370px] ml-24 leading-loose">
             <span className="text-3xl">hello, </span>
             <span>I draw, I program, and I enjoy both</span>
             <span>CS and Math gave me a strong technical background</span>
@@ -69,6 +69,9 @@ export default async function Home() {
 
           <section className="flex flex-col md:w-[1028px] sm:w-[370px] ml-24 -mt-8">
             <span className="text-3xl"> skills </span>
+            <span className="w-[350px] mt-3 leading-loose">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula ligula lectus, vel vestibulum est molestie at. In metus leo, gravida a neque fermentum, cursus suscipit nulla. Sed finibus a nulla quis fermentum. Nulla pulvinar dui nec nisl finibus, at interdum massa egestas. Quisque id convallis mi.
+            </span>
           </section>
           
           {/* <div className="flex justify-center w-full absolute left-0 right-0 shake pointer-events-none">

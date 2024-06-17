@@ -2,6 +2,7 @@ import path from "path";
 import fs from "fs";
 import '../styles/pages.css'
 import localFont from 'next/font/local'
+import WIPPage from "../components/WIPPage";
 
 const getInfo = async (): Promise<any[]> => {
   const filePath = path.join(process.cwd(), 'app/data', 'aboutme.json');
@@ -16,8 +17,9 @@ export default async function Home() {
     const info: any = await getInfo();
 
     return (
-      <div className={`page-container flex flex-col ${myFont.className}`}>
-        <h1 className="text-6xl text-left w-auto">Projects</h1>
+      // <div className={`page-container flex flex-col ${myFont.className}`}>
+      <div className="page-container flex flex-col">
+        <WIPPage pageTitle="Projects"/>
       </div>
     );
 }

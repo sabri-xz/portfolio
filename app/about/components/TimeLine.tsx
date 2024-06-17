@@ -84,7 +84,7 @@ const TimeLine: React.FC<{info: any}> = ( {info} ) => {
         const company = exp.company
 
         return (
-            <div className="whitespace-pre-wrap flex flex-col w-full h-auto ">
+            <div className="whitespace-pre-wrap flex flex-col w-full h-auto leading-loose">
                 <span className="text-xl font-bold">{role}</span>
                 <span className="text-sm italic">{company}</span>
                 <span className="mt-1">{description}</span>
@@ -161,7 +161,7 @@ const TimeLine: React.FC<{info: any}> = ( {info} ) => {
             </div>
 
             <section id="" className="absolute w-80 h-auto bg-th-background rounded-md p-4" 
-                style={{left: "-400px", top: "120px", visibility: showDetails.show ? "visible" : "hidden"}}>
+                style={{left: "-400px", top: "100px", visibility: showDetails.show ? "visible" : "hidden"}}>
                 {getDisplayInfo(experiences.find(exp => exp.id === showDetails.id))}
             </section>
         </div>

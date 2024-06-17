@@ -69,14 +69,14 @@ const AboutGrid: React.FC<{info: any}> = ({info}) => {
                     <span className='text-[#3D4927] absolute z-20 pt-[360px] w-full text-center pointer-events-none font-bold text-xl'> hello world </span>
                     <div className='absolute w-full h-full hover:opacity-0 z-10 transition-opacity duration-200'>
                         <div className='polaroid-frame absolute w-full h-full'/>
-                        <Image src="https://raw.githubusercontent.com/sabri-xz/portfolio/about-me-reformat/imgs/about-me/aboutme_draw.png" 
+                        <Image src="https://raw.githubusercontent.com/sabri-xz/portfolio/main/imgs/about-me/aboutme_draw.png" 
                             alt="Drawing" 
                             width={600} height={400}
                             className='w-full h-full object-cover object-center' />
                     </div>
                     <div className='absolute w-full h-full'>
                         <div className='polaroid-frame absolute w-full h-full'/>
-                        <Image src="https://raw.githubusercontent.com/sabri-xz/portfolio/about-me-reformat/imgs/about-me/aboutme_pic.png"
+                        <Image src="https://raw.githubusercontent.com/sabri-xz/portfolio/main/imgs/about-me/aboutme_pic.png"
                             alt='Photo'
                             width={600} height={400}
                             className='w-full h-full object-cover object-center' />
@@ -93,14 +93,14 @@ const AboutGrid: React.FC<{info: any}> = ({info}) => {
                     <span className='text-[#3D4927] absolute z-20 pt-[360px] w-full text-center pointer-events-none font-bold text-xl'> experiences </span>
                     <div className='absolute w-full h-full hover:opacity-0 z-10 transition-opacity duration-200'>
                         <div className='polaroid-frame absolute w-full h-full'/>
-                        <Image src="https://raw.githubusercontent.com/sabri-xz/portfolio/about-me-reformat/imgs/about-me/aboutme_draw.png" 
+                        <Image src="https://raw.githubusercontent.com/sabri-xz/portfolio/main/imgs/about-me/aboutme_draw.png" 
                             alt="Drawing" 
                             width={600} height={400}
                             className='w-full h-full object-cover object-center' />
                     </div>
                     <div className='absolute w-full h-full'>
                         <div className='polaroid-frame absolute w-full h-full'/>
-                        <Image src="https://raw.githubusercontent.com/sabri-xz/portfolio/about-me-reformat/imgs/about-me/aboutme_pic.png"
+                        <Image src="https://raw.githubusercontent.com/sabri-xz/portfolio/main/imgs/about-me/aboutme_pic.png"
                             alt='Photo'
                             width={600} height={400}
                             className='w-full h-full object-cover object-center' />
