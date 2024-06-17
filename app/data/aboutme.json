@@ -97,23 +97,28 @@
     "art-displays": [
         {
             "src": "https://raw.githubusercontent.com/sabri-xz/portfolio/main/imgs/about-me/art-hist-show/john_singer_sargent_1.jpg", 
-            "alt": "birb"
+            "alt": "birb",
+            "description": ""
         },
         {
             "src": "https://raw.githubusercontent.com/sabri-xz/portfolio/main/imgs/about-me/art-hist-show/john_singer_sargent_2.jpg",
-            "alt": "birb"
+            "alt": "birb",
+            "description": ""
         },
         {
             "src": "https://raw.githubusercontent.com/sabri-xz/portfolio/main/imgs/about-me/art-hist-show/klimt_1.jpg", 
-            "alt": "birb"
+            "alt": "birb",
+            "description": ""
         },
         {
             "src": "https://raw.githubusercontent.com/sabri-xz/portfolio/main/imgs/about-me/art-hist-show/william_morris_1.jpg", 
-            "alt": "birb"
+            "alt": "birb",
+            "description": ""
         },
         {
             "src": "https://raw.githubusercontent.com/sabri-xz/portfolio/main/imgs/about-me/art-hist-show/william_morris_2.jpg", 
-            "alt": "birb"
+            "alt": "birb",
+            "description": ""
         }
     ],
     "placeholder-music": {

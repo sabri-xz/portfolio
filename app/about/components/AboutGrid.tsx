@@ -25,7 +25,7 @@ const AboutGrid: React.FC<{info: any}> = ({info}) => {
     const [divVisibility, setDivVisibility] = useState<{[key: string]: boolean}>({
         "hello": true,
         "edu": true,
-        "art":true
+        "exp":true
     });
 
     const toggleCover = (divId: string) => {

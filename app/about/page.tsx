@@ -20,7 +20,8 @@ interface SongInfo {
 }
 
 interface Pic {
-  scrs: string,
+  src: string,
+  alt: string,
   description: string
 }
 
@@ -34,7 +35,8 @@ const getInfo = async (): Promise<any[]> => {
 export default async function Home() {
     const info: any = await getInfo();
     // const song: SongInfo | null = await getNowPlaying();
-    const pics: Pic[] | null = info.pics;
+    const pics: Pic[] = info["art-displays"];
+    // console.log(pics)
 
     return (
       <div className="page-container flex md:items-center flex-col relative">
@@ -80,7 +82,7 @@ export default async function Home() {
           </section>
           
           {/* want to add some random pictures here */}
-          <PicturePile pics={[]}/>
+          <PicturePile pics={pics}/>
         </section>
       </div>
     );
