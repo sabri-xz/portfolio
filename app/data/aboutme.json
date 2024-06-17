@@ -64,14 +64,14 @@
         {
             "id": "4",
             "role": "Teaching Assistant & Associate",
-            "company": " CICS - University of Massachusetts, Amherst",
+            "company": "CICS - University of Massachusetts, Amherst",
             "start_date":"2022-09",
             "end_date": "2024-05", 
             "description": "- Independently designed, proposed, and instructed first-year seminar to foster a supportive and welcoming environment for freshmen entering Computer Science.\n- Provide academic support through office hours and timely updates of the course website via Git, addressing conceptual challenges, debugging, and optimization for various core undergraduate classes ensuring solidity in technical knowledge.\n- Lead engaging discussions to reinforce understanding of lecture materials including Git workflow, web development, general programming methodology, and algorithm designs."
         },
         {
             "id": "5",
-            "role": "Software Development Engineering Intern",
+            "role": "Software Engineer Intern",
             "company": "Amazon",
             "start_date":"2022-05",
             "end_date": "2022-08",  
@@ -88,7 +88,7 @@
         {
             "id": "7",
             "role": "Residential Assistant",
-            "company": "ResLife - University of Massachesetts, Amherst",
+            "company": "University of Massachesetts, Amherst",
             "start_date":"2021-08",
             "end_date": "2022-05", 
             "description": "- Completed duty as instructed: visible in the office during instructed hours, answer questions that may arise from the residents, and being accessible at all hours through duty hours.\n- Facilitated 35 assigned residents as they adapt to dorm living, addressed conflicts and incidents arising between residents professionally.\n- Led, prepared, and programmed community building activities such as updating bulletin boards, hosting floor meetings, and conducting general check-ins"

@@ -9,7 +9,7 @@ interface ExpInfo {
     company: string,
     start_date: string,
     end_date: string, 
-    decription: string
+    description: string
 }
 
 interface EduInfo {
@@ -34,7 +34,7 @@ const TimeLine: React.FC<{info: any}> = ( {info} ) => {
     const experiences: ExpInfo[] = info.experiences;
     const [showDetails, setShowDetails] = useState({show: false, id: "0"})
 
-    const bottom_group: string[] = ["4", "5", "7"]
+    const top_group: string[] = ["1", "2", "3", "4", "5"]
 
     let max_date: string = education.reduce( (max, edu) => {
         return new Date(edu.end_date) > new Date(max) ? edu.end_date : max
@@ -63,7 +63,7 @@ const TimeLine: React.FC<{info: any}> = ( {info} ) => {
         
         const monthSpan = calcMonthsDiff(startDate, endDate)
         const heightSpan = monthSpan * h_per_month
-        const padding = 4
+        const padding = 6
     
         const startLoc = padding + calcMonthsDiff(endDate, maxDate) * h_per_month
 
@@ -71,73 +71,98 @@ const TimeLine: React.FC<{info: any}> = ( {info} ) => {
     }
 
     function hoverHandler(id: string) {
-        setShowDetails({show: true, id: id})
-        console.log(showDetails)
+        setShowDetails({show: !showDetails.show, id: id})
+    }
+
+    function getDisplayInfo(exp: ExpInfo | undefined) {
+        if (!exp) {
+            return <div> no information </div>
+        }
+
+        const description = exp.description;
+        const role = exp.role;
+        const company = exp.company
+
+        return (
+            <div className="whitespace-pre-wrap flex flex-col w-full h-auto ">
+                <span className="text-xl font-bold">{role}</span>
+                <span className="text-sm italic">{company}</span>
+                <span className="mt-1">{description}</span>
+            </div>
+        )
     }
 
     return (
         <div className="flex flex-row h-auto relative justify-between pt-4">
-            <div className={`flex flex-col relative w-5/12 h-[${total_months*h_per_month + 32}px] items-end`}>
+            <div className={`flex flex-col relative w-1/2 h-[${total_months*h_per_month + 32}px] items-end`}>
                 {
                     experiences.map( (exp, index) => {
                         const [startLoc, height] = datesToStartLocHeight(exp.start_date, exp.end_date)
                         
-                        if (bottom_group.includes(exp.id)) {
+                        if (top_group.includes(exp.id)) {
                             return (
-                            <div key={index} className={`text-right bg-slate-500 timeline-item z-10`}
+                            <div key={index} className={`text-right bg-th-background timeline-item z-20 transition-colors duration-500`}
+                                style={{height: `${height}px`, top: `${startLoc + 12}px`, left: "-12px"}}
+                                onMouseEnter={ () => {
+                                    hoverHandler(exp.id)
+                                }}
+                                onMouseLeave={ () => {
+                                    hoverHandler(exp.id)
+                                }}>
+                                    <span className="font-semibold">{exp.role}</span>
+                                </div>)
+                        } else {
+                            return (
+                                <div key={index} className={`text-right bg-th-midground2 timeline-item z-10 transition-colors duration-500`}
                                 style={{height: `${height}px`, top: `${startLoc}px`}}
                                 onMouseEnter={ () => {
                                     hoverHandler(exp.id)
                                 }}
                                 onMouseLeave={ () => {
-                                    
+                                    hoverHandler(exp.id)
                                 }}>
-                                    {exp.role}
-                                </div>)
-                        } else {
-                            return (
-                                <div key={index} className={`text-right bg-slate-400 timeline-item z-20`}
-                                style={{height: `${height}px`, top: `${startLoc+12}px`, left: "-12px"}}
-                                onMouseEnter={ () => {
-
-                                }}
-                                onMouseLeave={ () => {
-                                    
-                                }}>
-                                    {exp.role}
+                                    <span className="font-semibold">{exp.role}</span>
                                 </div> )
                         } 
                     })
                 }
             </div>
-            <div className="h-full w-4 flex justify-center text-th-foreground">
+
+            {/* divider */}
+            <div className="h-full w-4 flex justify-center text-th-foreground transition-colors duration-500 mx-5">
                 <svg width="4" height={"100%"} viewBox={`0 0 4 ${total_months*h_per_month + 32}`}>
                     <path d={`M1 1 L1 ${total_months*h_per_month + 32} Z`} fill="transparent" stroke="currentcolor" strokeWidth="4" />
                 </svg>
             </div>
-            <div className={`flex flex-col relative w-5/12 h-[${total_months*h_per_month + 32}px]`}>
+
+            <div className={`flex flex-col relative w-1/2 h-[${total_months*h_per_month + 32}px]`}>
                 {
                     education.map( (edu, index) => {
                         const [startLoc, height] = datesToStartLocHeight(edu.start_date, edu.end_date)
 
                         return (
-                            <div key={index} className={`bg-slate-500 timeline-item`}
-                                style={{height: `${height}px`, top: `${startLoc}px`}}
-                                onMouseEnter={ () => {
-
-                                }}
-                                onMouseLeave={ () => {
-
-                                }}>
-                                {edu.school} <br/>
+                            <div key={index} className={`flex flex-col bg-th-background timeline-item transition-colors duration-500`}
+                                style={{height: `${height}px`, top: `${startLoc}px`}}>
+                                    <span className="text-xl">
+                                        {edu.degree} <span className="text-sm">in</span> <span className="font-bold">{edu.majors}</span>
+                                    </span>
+                                    {
+                                        edu.concentration && (<span>
+                                            focus in {edu.concentration}
+                                        </span>)
+                                    }
+                                    <span className="italic text-sm">{edu.school}</span>
+                                    <span>
+                                        reward(s): {edu.rewards}
+                                    </span>
                             </div> )
                     })
                 }
             </div>
 
-            <section id="" className="absolute w-64 h-80 bg-slate-200" 
-                style={{left: "-365px", top: "120px", visibility: "visible"}}> 
-                details of the experience :D
+            <section id="" className="absolute w-80 h-auto bg-th-background rounded-md p-4" 
+                style={{left: "-400px", top: "120px", visibility: showDetails.show ? "visible" : "hidden"}}>
+                {getDisplayInfo(experiences.find(exp => exp.id === showDetails.id))}
             </section>
         </div>
     )

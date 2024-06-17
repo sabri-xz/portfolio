@@ -51,7 +51,7 @@ export default async function Home() {
           <PageSparkles />
         </section>
         
-        <section className="h-auto w-[100vw] bg-th-midground flex flex-col items-center py-44">
+        <section className="h-auto w-[100vw] bg-th-midground1 flex flex-col items-center py-44">
           
           <section className="flex flex-col md:w-[1028px] sm:w-[370px] ml-24">
             <span className="text-3xl">hello, </span>

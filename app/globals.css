@@ -5,7 +5,8 @@
 :root {
   /* default color palette is light theme */
   --foreground-color: #3D4927;
-  --midground-color: #6e7a4d;
+  --midground-color1: #6e7a4d;
+  --midground-color2: #aeb57e;
   --background-color: #F1E7D3;
   --secondary-color: #958B57;
   --tertiary-color: #F3CC4A;
@@ -33,7 +34,8 @@ body {
 
 [data-theme="dark"] {
   --foreground-color: #F1E7D3;
-  --midground-color: #6e7a4d;
+  --midground-color1: #6e7a4d;
+  --midground-color2: #aeb57e;
   --background-color: #3D4927;
   --secondary-color: #b67f13;
   --tertiary-color: #F3CC4A;
@@ -41,7 +43,8 @@ body {
 
 [data-theme="light"] {
   --foreground-color: #3D4927;
-  --midground-color: #a9ba7a;
+  --midground-color1: #a9ba7a;
+  --midground-color2: #899251;
   --background-color: #F1E7D3;
   --secondary-color: #958B57;
   --tertiary-color: #F3CC4A;
