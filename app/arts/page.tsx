@@ -1,6 +1,8 @@
 import path from 'path';
 import fs from "fs";
 import GamePage from './components/GamePage';
+import ArtsGrid from './components/ArtsGrid';
+import SketchPage from './components/SketchPage';
 import '../styles/pages.css'
 
 type Game = {
@@ -22,7 +24,8 @@ export default async function Home() {
   
     return (
         <div className='page-container'>
-            <h1 className='justify-self-center text-xl'> Welcome to my personal art gallery </h1>
+            <h1 className='justify-self-center text-xl'> Welcome to my art gallery </h1>
+            <ArtsGrid />
             <GamePage gamesInfo={games}/>
         </div>
     );
