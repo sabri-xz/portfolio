@@ -70,8 +70,8 @@ const TimeLine: React.FC<{info: any}> = ( {info} ) => {
         return [startLoc, heightSpan - 2*padding]
     }
 
-    function hoverHandler(id: string) {
-        setShowDetails({show: !showDetails.show, id: id})
+    function hoverHandler(id: string, enter: boolean) {
+        setShowDetails({show: enter, id: id})
     }
 
     function getDisplayInfo(exp: ExpInfo | undefined) {
@@ -87,9 +87,19 @@ const TimeLine: React.FC<{info: any}> = ( {info} ) => {
             <div className="whitespace-pre-wrap flex flex-col w-full h-auto leading-loose">
                 <span className="text-xl font-bold">{role}</span>
                 <span className="text-sm italic">{company}</span>
+                <span className="text-sm">{dateFormatter(exp.start_date)} - {dateFormatter(exp.end_date)}</span>
                 <span className="mt-1">{description}</span>
             </div>
         )
+    }
+
+    function dateFormatter(date: string) {
+        const d = new Date(date)
+        const options: Intl.DateTimeFormatOptions = {
+            month: "short",
+            year: "numeric"
+        }
+        return d.toLocaleDateString(undefined, options)
     }
 
     return (
@@ -101,27 +111,31 @@ const TimeLine: React.FC<{info: any}> = ( {info} ) => {
                         
                         if (top_group.includes(exp.id)) {
                             return (
-                            <div key={index} className={`text-right bg-th-background timeline-item z-20 transition-colors duration-500`}
+                            <div key={index} className={`text-right bg-th-background timeline-item flex flex-col overflow-auto z-20 transition-colors duration-500`}
                                 style={{height: `${height}px`, top: `${startLoc + 12}px`, left: "-12px"}}
                                 onMouseEnter={ () => {
-                                    hoverHandler(exp.id)
+                                    hoverHandler(exp.id, true)
                                 }}
                                 onMouseLeave={ () => {
-                                    hoverHandler(exp.id)
-                                }}>
+                                    hoverHandler(exp.id, false)
+                                }}
+                                id="experience">
                                     <span className="font-semibold">{exp.role}</span>
+                                    <span className="text-sm">{dateFormatter(exp.start_date)} - {dateFormatter(exp.end_date)}</span>
                                 </div>)
                         } else {
                             return (
-                                <div key={index} className={`text-right bg-th-midground2 timeline-item z-10 transition-colors duration-500`}
+                                <div key={index} className={`text-right bg-th-midground2 timeline-item flex flex-col overflow-auto z-10 transition-colors duration-500`}
                                 style={{height: `${height}px`, top: `${startLoc}px`}}
                                 onMouseEnter={ () => {
-                                    hoverHandler(exp.id)
+                                    hoverHandler(exp.id, true)
                                 }}
                                 onMouseLeave={ () => {
-                                    hoverHandler(exp.id)
-                                }}>
+                                    hoverHandler(exp.id, false)
+                                }}
+                                id="experience">
                                     <span className="font-semibold">{exp.role}</span>
+                                    <span className="text-sm">{dateFormatter(exp.start_date)} - {dateFormatter(exp.end_date)}</span>
                                 </div> )
                         } 
                     })
@@ -141,7 +155,7 @@ const TimeLine: React.FC<{info: any}> = ( {info} ) => {
                         const [startLoc, height] = datesToStartLocHeight(edu.start_date, edu.end_date)
 
                         return (
-                            <div key={index} className={`flex flex-col bg-th-background timeline-item transition-colors duration-500`}
+                            <div key={index} className={`flex flex-col bg-th-background leading-relaxed timeline-item transition-colors duration-500`}
                                 style={{height: `${height}px`, top: `${startLoc}px`}}>
                                     <span className="text-xl">
                                         {edu.degree} <span className="text-sm">in</span> <span className="font-bold">{edu.majors}</span>
@@ -152,6 +166,7 @@ const TimeLine: React.FC<{info: any}> = ( {info} ) => {
                                         </span>)
                                     }
                                     <span className="italic text-sm">{edu.school}</span>
+                                    <span className="text-sm">{dateFormatter(edu.start_date)} - {dateFormatter(edu.end_date)}</span>
                                     <span>
                                         reward(s): {edu.rewards}
                                     </span>

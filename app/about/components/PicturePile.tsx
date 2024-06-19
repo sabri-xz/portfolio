@@ -19,9 +19,9 @@ const PicturePile: React.FC<{pics: Pic[]}> = ( {pics} ) => {
         <div className='mt-8'>
             <section className='flex relative md:w-[900px] sm:w-[370px]'>
                 {
-                    pics.map((pic: Pic) => {
+                    pics.map((pic: Pic, index: number) => {
                         return (
-                            <Picture pic={pic} id={i++}/>
+                            <Picture pic={pic} id={i++} key={index}/>
                         )
                     }) 
                 }

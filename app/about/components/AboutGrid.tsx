@@ -90,7 +90,7 @@ const AboutGrid: React.FC<{info: any}> = ({info}) => {
             <div className="bg-th-tertiary relative hover:cursor-pointer items-center flex"
                 onClick={() => toggleCover("exp")}>
                 <div className={`absolute w-full h-full z-10 bg-th-midground ${divVisibility.exp? "visible" : "hidden"}`}>
-                    <span className='text-[#3D4927] absolute z-20 pt-[360px] w-full text-center pointer-events-none font-bold text-xl'> experiences </span>
+                    <span className='text-[#3D4927] absolute z-20 pt-[360px] w-full text-center pointer-events-none font-bold text-xl'> aspirations </span>
                     <div className='absolute w-full h-full hover:opacity-0 z-10 transition-opacity duration-200'>
                         <div className='polaroid-frame absolute w-full h-full'/>
                         <Image src="https://raw.githubusercontent.com/sabri-xz/portfolio/main/imgs/about-me/aboutme_draw.png" 
@@ -106,13 +106,16 @@ const AboutGrid: React.FC<{info: any}> = ({info}) => {
                             className='w-full h-full object-cover object-center' />
                     </div>
                 </div>
-                <div className='absolute w-full h-full overflow-y-auto bg-th-tertiary text-[#3D4927] transition-colors duration-500'>
+                <p className='text-[#3D4927] mx-5 my-3 text-2xl/8 font-sans font-semibold whitespace-pre-wrap text-pretty transition-colors duration-500'>
+                    I'd love to be able to contribute to improving the <span className='font-bold'>QoL</span> of people using my skills and knowledge 
+                </p>
+                {/* <div className='absolute w-full h-full overflow-y-auto bg-th-tertiary text-[#3D4927] transition-colors duration-500'>
                     <section className='font-medium text-lg gap-3 p-4 flex flex-col'>
                         <span> I've worked on various research projects exploring <span className='underline'>human biases</span> and <span className='underline'>visualization effectiveness</span>, developing surveys and leading a team focusing on older adults' engagement with visual content. </span>
                         <span> In industry, I interned with the <span className='underline'>Amazon Alexa Team</span>, collaborating on project design and delivering high-quality code within deadlines. </span>
                         <span> As a Teaching Assistant, I designed and instructed a first-year seminar for Computer Science freshmen, alongside providing academic support and leading discussions for various core classes. </span>
                     </section>
-                </div>
+                </div> */}
             </div>
 
             
