@@ -1,6 +1,7 @@
 {   
     "education": [
-        {
+        {   
+            "id":"1",
             "school": "University of Massachesetts, Amherst", 
             "degree": "Bachelor of Science", 
             "start_date":"2019-09",
@@ -9,9 +10,11 @@
             "majors": "Mathematics & Computer Science", 
             "minor": "Art History",
             "concentration":"",
-            "rewards": "Dean's List, CRC Press Chemistry Achievement Award"
+            "rewards": "Dean's List, CRC Press Chemistry Achievement Award",
+            "coursework": "Programming with Data Structures \nComputer System Principles\nProgramming Methodology\nData Visualization and Exploration\nRegression Analysis with Variance\nPractice and Application of Data Management\nSearch Engines\nInfrormation Systems\nAlgorithms for Data Science\nStatistical Computing\nApplied Linear Algebra"
         },
         {
+            "id": "2",
             "school": "University of Massachesetts, Amherst", 
             "degree": "Master of Science", 
             "start_date":"2022-09",
@@ -19,22 +22,9 @@
             "majors": "Computer Science", 
             "minor": "",
             "concentration":"Data Science",
-            "rewards": "Bay State Fellowship"
+            "rewards": "Bay State Fellowship",
+            "coursework": "Advance Algorithms\nReinforcement Learning\nAugmented and Virtial Reality Design\nApplied Statistical Leanring \nSystems for Data Science\nMachine Learning\nProbabilitstic Graphical Models\nTheory and Practice of Software Engineering\nApplied Cryptography\nRandomized Algorithms and Application to Data Science\nFundamentals of Graphic Design"
         }
-    ],
-    "courses": [
-        "Reasoning Under Uncertainty", 
-        "Data Visualization and Exploration",
-        "Search Engines",
-        "Statistical Computing", 
-        "Advanced Algorithms",
-        "Reinforcement Learning", 
-        "Augmented & Virtual Reality Design", 
-        "Applied Stastical Learning", 
-        "Systems for Data Science", 
-        "Theory and Practice of Software Engineering", 
-        "Randomized Algorithms and Applications to Data Science", 
-        "Fundamentals of Graphic Design"
     ],
     "experiences": [
         {

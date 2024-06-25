@@ -62,9 +62,6 @@
 
 .timeline-item:hover {
     z-index: 40;
-}
-
-.timeline-item#experience:hover {
     transform: scale(1.1);
 }
 

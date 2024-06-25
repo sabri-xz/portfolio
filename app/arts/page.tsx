@@ -25,7 +25,6 @@ export default async function Home() {
     return (
         <div className='page-container'>
             <h1 className='justify-self-center text-xl'> Welcome to my art gallery </h1>
-            <ArtsGrid />
             <GamePage gamesInfo={games}/>
         </div>
     );

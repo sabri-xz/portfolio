@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import "../../styles/pages.css"
+import "../../styles/animation.css"
 
 interface ExpInfo {
     id: string,
@@ -13,6 +14,7 @@ interface ExpInfo {
 }
 
 interface EduInfo {
+    id: string,
     school: string, 
     degree: string, 
     start_date: string,
@@ -21,7 +23,8 @@ interface EduInfo {
     majors: string, 
     minor: string,
     concentration: string,
-    rewards: string
+    rewards: string,
+    coursework: string
 }
 
 function calcMonthsDiff(startDate: Date, endDate: Date): number {
@@ -33,6 +36,8 @@ const TimeLine: React.FC<{info: any}> = ( {info} ) => {
     const education: EduInfo[] = info.education;
     const experiences: ExpInfo[] = info.experiences;
     const [showDetails, setShowDetails] = useState({show: false, id: "0"})
+    const [showCourses1, setShowCourses1] = useState(false)
+    const [showCourses2, setShowCourses2] = useState(false)
 
     const top_group: string[] = ["1", "2", "3", "4", "5"]
 
@@ -104,6 +109,7 @@ const TimeLine: React.FC<{info: any}> = ( {info} ) => {
 
     return (
         <div className="flex flex-row h-auto relative justify-between pt-4">
+            {/* experiences section */}
             <div className={`flex flex-col relative w-1/2 h-[${total_months*h_per_month + 32}px] items-end`}>
                 {
                     experiences.map( (exp, index) => {
@@ -149,32 +155,57 @@ const TimeLine: React.FC<{info: any}> = ( {info} ) => {
                 </svg>
             </div>
 
+            {/* education section */}
             <div className={`flex flex-col relative w-1/2 h-[${total_months*h_per_month + 32}px]`}>
                 {
                     education.map( (edu, index) => {
                         const [startLoc, height] = datesToStartLocHeight(edu.start_date, edu.end_date)
 
                         return (
-                            <div key={index} className={`flex flex-col bg-th-background leading-relaxed timeline-item transition-colors duration-500`}
-                                style={{height: `${height}px`, top: `${startLoc}px`}}>
-                                    <span className="text-xl">
-                                        {edu.degree} <span className="text-sm">in</span> <span className="font-bold">{edu.majors}</span>
-                                    </span>
-                                    {
-                                        edu.concentration && (<span>
-                                            focus in {edu.concentration}
-                                        </span>)
-                                    }
-                                    <span className="italic text-sm">{edu.school}</span>
-                                    <span className="text-sm">{dateFormatter(edu.start_date)} - {dateFormatter(edu.end_date)}</span>
-                                    <span>
-                                        reward(s): {edu.rewards}
-                                    </span>
-                            </div> )
+                            <div onClick={() => {
+                                if (edu.id === "1") {
+                                    setShowCourses1(!showCourses1)
+                                } else {
+                                    setShowCourses2(!showCourses2)
+                                }
+                            }}>
+                                {/* front cover of this education */}
+                                <div key={index} className={`flex flex-col bg-th-background leading-relaxed timeline-item hover:cursor-pointer transition-colors duration-500 z-10`}
+                                    style={{height: `${height}px`, top: `${startLoc}px`, 
+                                            visibility: (edu.id === "1" ? !showCourses1 : !showCourses2) ? "visible" : "hidden"}}>
+                                        <span className="text-xl">
+                                            {edu.degree} <span className="text-sm">in</span> <span className="font-bold">{edu.majors}</span>
+                                        </span>
+                                        {
+                                            edu.concentration && (<span>
+                                                focus in {edu.concentration}
+                                            </span>)
+                                        }
+                                        <span className="italic text-sm">{edu.school}</span>
+                                        <span className="text-sm">{dateFormatter(edu.start_date)} - {dateFormatter(edu.end_date)}</span>
+                                        <span>
+                                            <span className="font-semibold">reward(s):</span> {edu.rewards}
+                                        </span>
+                                </div>
+
+                                {/* relavent courses during this education */}
+                                <div key={index} className={`flex flex-col bg-th-background leading-relaxed timeline-item hover:cursor-pointer transition-colors duration-500 z-0 overflow-auto`}
+                                    style={{height: `${height}px`, top: `${startLoc}px`}}>
+                                        {edu.coursework}
+                                </div>
+                            </div>
+                            )
                     })
                 }
             </div>
+            
+            {/* notification to try hovering :) */}
+            <section id="" className="absolute w-80 h-auto text-th-background rounded-md p-4 shake" 
+                style={{left: "-340px", top: "150px"}}>
+                Try hovering -> 
+            </section>
 
+            {/* details tab */}
             <section id="" className="absolute w-80 h-auto bg-th-background rounded-md p-4" 
                 style={{left: "-400px", top: "100px", visibility: showDetails.show ? "visible" : "hidden"}}>
                 {getDisplayInfo(experiences.find(exp => exp.id === showDetails.id))}

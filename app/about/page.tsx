@@ -69,8 +69,9 @@ export default async function Home() {
 
           <section className="flex flex-col md:w-[1028px] sm:w-[370px] ml-24 -mt-8">
             <span className="text-3xl"> skills </span>
-            <span className="w-[350px] mt-3 leading-loose">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula ligula lectus, vel vestibulum est molestie at. In metus leo, gravida a neque fermentum, cursus suscipit nulla. Sed finibus a nulla quis fermentum. Nulla pulvinar dui nec nisl finibus, at interdum massa egestas. Quisque id convallis mi.
+            <span className="w-[375px] mt-3 leading-loose">
+              <span className="font-bold"> Technical: </span> R, JavaScript, Python, PostgreSQL, HTML, CSS, Git <br/>
+              <span className="font-bold"> Design: </span> Latex, Microsoft Office, Adobe Illustrator, Figma, Procreate
             </span>
           </section>
           

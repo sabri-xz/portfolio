@@ -11,8 +11,6 @@ interface Pic {
     description: string
 }
 
-
-
 const PicturePile: React.FC<{pics: Pic[]}> = ( {pics} ) => {
     let i = 0
     return (
