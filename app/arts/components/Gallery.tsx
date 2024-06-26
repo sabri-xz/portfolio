@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import ImageCard from "./ImageCard";
-import { getImageDimensions } from '../utils/getImageDim';
+import { getImageDimensions } from '../../utils/getImageDim';
 import GalleryContainer from './GalleryContainer';
 
 type Image = {

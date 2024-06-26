@@ -8,9 +8,6 @@ const WIPPage: React.FC<{pageTitle: string}> = ({ pageTitle }) => {
             <p className="my-12">
                 this page is not yet ready, apologies {`<]:3`}
             </p>
-            <section className="w-full">
-                hello
-            </section>
         </div>
     )
 }

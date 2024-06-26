@@ -1,4 +1,4 @@
-import ImageCard from "@/app/components/ImageCard";
+import ImageCard from "@/app/arts/components/ImageCard";
 import Link from "next/link";
 
 type Image = {
