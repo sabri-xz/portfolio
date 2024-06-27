@@ -1,14 +1,9 @@
-.grid-things {
+.directory {
     max-width: 1028px;
     min-width: 1028px;
 }
 
-.grid-things > * {
-    /* position: relative; */
-    /* max-width: 270px;
-    max-height: 480px; */
+.directory > * {
     width: 300px; 
-    height: 420px;
-    /* border-color: blue; */
-    /* border-width: 1px; */
+    height: 300px;
 }

@@ -18,6 +18,9 @@ const config: Config = {
         "th-background": "var(--background-color)",
         "th-secondary": "var(--secondary-color)",
         "th-tertiary": "var(--tertiary-color)",
+        "th-art1": "var(--art-color1)",
+        "th-art2": "var(--art-color2)",
+        "th-art3": "var(--art-color3)",
       },
       screens: {
         "sm": "300px",

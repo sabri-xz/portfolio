@@ -1,7 +1,6 @@
 import path from "path";
 import fs from "fs";
 import '../styles/pages.css'
-import { getNowPlaying } from "./api/spotify";
 import AboutGrid from "./components/AboutGrid";
 import Me from "./components/MeText";
 import About from "./components/AboutText";

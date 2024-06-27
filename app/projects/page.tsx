@@ -18,7 +18,7 @@ export default async function Home() {
 
     return (
       // <div className={`page-container flex flex-col ${myFont.className}`}>
-      <div className="page-container flex flex-col">
+      <div className="page-container flex-col items-center">
         <WIPPage pageTitle="Projects"/>
       </div>
     );

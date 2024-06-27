@@ -11,7 +11,7 @@ const GamePage: React.FC<{imgs: Image[]}> = ({imgs}) => {
 
 
     return (
-        <div className="m-5 px-12">
+        <div className="m-5 px-12 w-full">
             <h1 className='justify-self-center text-5xl'> Visual Arts </h1>
             <p> Some artworks, traditional and digital and sketches :) </p>
             <Gallery srcs={srcs} galleryName="Visual Arts" />

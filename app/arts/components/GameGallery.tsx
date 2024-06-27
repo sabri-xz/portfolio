@@ -1,7 +1,8 @@
  'use client'
 
  import { useEffect, useState } from 'react';
-import GameSection from './GameSection'
+ import ImageCard from "@/app/arts/components/ImageCard";
+import Link from "next/link";
 import { getImageDimensions } from '../../utils/getImageDim';
 
 type Image = {
@@ -64,7 +65,21 @@ const GameGallery: React.FC<{gamesInfo: Game[]}> = ({ gamesInfo }) => {
 
     return (
         <div>
-            { games.map((game: NewGame) => <GameSection game={game} />) }
+            { games.map((game: NewGame, index: number) => {
+                return (
+                    <div className="px-4 py-8">
+                        <Link href={game.gameLink} className="">
+                            <ImageCard id={index} 
+                                src={game.thumbnail.src} 
+                                height={game.thumbnail.height} 
+                                width={game.thumbnail.width} 
+                                imageWidth={350}
+                            />
+                        </Link>
+                        <p>{game.description}</p>
+                    </div>
+                )
+            }) }
         </div>
     );
 }

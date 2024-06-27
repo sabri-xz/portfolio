@@ -1,18 +1,14 @@
 import path from 'path';
 import fs from "fs";
+import Directory from './components/Directory';
 import VisualArtPage from './components/VisualArtPage';
 import GamePage from './components/GamePage';
 import CraftsPage from './components/CraftsPage';
-import ArtsGrid from './components/ArtsGrid';
+import { ScrollIcon } from '@/app/components/icons';
 import '../styles/pages.css'
+import '../styles/animation.css'
+import React from 'react';
 
-type Game = {
-    name: string;
-    thumbnailSrc: string;
-    gameLink: string;
-    description: string;
-}
-  
 const getInfo = async ( jsonFile: string, section: string ): Promise<any[]> => {
     const filePath = path.join(process.cwd(), 'app/data', jsonFile);
     const jsonData = fs.readFileSync(filePath, 'utf-8');
@@ -25,11 +21,36 @@ export default async function Home() {
     const imgs = await getInfo('arts.json', 'placeholders');
   
     return (
-        <div className='page-container'>
-            <h1 className='justify-self-center text-xl'> Welcome to my art gallery </h1>
-            <VisualArtPage imgs={imgs}/>
-            <GamePage gamesInfo={games}/>
-            <CraftsPage />
+        <div className='page-container flex-col items-center'>
+            <section className='h-[720px] flex items-center justify-center relative bg-th-midground1 w-[100vw]'
+                style={{top: "-36px"}}>
+                <h1 className='text-4xl font-bold'> Welcome to my art gallery </h1>
+                <div className="flex justify-center w-full absolute -bottom-[530px] left-0 right-0 shake pointer-events-none">
+                    <ScrollIcon className="text-th-foreground scale-4 z-40"/>
+                </div>
+            </section>
+            
+            <section className='mb-16'>
+                <Directory />
+            </section>
+            
+            <section className='h-auto flex items-center justify-center relative w-full py-24'
+                     id='VisualArt'>
+                        <div className='bg-th-art1 w-[100vw] absolute h-full -z-10'></div>
+                        <VisualArtPage imgs={imgs}/>
+            </section>
+
+            <section className='h-auto flex items-center justify-center relative w-full py-24'
+                     id='Games'>
+                        <div className='bg-th-art2 w-[100vw] absolute h-full -z-10'></div>
+                        <GamePage gamesInfo={games}/>
+            </section>
+
+            <section className='h-auto flex items-center justify-center relative w-full py-24'
+                     id='Crafts'>
+                        <div className='bg-th-art3 w-[100vw] absolute h-full -z-10'></div>
+                        <CraftsPage imgs={imgs}/>
+            </section>
         </div>
     );
   }
