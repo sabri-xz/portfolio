@@ -17,7 +17,7 @@ const getInfo = async ( jsonFile: string, section: string ): Promise<any[]> => {
 };
 
 export default async function Home() { 
-    const games = await getInfo('gameData.json', 'games');
+    const games = await getInfo('arts.json', 'games');
     const imgs = await getInfo('arts.json', 'placeholders');
   
     return (
@@ -26,7 +26,7 @@ export default async function Home() {
                 style={{top: "-36px"}}>
                 <h1 className='text-4xl font-bold'> Welcome to my art gallery </h1>
                 <div className="flex justify-center w-full absolute -bottom-[530px] left-0 right-0 shake pointer-events-none">
-                    <ScrollIcon className="text-th-foreground scale-4 z-40"/>
+                    <ScrollIcon className="text-th-foreground scale-3.5 z-40"/>
                 </div>
             </section>
             

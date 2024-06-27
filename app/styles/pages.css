@@ -29,10 +29,10 @@
     border-top: 15px solid white;
     border-right: 15px solid white;
     border-left: 15px solid white;
-    top: 15px; 
+    /* top: 15px; 
     left: 15px; 
     right: 15px; 
-    bottom: 67px;
+    bottom: 67px; */
     top: 0;
     left: 0;
 }
@@ -53,9 +53,6 @@
 
 .picture {
     position: absolute;
-    z-index: 100;
-    width: 220px;
-    height: 380px;
     transition: transform 0.3s;
 }
 

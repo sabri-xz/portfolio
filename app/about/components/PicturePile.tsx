@@ -1,8 +1,4 @@
-'use client'
-
-import { useState } from 'react';
 import '../../styles/pages.css'
-import Image from 'next/image';
 import Picture from './Picture';
 
 interface Pic {
@@ -14,8 +10,8 @@ interface Pic {
 const PicturePile: React.FC<{pics: Pic[]}> = ( {pics} ) => {
     let i = 0
     return (
-        <div className='mt-8'>
-            <section className='flex relative md:w-[900px] sm:w-[370px]'>
+        <div className='mt-8 isolate'>
+            <section className='flex relative md:w-[900px] sm:w-[370px] h-[750px]'>
                 {
                     pics.map((pic: Pic, index: number) => {
                         return (

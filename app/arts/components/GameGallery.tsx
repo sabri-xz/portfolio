@@ -1,7 +1,7 @@
  'use client'
 
- import { useEffect, useState } from 'react';
- import ImageCard from "@/app/arts/components/ImageCard";
+import { useEffect, useState } from 'react';
+import ImageCard from "@/app/arts/components/ImageCard";
 import Link from "next/link";
 import { getImageDimensions } from '../../utils/getImageDim';
 
@@ -67,7 +67,7 @@ const GameGallery: React.FC<{gamesInfo: Game[]}> = ({ gamesInfo }) => {
         <div>
             { games.map((game: NewGame, index: number) => {
                 return (
-                    <div className="px-4 py-8">
+                    <div className="px-4 py-8 flex flex-row">
                         <Link href={game.gameLink} className="">
                             <ImageCard id={index} 
                                 src={game.thumbnail.src} 
@@ -76,7 +76,7 @@ const GameGallery: React.FC<{gamesInfo: Game[]}> = ({ gamesInfo }) => {
                                 imageWidth={350}
                             />
                         </Link>
-                        <p>{game.description}</p>
+                        <p className='px-6'>{game.description}</p>
                     </div>
                 )
             }) }

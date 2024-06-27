@@ -2,31 +2,55 @@
     "placeholders": [
         {
             "src": "https://raw.githubusercontent.com/sabri-xz/art-portfolio/main/imgs/bird1.jpg",
-            "alt": ""
+            "alt": "bird"
         },
         {
             "src": "https://raw.githubusercontent.com/sabri-xz/art-portfolio/main/imgs/bird2.jpg",
-            "alt": ""
+            "alt": "bird"
         },
         {
             "src": "https://raw.githubusercontent.com/sabri-xz/art-portfolio/main/imgs/bird3.jpg",
-            "alt": ""
+            "alt": "bird"
         },
         {
             "src": "https://raw.githubusercontent.com/sabri-xz/art-portfolio/main/imgs/bunny1.jpg",
-            "alt": ""
+            "alt": "bunny"
         },
         {
             "src": "https://raw.githubusercontent.com/sabri-xz/art-portfolio/main/imgs/bunny2.jpg",
-            "alt": ""
+            "alt": "bunny"
         },
         {
             "src": "https://raw.githubusercontent.com/sabri-xz/art-portfolio/main/imgs/bunny3.jpg",
-            "alt": ""
+            "alt": "bunny"
         }
     ],
-    "sketches": [],
-    "cute-doodles": [],
+    "games": [
+        {
+            "name": "Retros-Bear-tic", 
+            "gameLink": "https://async-fish.itch.io/retros-bear-tic",
+            "description": "Game built for Touhou Fan Game Jam 13 with extension time\nDecided on color palletts and stuff",
+            "thumbnailSrc": "https://raw.githubusercontent.com/sabri-xz/art-portfolio/main/imgs/game-thumbnails/retrobeartic-thumbnail.gif"
+        },
+        {
+            "name": "Cirno's Rythm Revenge", 
+            "gameLink": "https://async-fish.itch.io/cirnos-rythm-revenge",
+            "description": "",
+            "thumbnailSrc": "https://media.githubusercontent.com/media/sabri-xz/portfolio/main/imgs/game-thumbnails/cirnosrythmrevenge-thumbnail.png"
+        },
+        {
+            "name": "Cirno's Perfect Snowbash", 
+            "gameLink": "https://async-fish.itch.io/cirnos-perfect-snowbash",
+            "description": "",
+            "thumbnailSrc": "https://raw.githubusercontent.com/sabri-xz/art-portfolio/main/imgs/bird2.jpg"
+        },
+        {
+            "name": "Be Good", 
+            "gameLink": "https://async-fish.itch.io/be-good",
+            "description": "",
+            "thumbnailSrc": "https://raw.githubusercontent.com/sabri-xz/art-portfolio/main/imgs/game-thumbnails/begood-thumbnail.gif"
+        }        
+    ],
     "animations": [],
     "fit-checks": []
 }

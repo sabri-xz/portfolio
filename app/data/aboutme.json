@@ -88,7 +88,7 @@
         {
             "src": "https://raw.githubusercontent.com/sabri-xz/portfolio/main/imgs/about-me/art-hist-show/john_singer_sargent_1.jpg", 
             "alt": "birb",
-            "description": ""
+            "description": "madamn X"
         },
         {
             "src": "https://raw.githubusercontent.com/sabri-xz/portfolio/main/imgs/about-me/art-hist-show/john_singer_sargent_2.jpg",
@@ -108,7 +108,34 @@
         {
             "src": "https://raw.githubusercontent.com/sabri-xz/portfolio/main/imgs/about-me/art-hist-show/william_morris_2.jpg", 
             "alt": "birb",
-            "description": ""
+            "description": "patterns by william morris"
+        }
+    ],
+    "glimpses-of-my-life": [
+        {
+            "src": "https://raw.githubusercontent.com/sabri-xz/portfolio/main/imgs/about-me/glimpses/artGallery.png", 
+            "alt": "MFA",
+            "description": "at the Fashioned by Sargent exhibition, MFA"
+        },
+        {
+            "src": "https://raw.githubusercontent.com/sabri-xz/portfolio/main/imgs/about-me/art-hist-show/john_singer_sargent_2.jpg",
+            "alt": "birb",
+            "description": "visiting a farm and feeding baby lamb :)"
+        },
+        {
+            "src": "https://raw.githubusercontent.com/sabri-xz/portfolio/main/imgs/about-me/art-hist-show/klimt_1.jpg", 
+            "alt": "birb",
+            "description": "sunny spring day with flowers and my F1 hat"
+        },
+        {
+            "src": "https://raw.githubusercontent.com/sabri-xz/portfolio/main/imgs/about-me/art-hist-show/william_morris_1.jpg", 
+            "alt": "birb",
+            "description": "first sweater I made"
+        },
+        {
+            "src": "https://raw.githubusercontent.com/sabri-xz/portfolio/main/imgs/about-me/art-hist-show/william_morris_2.jpg", 
+            "alt": "birb",
+            "description": "patterns by william morris"
         }
     ],
     "placeholder-music": {

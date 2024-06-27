@@ -48,7 +48,7 @@ const Gallery: React.FC<{srcs: string[], galleryName: string}> = ({ srcs, galler
               src={image.src} 
               height={image.height} 
               width={image.width}
-              imageWidth={250}
+              imageWidth={275}
             />
           ))}
       </section>

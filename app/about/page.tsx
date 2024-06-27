@@ -35,7 +35,6 @@ export default async function Home() {
     const info: any = await getInfo();
     // const song: SongInfo | null = await getNowPlaying();
     const pics: Pic[] = info["art-displays"];
-    // console.log(pics)
 
     return (
       <div className="page-container flex md:items-center flex-col relative">
@@ -81,9 +80,9 @@ export default async function Home() {
 
         <section className="h-[930px] w-[100vw] flex flex-col items-center">
           <section className="md:h-[950px] sm:h-[1900px] md:w-[1028px] sm:w-[370px] mt-16">
-            <span>In my free time, i enjoy knitting and tending to my plants</span>
-
-            {/* want to add some random pictures here */}
+            <span className="text-xl font-medium"> 
+              If you would like to take a glimpse into my life :)
+            </span>
             <PicturePile pics={pics}/>
           </section>
         </section>
