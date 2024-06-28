@@ -34,7 +34,7 @@ const getInfo = async (): Promise<any[]> => {
 export default async function Home() {
     const info: any = await getInfo();
     // const song: SongInfo | null = await getNowPlaying();
-    const pics: Pic[] = info["art-displays"];
+    const pics: Pic[] = info["glimpses-of-my-life"];
 
     return (
       <div className="page-container flex md:items-center flex-col relative">
@@ -52,7 +52,7 @@ export default async function Home() {
         <section className="h-auto w-[100vw] bg-th-midground1 flex flex-col items-center py-44">
           
           <section className="flex flex-col md:w-[1028px] sm:w-[370px] ml-24 leading-loose">
-            <span className="text-3xl">hello, </span>
+            <span className="text-3xl font-medium">hello, </span>
             <span>I draw, I program, and I enjoy both</span>
             <span>CS and Math gave me a strong technical background</span>
             <span>and Art History taught me the art of perception</span>
@@ -61,12 +61,12 @@ export default async function Home() {
           </section>
 
           <section className="flex flex-col md:w-[1028px] sm:w-[370px] mr-24 pl-[496px]">
-            <span className="w-full text-center text-3xl">my Journey so far</span>
+            <span className="w-full text-center text-3xl font-medium">my Journey so far</span>
             <TimeLine info={info}/>
           </section>
 
           <section className="flex flex-col md:w-[1028px] sm:w-[370px] ml-24 -mt-8">
-            <span className="text-3xl"> skills </span>
+            <span className="text-3xl font-medium"> skills </span>
             <span className="w-[375px] mt-3 leading-loose">
               <span className="font-bold"> Technical: </span> R, JavaScript, Python, PostgreSQL, HTML, CSS, Git <br/>
               <span className="font-bold"> Design: </span> Latex, Microsoft Office, Adobe Illustrator, Figma, Procreate

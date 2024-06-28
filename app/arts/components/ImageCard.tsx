@@ -15,8 +15,8 @@ export default function ImageCard({ id, height, width, src, imageWidth }: Props)
     let cardSpan = Math.ceil(cardHeight / 10) + padding;
     
     return (
-        <div key={id} className={`justify-self-center w-[${imageWidth}px]`}
-             style={ {gridRow: `span ${cardSpan}`}}> 
+        <div key={id} className="justify-self-center"
+             style={ {gridRow: `span ${cardSpan}`, width: imageWidth}}> 
             <div className="rounded-xl overflow-hidden group" 
                  style={{width: `${imageWidth}px`, height: `${cardHeight}px`, position: 'relative'}}>
                 <Image 

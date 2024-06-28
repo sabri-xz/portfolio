@@ -24,7 +24,7 @@ export default async function Home() {
         <div className='page-container flex-col items-center'>
             <section className='h-[720px] flex items-center justify-center relative bg-th-midground1 w-[100vw]'
                 style={{top: "-36px"}}>
-                <h1 className='text-4xl font-bold'> Welcome to my art gallery </h1>
+                <h1 className='text-5xl font-bold'> Welcome to my art gallery </h1>
                 <div className="flex justify-center w-full absolute -bottom-[530px] left-0 right-0 shake pointer-events-none">
                     <ScrollIcon className="text-th-foreground scale-3.5 z-40"/>
                 </div>

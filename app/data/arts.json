@@ -29,24 +29,28 @@
         {
             "name": "Retros-Bear-tic", 
             "gameLink": "https://async-fish.itch.io/retros-bear-tic",
-            "description": "Game built for Touhou Fan Game Jam 13 with extension time\nDecided on color palletts and stuff",
+            "caption": "Game built for Touhou Fan Game Jam 13 with extented time.",
+            "description": "Collaborated with friend\nGame is built using Unity engine\nDecided on aesthetics to fit the game jam theme\nAll game sprites drawn using Procreate",
             "thumbnailSrc": "https://raw.githubusercontent.com/sabri-xz/art-portfolio/main/imgs/game-thumbnails/retrobeartic-thumbnail.gif"
         },
         {
             "name": "Cirno's Rythm Revenge", 
             "gameLink": "https://async-fish.itch.io/cirnos-rythm-revenge",
+            "caption": "Game built for Touhou Fan Game Jam 12.",
             "description": "",
             "thumbnailSrc": "https://media.githubusercontent.com/media/sabri-xz/portfolio/main/imgs/game-thumbnails/cirnosrythmrevenge-thumbnail.png"
         },
         {
             "name": "Cirno's Perfect Snowbash", 
             "gameLink": "https://async-fish.itch.io/cirnos-perfect-snowbash",
+            "caption": "Game built for Touhou Fan Game Jam 10 within 72 hours.",
             "description": "",
-            "thumbnailSrc": "https://raw.githubusercontent.com/sabri-xz/art-portfolio/main/imgs/bird2.jpg"
+            "thumbnailSrc": "https://media.githubusercontent.com/media/sabri-xz/portfolio/main/imgs/game-thumbnails/cirnosperfectsnowbash-thumbnail.png"
         },
         {
             "name": "Be Good", 
             "gameLink": "https://async-fish.itch.io/be-good",
+            "caption": "Made for Mini Jam 97.",
             "description": "",
             "thumbnailSrc": "https://raw.githubusercontent.com/sabri-xz/art-portfolio/main/imgs/game-thumbnails/begood-thumbnail.gif"
         }        

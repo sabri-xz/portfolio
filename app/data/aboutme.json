@@ -113,29 +113,29 @@
     ],
     "glimpses-of-my-life": [
         {
-            "src": "https://raw.githubusercontent.com/sabri-xz/portfolio/main/imgs/about-me/glimpses/artGallery.png", 
+            "src": "https://media.githubusercontent.com/media/sabri-xz/portfolio/main/imgs/about-me/glimpses/artGallery.png", 
             "alt": "MFA",
             "description": "at the Fashioned by Sargent exhibition, MFA"
         },
         {
-            "src": "https://raw.githubusercontent.com/sabri-xz/portfolio/main/imgs/about-me/art-hist-show/john_singer_sargent_2.jpg",
+            "src": "https://media.githubusercontent.com/media/sabri-xz/portfolio/main/imgs/about-me/glimpses/babyGoat.png",
             "alt": "birb",
-            "description": "visiting a farm and feeding baby lamb :)"
+            "description": "visited a farm and got to feed baby lamb :)"
         },
         {
-            "src": "https://raw.githubusercontent.com/sabri-xz/portfolio/main/imgs/about-me/art-hist-show/klimt_1.jpg", 
+            "src": "https://media.githubusercontent.com/media/sabri-xz/portfolio/main/imgs/about-me/glimpses/flowersAndHat.png", 
             "alt": "birb",
             "description": "sunny spring day with flowers and my F1 hat"
-        },
-        {
-            "src": "https://raw.githubusercontent.com/sabri-xz/portfolio/main/imgs/about-me/art-hist-show/william_morris_1.jpg", 
-            "alt": "birb",
-            "description": "first sweater I made"
         },
         {
             "src": "https://raw.githubusercontent.com/sabri-xz/portfolio/main/imgs/about-me/art-hist-show/william_morris_2.jpg", 
             "alt": "birb",
             "description": "patterns by william morris"
+        },
+        {
+            "src": "https://media.githubusercontent.com/media/sabri-xz/portfolio/main/imgs/about-me/glimpses/sweater.png", 
+            "alt": "birb",
+            "description": "first sweater I made"
         }
     ],
     "placeholder-music": {

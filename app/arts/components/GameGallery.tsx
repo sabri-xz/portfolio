@@ -16,6 +16,7 @@ type NewGame = {
     thumbnailSrc?: string;
     thumbnail: Image;
     gameLink: string;
+    caption: string;
     description: string;
 }
 
@@ -23,6 +24,7 @@ type Game = {
     name: string;
     thumbnailSrc: string;
     gameLink: string;
+    caption: string;
     description: string;
 }
 
@@ -67,16 +69,20 @@ const GameGallery: React.FC<{gamesInfo: Game[]}> = ({ gamesInfo }) => {
         <div>
             { games.map((game: NewGame, index: number) => {
                 return (
-                    <div className="px-4 py-8 flex flex-row">
+                    <div className="py-2 flex flex-row">
                         <Link href={game.gameLink} className="">
                             <ImageCard id={index} 
                                 src={game.thumbnail.src} 
                                 height={game.thumbnail.height} 
                                 width={game.thumbnail.width} 
-                                imageWidth={350}
+                                imageWidth={425}
                             />
                         </Link>
-                        <p className='px-6'>{game.description}</p>
+                        <section className="flex flex-col justify-center items-start px-6">
+                            <span className='font-bold text-xl underline'> {game.name} </span>
+                            <p className='text-sm pb-2'> {game.caption} </p>
+                            <p className='whitespace-pre-line'> {game.description} </p>
+                        </section>
                     </div>
                 )
             }) }

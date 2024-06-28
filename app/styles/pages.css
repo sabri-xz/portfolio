@@ -54,6 +54,7 @@
 .picture {
     position: absolute;
     transition: transform 0.3s;
+    box-shadow: 0.4px 4px 6px rgb(188, 183, 183);
 }
 
 .picture:hover {
@@ -69,11 +70,11 @@
 #pic-1 {
     transform: rotate(10deg);
     top: 10px;
-    left: 345px;
+    left: 330px;
 }
 
 #pic-2 {
-    transform: rotate(-15deg);
+    transform: rotate(-10deg);
     top: 25px;
     left: 750px;
 }
