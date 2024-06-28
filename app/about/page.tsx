@@ -8,20 +8,20 @@ import PageSparkles from "./components/PageSparkles";
 import TimeLine from "./components/TimeLine";
 import PicturePile from "./components/PicturePile";
 import { ScrollIcon } from '@/app/components/icons';
-
-interface SongInfo {
-  album: string;
-  albumImageUrl: string;
-  artist: string;
-  isPlaying: boolean;
-  songUrl: string;
-  title: string;
-}
+import { getPlaiceholder } from 'plaiceholder';
 
 interface Pic {
   src: string,
   alt: string,
   description: string
+}
+
+interface GridItem {
+  id: string,
+  photo: string,
+  drawing: string,
+  blurredPhoto?: string,
+  blurredDrawing?:string,
 }
 
 const getInfo = async (): Promise<any[]> => {
@@ -31,10 +31,23 @@ const getInfo = async (): Promise<any[]> => {
   return info;
 };
 
+const getBuffer = async (url: string) => {
+  const buffer = await fetch(url).then(async (res) => 
+    Buffer.from(await res.arrayBuffer())
+  );
+  const { base64 } = await getPlaiceholder(buffer);
+  return base64;
+};
+
 export default async function Home() {
     const info: any = await getInfo();
-    // const song: SongInfo | null = await getNowPlaying();
     const pics: Pic[] = info["glimpses-of-my-life"];
+    const gridItems: GridItem[] = info["grid-items"];
+
+    // gridItems.map(async (item: GridItem) => {
+    //   item.blurredPhoto = await getBuffer(item.photo);
+    //   item.blurredDrawing = await getBuffer(item.drawing);
+    // });
 
     return (
       <div className="page-container flex md:items-center flex-col relative">
@@ -42,7 +55,7 @@ export default async function Home() {
           <section className="flex items-end md:w-[900px] sm:w-[370px] mr-4 my-16 mb-18">
             <About className="mr-6 ml-3"/> <Me className="md:h-[108px] sm:h-[72px] -my-4 mr-3"/>
           </section>
-          <AboutGrid info={info}/>
+          <AboutGrid gridItems={gridItems} />
           <div className="flex justify-center w-full absolute -bottom-[425px] left-0 right-0 shake pointer-events-none">
             <ScrollIcon className="text-th-foreground scale-4 z-40"/>
           </div>

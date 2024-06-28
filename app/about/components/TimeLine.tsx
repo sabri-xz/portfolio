@@ -106,18 +106,19 @@ const TimeLine: React.FC<{info: any}> = ( {info} ) => {
         }
         return d.toLocaleDateString(undefined, options)
     }
+    let i = 0;
 
     return (
         <div className="flex flex-row h-auto relative justify-between pt-4">
             {/* experiences section */}
-            <div className={`flex flex-col relative w-1/2 h-[${total_months*h_per_month + 32}px] items-end`}>
+            <ul className={`flex flex-col relative w-1/2 h-[${total_months*h_per_month + 32}px] items-end`}>
                 {
-                    experiences.map( (exp, index) => {
+                    experiences.map( (exp) => {
                         const [startLoc, height] = datesToStartLocHeight(exp.start_date, exp.end_date)
                         
                         if (top_group.includes(exp.id)) {
                             return (
-                            <div key={index} className={`text-right bg-th-background timeline-item flex flex-col overflow-auto z-20 transition-colors duration-500`}
+                            <li key={i++} className={`text-right bg-th-background timeline-item flex flex-col overflow-auto z-20 transition-colors duration-500`}
                                 style={{height: `${height}px`, top: `${startLoc + 12}px`, left: "-12px"}}
                                 onMouseEnter={ () => {
                                     hoverHandler(exp.id, true)
@@ -128,10 +129,10 @@ const TimeLine: React.FC<{info: any}> = ( {info} ) => {
                                 id="experience">
                                     <span className="font-semibold">{exp.role}</span>
                                     <span className="text-sm">{dateFormatter(exp.start_date)} - {dateFormatter(exp.end_date)}</span>
-                                </div>)
+                                </li>)
                         } else {
                             return (
-                                <div key={index} className={`text-right bg-th-midground2 timeline-item flex flex-col overflow-auto z-10 transition-colors duration-500`}
+                                <li key={i++} className={`text-right bg-th-midground2 timeline-item flex flex-col overflow-auto z-10 transition-colors duration-500`}
                                 style={{height: `${height}px`, top: `${startLoc}px`}}
                                 onMouseEnter={ () => {
                                     hoverHandler(exp.id, true)
@@ -142,11 +143,11 @@ const TimeLine: React.FC<{info: any}> = ( {info} ) => {
                                 id="experience">
                                     <span className="font-semibold">{exp.role}</span>
                                     <span className="text-sm">{dateFormatter(exp.start_date)} - {dateFormatter(exp.end_date)}</span>
-                                </div> )
+                                </li> )
                         } 
                     })
                 }
-            </div>
+            </ul>
 
             {/* divider */}
             <div className="h-full w-4 flex justify-center text-th-foreground transition-colors duration-500 mx-5">
@@ -156,13 +157,13 @@ const TimeLine: React.FC<{info: any}> = ( {info} ) => {
             </div>
 
             {/* education section */}
-            <div className={`flex flex-col relative w-1/2 h-[${total_months*h_per_month + 32}px]`}>
+            <ul className={`flex flex-col relative w-1/2 h-[${total_months*h_per_month + 32}px]`}>
                 {
                     education.map( (edu, index) => {
                         const [startLoc, height] = datesToStartLocHeight(edu.start_date, edu.end_date)
 
                         return (
-                            <div onClick={() => {
+                            <li  key={i++} onClick={() => {
                                 if (edu.id === "1") {
                                     setShowCourses1(!showCourses1)
                                 } else {
@@ -170,7 +171,7 @@ const TimeLine: React.FC<{info: any}> = ( {info} ) => {
                                 }
                             }}>
                                 {/* front cover of this education */}
-                                <div key={index} className={`flex flex-col bg-th-background leading-relaxed timeline-item hover:cursor-pointer transition-colors duration-500 z-10`}
+                                <div className={`flex flex-col bg-th-background leading-relaxed timeline-item hover:cursor-pointer transition-colors duration-500 z-10`}
                                     style={{height: `${height}px`, top: `${startLoc}px`, 
                                             visibility: (edu.id === "1" ? !showCourses1 : !showCourses2) ? "visible" : "hidden"}}>
                                         <span className="text-xl">
@@ -189,15 +190,15 @@ const TimeLine: React.FC<{info: any}> = ( {info} ) => {
                                 </div>
 
                                 {/* relavent courses during this education */}
-                                <div key={index} className={`flex flex-col bg-th-background leading-relaxed timeline-item hover:cursor-pointer transition-colors duration-500 z-0 overflow-auto`}
+                                <div key={i++} className={`flex flex-col bg-th-background leading-relaxed timeline-item hover:cursor-pointer transition-colors duration-500 z-0 overflow-auto`}
                                     style={{height: `${height}px`, top: `${startLoc}px`}}>
                                         {edu.coursework}
                                 </div>
-                            </div>
+                            </li>
                             )
                     })
                 }
-            </div>
+            </ul>
             
             {/* notification to try hovering :) */}
             <section id="" className="absolute w-80 h-auto text-th-background rounded-md p-4 shake" 

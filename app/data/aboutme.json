@@ -1,4 +1,21 @@
 {   
+    "grid-items": [
+        {
+            "id": "1",
+            "photo": "https://media.githubusercontent.com/media/sabri-xz/portfolio/main/imgs/about-me/gradpic1.png",
+            "drawing": "https://media.githubusercontent.com/media/sabri-xz/portfolio/main/imgs/about-me/gradpic.png"
+        },
+        {
+            "id": "2",
+            "photo": "https://media.githubusercontent.com/media/sabri-xz/portfolio/main/imgs/about-me/aboutme_pic.png",
+            "drawing": "https://media.githubusercontent.com/media/sabri-xz/portfolio/main/imgs/about-me/aboutme_draw.png"
+        },
+        {
+            "id": "3",
+            "photo": "https://media.githubusercontent.com/media/sabri-xz/portfolio/main/imgs/about-me/gradpic1.png",
+            "drawing": "https://media.githubusercontent.com/media/sabri-xz/portfolio/main/imgs/about-me/gradpic.png"
+        } 
+    ],
     "education": [
         {   
             "id":"1",

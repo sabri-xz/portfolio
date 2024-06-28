@@ -2,31 +2,39 @@
 
 import '../../styles/pages.css'
 import Image from 'next/image';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
+interface GridItem {
+    id: string,
+    photo: string,
+    drawing: string,
+    blurredPhoto?: string,
+    blurredDrawing?:string,
+  }
 
-import { CourseCover, ExpCover } from '../decors';
-
-interface SongInfo {
-    album: string;
-    albumImageUrl: string;
-    artist: string;
-    isPlaying: boolean;
-    songUrl: string;
-    title: string;
-}
-
-const AboutGrid: React.FC<{info: any}> = ({info}) => { 
-    const education = info.education;
-    const courses = info.courses;
-    const experiences = info.experiences;
-    const artworks = info['art-displays'];
-    const song_mock = info['placeholder-music'];
+const AboutGrid: React.FC<{gridItems: GridItem[]}> = ({ gridItems }) => { 
     const [divVisibility, setDivVisibility] = useState<{[key: string]: boolean}>({
         "hello": true,
         "edu": true,
         "exp":true
     });
+    const [blurImgs, setBlurImgs] = useState<{[key: string]: string}>({
+        "photo1": "",
+        "drawing1": "",
+        "photo2": "",
+        "drawing2": "",
+        "photo3": "",
+        "drawing3": ""
+    });
+
+    // image sources
+    const photo1 = gridItems[0].photo;
+    const drawing1 = gridItems[0].drawing;
+    const photo2 = gridItems[1].photo;
+    const drawing2 = gridItems[1].drawing;
+    const photo3 = gridItems[2].photo;
+    const drawing3 = gridItems[2].drawing;
+
 
     const toggleCover = (divId: string) => {
         setDivVisibility ({
@@ -43,18 +51,20 @@ const AboutGrid: React.FC<{info: any}> = ({info}) => {
                 onClick={() => toggleCover("edu")}>
                 <div className={`absolute w-full h-full z-10 bg-th-midground ${divVisibility.edu? "visible" : "hidden"}`}>
                     <span className='text-[#3D4927] absolute z-20 pt-[360px] w-full text-center pointer-events-none font-bold text-xl'> education </span>
-                    <div className='absolute w-full h-full hover:opacity-0 z-10 transition-opacity duration-200'>
+                    <div className='bg-th-midground1 absolute w-full h-full hover:opacity-0 z-10 transition-opacity duration-200'>
                         <div className='polaroid-frame absolute w-full h-full'/>
-                        <Image src="https://raw.githubusercontent.com/sabri-xz/portfolio/main/imgs/about-me/gradpic.png" 
+                        <Image src={drawing1}
                             alt="Grad Photo Drawing" 
                             width={600} height={400}
+                            sizes="(max-width: 300px) 100vw, 300px"
                             className='w-full h-full object-cover object-center' />
                     </div>
                     <div className='absolute w-full h-full'>
                         <div className='polaroid-frame absolute w-full h-full'/>
-                        <Image src="https://raw.githubusercontent.com/sabri-xz/portfolio/main/imgs/about-me/gradpic1.png"
+                        <Image src={photo1}
                             alt='Grad Photo'
                             width={600} height={400}
+                            sizes="(max-width: 300px) 100vw, 300px"
                             className='w-full h-full object-cover object-center' />
                     </div>
                 </div>
@@ -67,18 +77,20 @@ const AboutGrid: React.FC<{info: any}> = ({info}) => {
                 onClick={() => toggleCover("hello")}>
                 <div className={`absolute w-full h-full z-10 bg-th-midground ${divVisibility.hello? "visible" : "hidden"}`}>
                     <span className='text-[#3D4927] absolute z-20 pt-[360px] w-full text-center pointer-events-none font-bold text-xl'> hello world </span>
-                    <div className='absolute w-full h-full hover:opacity-0 z-10 transition-opacity duration-200'>
+                    <div className='bg-th-midground1 absolute w-full h-full hover:opacity-0 z-10 transition-opacity duration-200'>
                         <div className='polaroid-frame absolute w-full h-full'/>
-                        <Image src="https://raw.githubusercontent.com/sabri-xz/portfolio/main/imgs/about-me/aboutme_draw.png" 
+                        <Image src={drawing2} 
                             alt="Drawing" 
                             width={600} height={400}
+                            sizes="(max-width: 300px) 100vw, 300px"
                             className='w-full h-full object-cover object-center' />
                     </div>
                     <div className='absolute w-full h-full'>
                         <div className='polaroid-frame absolute w-full h-full'/>
-                        <Image src="https://raw.githubusercontent.com/sabri-xz/portfolio/main/imgs/about-me/aboutme_pic.png"
+                        <Image src={photo2}
                             alt='Photo'
                             width={600} height={400}
+                            sizes="(max-width: 300px) 100vw, 300px"
                             className='w-full h-full object-cover object-center' />
                     </div>
                 </div>
@@ -91,18 +103,20 @@ const AboutGrid: React.FC<{info: any}> = ({info}) => {
                 onClick={() => toggleCover("exp")}>
                 <div className={`absolute w-full h-full z-10 bg-th-midground ${divVisibility.exp? "visible" : "hidden"}`}>
                     <span className='text-[#3D4927] absolute z-20 pt-[360px] w-full text-center pointer-events-none font-bold text-xl'> aspirations </span>
-                    <div className='absolute w-full h-full hover:opacity-0 z-10 transition-opacity duration-200'>
+                    <div className='bg-th-midground1 absolute w-full h-full hover:opacity-0 z-10 transition-opacity duration-200'>
                         <div className='polaroid-frame absolute w-full h-full'/>
-                        <Image src="https://raw.githubusercontent.com/sabri-xz/portfolio/main/imgs/about-me/aboutme_draw.png" 
+                        <Image src={drawing3}
                             alt="Drawing" 
                             width={600} height={400}
+                            sizes="(max-width: 300px) 100vw, 300px"
                             className='w-full h-full object-cover object-center' />
                     </div>
                     <div className='absolute w-full h-full'>
                         <div className='polaroid-frame absolute w-full h-full'/>
-                        <Image src="https://raw.githubusercontent.com/sabri-xz/portfolio/main/imgs/about-me/aboutme_pic.png"
+                        <Image src={photo3}
                             alt='Photo'
                             width={600} height={400}
+                            sizes="(max-width: 300px) 100vw, 300px"
                             className='w-full h-full object-cover object-center' />
                     </div>
                 </div>

@@ -76,6 +76,7 @@ const Picture: React.FC<{pic: Pic, id: number}> = ( {pic, id} ) => {
                     <Image src={pic.src} 
                         alt={pic.alt}
                         width={600} height={400}
+                        sizes="(max-width: 420px) 100vw, 420px"
                         className='w-full h-full object-cover object-center z-0' />
                 </div>
                 )
@@ -91,6 +92,7 @@ const Picture: React.FC<{pic: Pic, id: number}> = ( {pic, id} ) => {
                         <Image src={pic.src} 
                             alt={pic.alt}
                             width={600} height={400}
+                            sizes="(max-width: 700px) 100vw, 50vw"
                             className='w-full h-full object-cover object-center' />
                     </div>
 
