@@ -4,49 +4,26 @@ import { useEffect, useState } from 'react';
 import ImageCard from "@/app/arts/components/ImageCard";
 import Link from "next/link";
 import { getImageDimensions } from '../../utils/getImageDim';
-
-type Image = {
-    height: number;
-    width: number;
-    src: string;
-}
-
-type NewGame = {
-    name: string;
-    thumbnailSrc?: string;
-    thumbnail: Image;
-    gameLink: string;
-    caption: string;
-    description: string;
-}
-
-type Game = {
-    name: string;
-    thumbnailSrc: string;
-    gameLink: string;
-    caption: string;
-    description: string;
-}
+import { ImageWithDim, Game, NewGame } from "@/app/types";
 
 const GameGallery: React.FC<{gamesInfo: Game[]}> = ({ gamesInfo }) => {
     let [games, setGames] = useState<NewGame[]>();
 
     useEffect(() => {
         const updateGameInfo = async () => {
-            const getDimension = async (src: string) => {
+            const getDimension = async (src: string, alt: string) => {
                 try {
                     const { width, height } = await getImageDimensions(src);
-                    return { src, width, height };
+                    return { src, alt, width, height };
                 } catch (error) {
                     console.error('Error loading image:', error);
-                    return { src, width: 0, height: 0 };
+                    return { src, alt, width: 0, height: 0 };
                 }
             };
 
             const updateGame = async (oldGame: Game) => {
-                const thumbnail: Image = await getDimension(oldGame.thumbnailSrc);
+                const thumbnail: ImageWithDim = await getDimension(oldGame.thumbnailSrc, oldGame.name);
                 let updatedGame: NewGame = { ...oldGame, thumbnail };
-                delete updatedGame.thumbnailSrc;
                 return updatedGame;
             }
 
@@ -65,17 +42,17 @@ const GameGallery: React.FC<{gamesInfo: Game[]}> = ({ gamesInfo }) => {
         return <div> loading games! :) </div>;
     }
 
+    let i = 0;
+
     return (
         <div>
             { games.map((game: NewGame, index: number) => {
                 return (
-                    <div className="py-2 flex flex-row">
+                    <div key={i++} className="py-2 flex flex-row">
                         <Link href={game.gameLink} className="">
                             <ImageCard id={index} 
-                                src={game.thumbnail.src} 
-                                height={game.thumbnail.height} 
-                                width={game.thumbnail.width} 
                                 imageWidth={425}
+                                img={game.thumbnail}
                             />
                         </Link>
                         <section className="flex flex-col justify-center items-start px-6">

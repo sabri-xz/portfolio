@@ -3,24 +3,20 @@
 import { useEffect, useState } from 'react';
 import ImageCard from "./ImageCard";
 import { getImageDimensions } from '../../utils/getImageDim';
-import GalleryContainer from './GalleryContainer';
+import { Image, ImageWithDim } from '../../types';
 
-type Image = {
-  src: string;
-  width: number; 
-  height: number
-}
-
-const Gallery: React.FC<{srcs: string[], galleryName: string}> = ({ srcs, galleryName }) => {
-  let [images, setImages] = useState<Image[]>();
+const Gallery: React.FC<{imgs: Image[], galleryName: string}> = ({ imgs, galleryName }) => {
+  let [images, setImages] = useState<ImageWithDim[]>();
   let i = 0;
 
   useEffect(() => {
     const fetchImageDimensions = async () => {
-      const dimensionsPromises = srcs.map(async (src: string) => {
+      const dimensionsPromises = imgs.map(async (img: Image) => {
         try {
-          const { width, height } = await getImageDimensions(src);
-          return { src, width, height };
+          const { width, height } = await getImageDimensions(img.src);
+          const src = img.src;
+          const alt = img.alt;
+          return { src, alt, width, height };
         } catch (error) {
           console.error('Error loading image:', error);
           return null;
@@ -28,31 +24,28 @@ const Gallery: React.FC<{srcs: string[], galleryName: string}> = ({ srcs, galler
       });
 
       const imagesWithDimensions = await Promise.all(dimensionsPromises);
-      const imgs: Image[] = imagesWithDimensions.filter((img): img is Image => img !== null);
-      setImages(imgs);
+      const imgsWithDim: ImageWithDim[] = imagesWithDimensions.filter((img): img is ImageWithDim => img !== null);
+      setImages(imgsWithDim);
     };
 
     fetchImageDimensions();
-  }, [srcs]);
+  }, [imgs]);
 
   if (!images) {
     return <div> gallery {galleryName} installation in progress </div>;
   }
 
   return (
-    <GalleryContainer>
-      <section className="grid grid-cols-gallery auto-rows-[10px]">
-          {images.map(image => (
-            <ImageCard 
-              id={i++} 
-              src={image.src} 
-              height={image.height} 
-              width={image.width}
-              imageWidth={275}
-            />
-          ))}
-      </section>
-    </GalleryContainer>
+    <section className="grid grid-cols-gallery auto-rows-[10px] w-[900px] mx-auto">
+        {images.map(image => (
+          <ImageCard 
+            id={i++} 
+            key={i}
+            imageWidth={275}
+            img={image}
+          />
+        ))}
+    </section>
   );
 }
 

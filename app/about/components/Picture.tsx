@@ -4,22 +4,7 @@ import { useEffect, useState } from 'react';
 import '../../styles/pages.css'
 import Image from 'next/image';
 import { getImageDimensions } from '../../utils/getImageDim';
-
-interface Pic {
-    src: string,
-    alt: string,
-    description: string
-}
-
-interface NewPic {
-    src: string,
-    alt: string,
-    description: string,
-    width: number,
-    height: number,
-    cWidth: number,
-    cHeight: number
-}
+import { Pic, NewPic } from '../../types';
 
 const Picture: React.FC<{pic: Pic, id: number}> = ( {pic, id} ) => {
     const [clicked, setClicked] = useState(false);

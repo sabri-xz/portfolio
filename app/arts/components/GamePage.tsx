@@ -1,12 +1,5 @@
 import GameGallery from "./GameGallery";
-
-type Game = {
-    name: string;
-    thumbnailSrc: string;
-    gameLink: string;
-    caption: string;
-    description: string;
-}
+import { Game } from "@/app/types";
 
 const GamePage: React.FC<{gamesInfo: Game[]}> = ({ gamesInfo }) => {
     return (

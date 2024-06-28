@@ -1,18 +1,13 @@
 import Image from "next/image";
+import { ImageWithDim } from "@/app/types";
 
-type Props = {
-    id: number;
-    height: number;
-    width: number;
-    src: string;
-    imageWidth: number;
-}
-
-export default function ImageCard({ id, height, width, src, imageWidth }: Props) {
-    let whRatio = height / width;
+export default function ImageCard({ id, imageWidth, img }: { id: number, imageWidth: number, img: ImageWithDim}) {
+    let whRatio = img.height / img.width;
     let cardHeight = Math.ceil(imageWidth * whRatio);
     let padding = 1;
     let cardSpan = Math.ceil(cardHeight / 10) + padding;
+    
+    const sizes = `(max-width: ${imageWidth}px) 100vw, ${imageWidth}px`;
     
     return (
         <div key={id} className="justify-self-center"
@@ -20,13 +15,12 @@ export default function ImageCard({ id, height, width, src, imageWidth }: Props)
             <div className="rounded-xl overflow-hidden group" 
                  style={{width: `${imageWidth}px`, height: `${cardHeight}px`, position: 'relative'}}>
                 <Image 
-                    src={src} 
+                    src={img.src} 
                     alt="" 
-                    layout="fill"
-                    objectFit="cover"
+                    fill
+                    style={{ objectFit: 'cover' }}
                     className='group-hover:opacity-60' 
-                    placeholder='blur' 
-                    blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII='
+                    sizes={sizes}
                 />
             </div>
         </div>

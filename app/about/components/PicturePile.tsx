@@ -1,11 +1,6 @@
 import '../../styles/pages.css'
 import Picture from './Picture';
-
-interface Pic {
-    src: string,
-    alt: string,
-    description: string
-}
+import { Pic } from '../../types';
 
 const PicturePile: React.FC<{pics: Pic[]}> = ( {pics} ) => {
     let i = 0

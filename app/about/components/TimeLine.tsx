@@ -3,29 +3,7 @@
 import { useState } from "react"
 import "../../styles/pages.css"
 import "../../styles/animation.css"
-
-interface ExpInfo {
-    id: string,
-    role: string,
-    company: string,
-    start_date: string,
-    end_date: string, 
-    description: string
-}
-
-interface EduInfo {
-    id: string,
-    school: string, 
-    degree: string, 
-    start_date: string,
-    end_date: string, 
-    gpa: string,
-    majors: string, 
-    minor: string,
-    concentration: string,
-    rewards: string,
-    coursework: string
-}
+import { EduInfo, ExpInfo } from "@/app/types"
 
 function calcMonthsDiff(startDate: Date, endDate: Date): number {
     return (endDate.getFullYear() - startDate.getFullYear())*12 + (endDate.getMonth() - startDate.getMonth())
