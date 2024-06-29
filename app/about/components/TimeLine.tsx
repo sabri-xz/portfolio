@@ -141,7 +141,10 @@ const TimeLine: React.FC<{info: any}> = ( {info} ) => {
                         const [startLoc, height] = datesToStartLocHeight(edu.start_date, edu.end_date)
 
                         return (
-                            <li  key={i++} onClick={() => {
+                            <li key={i++} 
+                                className="timeline-item  hover:cursor-pointer"
+                                style={{height: `${height}px`, top: `${startLoc}px`}}
+                                onClick={() => {
                                 if (edu.id === "1") {
                                     setShowCourses1(!showCourses1)
                                 } else {
@@ -149,27 +152,31 @@ const TimeLine: React.FC<{info: any}> = ( {info} ) => {
                                 }
                             }}>
                                 {/* front cover of this education */}
-                                <div className={`flex flex-col bg-th-background leading-relaxed timeline-item hover:cursor-pointer transition-colors duration-500 z-10`}
-                                    style={{height: `${height}px`, top: `${startLoc}px`, 
+                                <div className={`flex flex-col bg-th-background leading-loose timeline-item pointer-events-none transition-colors duration-500 z-10`}
+                                    style={{height: `${height}px`, 
                                             visibility: (edu.id === "1" ? !showCourses1 : !showCourses2) ? "visible" : "hidden"}}>
                                         <span className="text-xl">
                                             {edu.degree} <span className="text-sm">in</span> <span className="font-bold">{edu.majors}</span>
                                         </span>
                                         {
-                                            edu.concentration && (<span>
+                                            edu.concentration && (<span className="-mt-2">
                                                 focus in {edu.concentration}
                                             </span>)
                                         }
                                         <span className="italic text-sm">{edu.school}</span>
                                         <span className="text-sm">{dateFormatter(edu.start_date)} - {dateFormatter(edu.end_date)}</span>
-                                        <span>
+                                        <span className="pt-2 text-sm">
+                                            <span className="font-semibold">GPA:</span> {edu.gpa}
+                                        </span>
+                                        <span className="text-sm">
                                             <span className="font-semibold">reward(s):</span> {edu.rewards}
                                         </span>
                                 </div>
 
                                 {/* relavent courses during this education */}
-                                <div key={i++} className={`flex flex-col bg-th-background leading-relaxed timeline-item hover:cursor-pointer transition-colors duration-500 z-0 overflow-auto`}
-                                    style={{height: `${height}px`, top: `${startLoc}px`}}>
+                                <div className={`flex flex-col bg-th-background leading-loose text-sm timeline-item pointer-events-none transition-colors duration-500 z-0 overflow-auto`}
+                                    style={{height: `${height}px`}}>
+                                        <span className="font-bold"> Courses: </span>
                                         {edu.coursework}
                                 </div>
                             </li>
@@ -181,7 +188,7 @@ const TimeLine: React.FC<{info: any}> = ( {info} ) => {
             {/* notification to try hovering :) */}
             <section id="" className="absolute w-80 h-auto text-th-background rounded-md p-4 shake" 
                 style={{left: "-340px", top: "150px"}}>
-                Try hovering -> 
+                try hovering &rarr; 
             </section>
 
             {/* details tab */}
