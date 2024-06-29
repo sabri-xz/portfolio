@@ -28,7 +28,7 @@
             "minor": "Art History",
             "concentration":"",
             "rewards": "Dean's List, CRC Press Chemistry Achievement Award",
-            "coursework": "Programming with Data Structures \nComputer System Principles\nProgramming Methodology\nData Visualization and Exploration\nRegression Analysis with Variance\nPractice and Application of Data Management\nSearch Engines\nInfrormation Systems\nAlgorithms for Data Science\nStatistical Computing\nApplied Linear Algebra"
+            "coursework": "Programming with Data Structures\nComputer System Principles\nProgramming Methodology\nData Visualization and Exploration\nRegression Analysis with Variance\nPractice and Application of Data Management\nSearch Engines\nInfrormation Systems\nAlgorithms for Data Science\nStatistical Computing\nApplied Linear Algebra"
         },
         {
             "id": "2",
@@ -41,7 +41,7 @@
             "minor": "",
             "concentration":"Data Science",
             "rewards": "Bay State Fellowship",
-            "coursework": "Advance Algorithms\nReinforcement Learning\nAugmented and Virtial Reality Design\nApplied Statistical Leanring \nSystems for Data Science\nMachine Learning\nProbabilitstic Graphical Models\nTheory and Practice of Software Engineering\nApplied Cryptography\nRandomized Algorithms and Application to Data Science\nFundamentals of Graphic Design"
+            "coursework": "Advance Algorithms\nReinforcement Learning\nAR & VR Design\nApplied Statistical Leanring\nSystems for Data Science\nProbabilitstic Graphical Models\nRandomized Algorithms\nFund. of Graphic Design"
         }
     ],
     "experiences": [

@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.className} mx-auto min-h-screen justify-center items-center
+      <body className={`${inter.className} mx-auto min-h-screen justify-center items-center overflow-x-hidden hide-scrollbars
       bg-th-background text-th-foreground transition-colors duration-500`}>
         <TSProvider> 
           <div className="theme-switcher-container"> <ThemeSwitcher /> </div>

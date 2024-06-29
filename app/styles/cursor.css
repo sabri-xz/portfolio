@@ -5,7 +5,7 @@
     mix-blend-mode: screen;
     pointer-events: none;
     transform: translate(-50%, -50%);
-    z-index: 999999 !important ;
+    z-index: 999999 !important;
     backdrop-filter: blur(1px);
     background-color: var(--tertiary-color);
     transition: width 0.2s ease-in-out, height 0.2s ease-in-out;

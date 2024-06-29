@@ -46,11 +46,10 @@ const Picture: React.FC<{pic: Pic, id: number}> = ( {pic, id} ) => {
         }
         updateImg();
     }, []);
-
     
 
     return (
-        <div id={`pic-container-${id}`}>
+        <div id={`pic-container-${id}`} className='flex justify-center items-center'>
             {!clicked && (
                 <div className='picture cursor-pointer z-0'
                     id={`pic-${id}`} 
@@ -67,24 +66,33 @@ const Picture: React.FC<{pic: Pic, id: number}> = ( {pic, id} ) => {
                 )
             }
             {clicked && (
-                <div className='picture cursor-pointer z-30' 
-                    style={{top: 0, left: (900 - newPic.cWidth)/2, width: newPic.cWidth, height: newPic.cHeight}}
-                    onClick={() => {
+                <div className='h-[985px] w-screen absolute flex justify-center items-center z-30 pt-[300px]'
+                     style={{top: '-300px', left: `56.5%`, transform: `translateX(-50vw)`}}
+                     onClick={() => {
                         setClicked(!clicked)
-                }}>
-                    <div className={`polaroid-frame absolute w-full h-full z-20`}/>
-                    <div className={`absolute w-full h-full z-10`}>
-                        <Image src={pic.src} 
-                            alt={pic.alt}
-                            width={600} height={400}
-                            sizes="(max-width: 700px) 100vw, 50vw"
-                            className='w-full h-full object-cover object-center' />
-                    </div>
+                    }}>
+                    <div className='picture cursor-pointer z-30' 
+                        style={{
+                            top: '300px', 
+                            left: `(50% - newPic.cWidth)/2`, 
+                            width: newPic.cWidth, 
+                            height: newPic.cHeight
+                        }}
+                        >
+                        <div className={`polaroid-frame absolute w-full h-full z-20`}/>
+                        <div className={`absolute w-full h-full z-10`}>
+                            <Image src={pic.src} 
+                                alt={pic.alt}
+                                width={600} height={400}
+                                sizes="(max-width: 700px) 100vw, 50vw"
+                                className='w-full h-full object-cover object-center' />
+                        </div>
 
-                    <span className="absolute z-30"
-                        style={{top: 675, left: 20, width: newPic.cWidth - 40}}>
-                        <p className='font-semibold text-xl'> {pic.description} </p>
-                    </span>
+                        <span className="absolute z-30"
+                            style={{top: 675, left: 20, width: newPic.cWidth - 40}}>
+                            <p className='font-semibold text-xl'> {pic.description} </p>
+                        </span>
+                    </div>
                 </div>
                 )
             }

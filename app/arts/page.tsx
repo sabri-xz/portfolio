@@ -36,19 +36,19 @@ export default async function Home() {
             
             <section className='h-auto flex items-center justify-center relative w-full py-24'
                      id='VisualArt'>
-                        <div className='bg-th-art1 w-[100vw] absolute h-full -z-10'></div>
+                        <div className='bg-th-art1 w-[100vw] absolute h-full -z-10 transition-colors duration-500'></div>
                         <VisualArtPage imgs={imgs}/>
             </section>
 
             <section className='h-auto flex items-center justify-center relative w-full py-24'
                      id='Games'>
-                        <div className='bg-th-art2 w-[100vw] absolute h-full -z-10'></div>
+                        <div className='bg-th-art2 w-[100vw] absolute h-full -z-10 transition-colors duration-500'></div>
                         <GamePage gamesInfo={games}/>
             </section>
 
             <section className='h-auto flex items-center justify-center relative w-full py-24'
                      id='Crafts'>
-                        <div className='bg-th-art3 w-[100vw] absolute h-full -z-10'></div>
+                        <div className='bg-th-art3 w-[100vw] absolute h-full -z-10 transition-colors duration-500'></div>
                         <CraftsPage imgs={imgs}/>
             </section>
         </div>

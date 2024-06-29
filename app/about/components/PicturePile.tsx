@@ -5,7 +5,7 @@ import { Pic } from '../../types';
 const PicturePile: React.FC<{pics: Pic[]}> = ( {pics} ) => {
     let i = 0
     return (
-        <div className='mt-8 isolate'>
+        <div className='mt-20 isolate'>
             <section className='flex relative md:w-[900px] sm:w-[370px] h-[750px]'>
                 {
                     pics.map((pic: Pic, index: number) => {

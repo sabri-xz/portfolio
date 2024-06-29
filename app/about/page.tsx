@@ -51,19 +51,18 @@ export default async function Home() {
 
     return (
       <div className="page-container flex md:items-center flex-col relative">
-        <section className="md:h-[950px] sm:h-[1900px] md:w-[1028px] sm:w-[370px] flex flex-col items-center relative">
+        <section className="md:h-[950px] sm:h-[1900px] md:w-[1028px] sm:w-[370px] flex flex-col items-center relative mt-10">
           <section className="flex items-end md:w-[900px] sm:w-[370px] mr-4 my-16 mb-18">
-            <About className="mr-6 ml-3"/> <Me className="md:h-[108px] sm:h-[72px] -my-4 mr-3"/>
+            <About className="mr-8 ml-2"/> <Me className="md:h-[108px] sm:h-[72px] my-2 mx-3"/>
           </section>
           <AboutGrid gridItems={gridItems} />
           <div className="flex justify-center w-full absolute -bottom-[425px] left-0 right-0 shake pointer-events-none">
             <ScrollIcon className="text-th-foreground scale-4 z-40"/>
           </div>
-          <PageSparkles />
+          {/* <PageSparkles /> */}
         </section>
         
         <section className="h-auto w-[100vw] bg-th-midground1 flex flex-col items-center py-44">
-          
           <section className="flex flex-col md:w-[1028px] sm:w-[370px] ml-24 leading-loose">
             <span className="text-3xl font-medium">hello, </span>
             <span>I draw, I program, and I enjoy both</span>
@@ -73,8 +72,8 @@ export default async function Home() {
             <span>thanks for visiting</span>
           </section>
 
-          <section className="flex flex-col md:w-[1028px] sm:w-[370px] mr-24 pl-[496px]">
-            <span className="w-full text-center text-3xl font-medium">my Journey so far</span>
+          <section className="flex flex-col md:w-[1028px] sm:w-[370px] mr-16 pl-[465px]">
+            <span className="w-full text-center text-3xl font-medium">my journey so far</span>
             <TimeLine info={info}/>
           </section>
 
@@ -91,8 +90,8 @@ export default async function Home() {
           </div> */}
         </section>
 
-        <section className="h-[930px] w-[100vw] flex flex-col items-center">
-          <section className="md:h-[950px] sm:h-[1900px] md:w-[1028px] sm:w-[370px] mt-16">
+        <section className="w-[100vw] flex flex-col items-center">
+          <section className="md:h-[950px] sm:h-[1900px] md:w-[1028px] sm:w-[370px] mt-20">
             <span className="text-xl font-medium"> 
               If you would like to take a glimpse into my life :)
             </span>

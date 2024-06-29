@@ -1,7 +1,6 @@
 "use client"
 import "../../styles/artPage.css"
 
-
 const Directory: React.FC<{}> = () => {
     const handleScroll = (e: React.MouseEvent, sectionId: string) => {
         e.preventDefault();
@@ -17,13 +16,13 @@ const Directory: React.FC<{}> = () => {
         <div className="pt-32 pb-24">
             <p className="px-12 w-full font-semibold text-3xl underline"> directory </p>
             <div className="grid grid-cols-3 grid-rows-1 gap-12 w-full p-12 directory">
-                <a className="w-auto h-64 bg-th-art1" 
+                <a className="w-auto h-64 bg-th-art1 transition-colors duration-500" 
                     href='#VisualArt'
                     onClick={(e) => handleScroll(e, 'VisualArt')}/>
-                <a className="w-auto h-64 bg-th-art2" 
+                <a className="w-auto h-64 bg-th-art2 transition-colors duration-500" 
                     href='#Games'
                     onClick={(e) => handleScroll(e, 'Games')}/>
-                <a className="w-auto h-64 bg-th-art3"
+                <a className="w-auto h-64 bg-th-art3 transition-colors duration-500"
                     href='#Crafts'
                     onClick={(e) => handleScroll(e, 'Crafts')}/>
             </div>

@@ -9,13 +9,13 @@ function calcMonthsDiff(startDate: Date, endDate: Date): number {
     return (endDate.getFullYear() - startDate.getFullYear())*12 + (endDate.getMonth() - startDate.getMonth())
 }
 
-
 const TimeLine: React.FC<{info: any}> = ( {info} ) => {
     const education: EduInfo[] = info.education;
     const experiences: ExpInfo[] = info.experiences;
     const [showDetails, setShowDetails] = useState({show: false, id: "0"})
     const [showCourses1, setShowCourses1] = useState(false)
     const [showCourses2, setShowCourses2] = useState(false)
+    const years = ['2020', '2021', '2022', '2023', '2024']
 
     const top_group: string[] = ["1", "2", "3", "4", "5"]
 
@@ -37,7 +37,7 @@ const TimeLine: React.FC<{info: any}> = ( {info} ) => {
     const minDate: Date = new Date(min_date)
 
     const total_months: number = calcMonthsDiff(minDate, maxDate)
-    const h_per_month: number = 16 // height per month in pixels
+    const h_per_month: number = 14 // height per month in pixels
 
     function datesToStartLocHeight(start_date: string, end_date: string) {
         // return the start location of the current item and the height it should span
@@ -96,7 +96,7 @@ const TimeLine: React.FC<{info: any}> = ( {info} ) => {
                         
                         if (top_group.includes(exp.id)) {
                             return (
-                            <li key={i++} className={`text-right bg-th-background timeline-item flex flex-col overflow-auto z-20 transition-colors duration-500`}
+                            <li key={i++} className={`text-right bg-th-background timeline-item flex flex-col overflow-hidden z-20 transition-colors duration-500`}
                                 style={{height: `${height}px`, top: `${startLoc + 12}px`, left: "-12px"}}
                                 onMouseEnter={ () => {
                                     hoverHandler(exp.id, true)
@@ -110,7 +110,7 @@ const TimeLine: React.FC<{info: any}> = ( {info} ) => {
                                 </li>)
                         } else {
                             return (
-                                <li key={i++} className={`text-right bg-th-midground2 timeline-item flex flex-col overflow-auto z-10 transition-colors duration-500`}
+                                <li key={i++} className={`text-right bg-th-midground2 timeline-item flex flex-col overflow-hidden z-10 transition-colors duration-500`}
                                 style={{height: `${height}px`, top: `${startLoc}px`}}
                                 onMouseEnter={ () => {
                                     hoverHandler(exp.id, true)
@@ -128,16 +128,30 @@ const TimeLine: React.FC<{info: any}> = ( {info} ) => {
             </ul>
 
             {/* divider */}
-            <div className="h-full w-4 flex justify-center text-th-foreground transition-colors duration-500 mx-5">
-                <svg width="4" height={"100%"} viewBox={`0 0 4 ${total_months*h_per_month + 32}`}>
-                    <path d={`M1 1 L1 ${total_months*h_per_month + 32} Z`} fill="transparent" stroke="currentcolor" strokeWidth="4" />
-                </svg>
+            <div className="h-full w-2 flex justify-center text-th-foreground transition-colors duration-500 mx-10 mr-11">
+                <span className="relative">
+                    {   
+                        years.map( (year) => {
+                            const position: number = datesToStartLocHeight(year, year)[0];
+
+                            return (
+                                <span key={i++} 
+                                      className="text-sm absolute opacity-50 transition-colors duration-500"
+                                      style={{top:position-5, left: '-4px', transform: `rotate(90deg)`}}> {year} </span>
+                            )
+                        })
+                    }
+                    <svg width="4" height={"100%"} viewBox={`0 0 4 ${total_months*h_per_month + 32}`}>
+                        <path d={`M1 1 L1 ${total_months*h_per_month + 24} Z`} fill="transparent" stroke="currentcolor" strokeWidth="4" />
+                    </svg>
+                </span>
+                
             </div>
 
             {/* education section */}
             <ul className={`flex flex-col relative w-1/2 h-[${total_months*h_per_month + 32}px]`}>
                 {
-                    education.map( (edu, index) => {
+                    education.map( (edu) => {
                         const [startLoc, height] = datesToStartLocHeight(edu.start_date, edu.end_date)
 
                         return (
@@ -174,10 +188,10 @@ const TimeLine: React.FC<{info: any}> = ( {info} ) => {
                                 </div>
 
                                 {/* relavent courses during this education */}
-                                <div className={`flex flex-col bg-th-background leading-loose text-sm timeline-item pointer-events-none transition-colors duration-500 z-0 overflow-auto`}
+                                <div className={`flex flex-col bg-th-background leading-loose text-sm timeline-item pointer-events-none overflow-hidden transition-colors duration-500 z-0`}
                                     style={{height: `${height}px`}}>
                                         <span className="font-bold"> Courses: </span>
-                                        {edu.coursework}
+                                        <span className="whitespace-pre-line">{edu.coursework}</span>
                                 </div>
                             </li>
                             )
@@ -193,7 +207,7 @@ const TimeLine: React.FC<{info: any}> = ( {info} ) => {
 
             {/* details tab */}
             <section id="" className="absolute w-80 h-auto bg-th-background rounded-md p-4" 
-                style={{left: "-400px", top: "100px", visibility: showDetails.show ? "visible" : "hidden"}}>
+                style={{left: "-400px", top: "35px", visibility: showDetails.show ? "visible" : "hidden"}}>
                 {getDisplayInfo(experiences.find(exp => exp.id === showDetails.id))}
             </section>
         </div>

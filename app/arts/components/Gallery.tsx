@@ -41,7 +41,7 @@ const Gallery: React.FC<{imgs: Image[], galleryName: string}> = ({ imgs, gallery
           <ImageCard 
             id={i++} 
             key={i}
-            imageWidth={275}
+            imageWidth={283}
             img={image}
           />
         ))}
