@@ -4,9 +4,29 @@ import { useState } from "react"
 import "../../styles/pages.css"
 import "../../styles/animation.css"
 import { EduInfo, ExpInfo } from "@/app/types"
+import { motion } from 'framer-motion';
 
 function calcMonthsDiff(startDate: Date, endDate: Date): number {
     return (endDate.getFullYear() - startDate.getFullYear())*12 + (endDate.getMonth() - startDate.getMonth())
+}
+
+const ani = {
+    open: {
+        y: 0,
+        opacity: 1,
+        transition: {
+            duration: 0.35,
+            ease: "anticipate",
+        },
+    },
+    close: {
+        y: 30,
+        opacity: 0,
+        transition: {
+            duration: 0.25,
+            ease: "anticipate",
+        },
+    }
 }
 
 const TimeLine: React.FC<{info: any}> = ( {info} ) => {
@@ -206,10 +226,19 @@ const TimeLine: React.FC<{info: any}> = ( {info} ) => {
             </section>
 
             {/* details tab */}
-            <section id="" className="absolute w-80 h-auto bg-th-background rounded-md p-4" 
+            {/* <section id="" className="absolute w-80 h-auto bg-th-background rounded-md p-4" 
                 style={{left: "-400px", top: "35px", visibility: showDetails.show ? "visible" : "hidden"}}>
-                {getDisplayInfo(experiences.find(exp => exp.id === showDetails.id))}
-            </section>
+                    <motion.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{delay: 0.5}}>
+                    {getDisplayInfo(experiences.find(exp => exp.id === showDetails.id))}
+                    </motion.div>
+            </section> */}
+
+            <motion.section className="absolute w-80 h-auto bg-th-background rounded-md p-4" 
+                style={{left: "-400px", top: "35px"}}
+                animate={showDetails.show ? "open" : "close"} variants={ani}>
+                    {getDisplayInfo(experiences.find(exp => exp.id === showDetails.id))}
+
+            </motion.section>
         </div>
     )
 }

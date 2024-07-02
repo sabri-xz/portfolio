@@ -48,7 +48,7 @@
         {
             "id": "1",
             "role": "Research Assistant",
-            "company": "CAV Lab - University of Massachesetts, Amherst",
+            "company": "Cognition & Visualization Lab",
             "start_date":"2021-08",
             "end_date": "2022-05", 
             "description": "Topic: Quantifying human biases and the effects of visualizations presented\n- Developed and designed interactive surveys, utilizing JavaScript, CSS, HTML, and Qualtrics, aligning with the study’s objectives outlined by the Principal Investigator. \n- Actively participated in weekly meetings, contributing insights on measuring human biases and validating research methodologies, while providing updates on weekly progress. \n- Proactively gathered and analyzed user feedback, proposing enhancements to survey design to optimize user experience and ensure meaningful data collection"

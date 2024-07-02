@@ -5,6 +5,25 @@ import '../../styles/pages.css'
 import Image from 'next/image';
 import { getImageDimensions } from '../../utils/getImageDim';
 import { Pic, NewPic } from '../../types';
+import { motion } from 'framer-motion';
+
+const ani = {
+    open: {
+        opacity: 1,
+        transition: {
+            duration: 0.35,
+            ease: "anticipate",
+        },
+    },
+    close: {
+        opacity: 0,
+        transition: {
+            duration: 0.25,
+            ease: "anticipate",
+        },
+    }
+}
+
 
 const Picture: React.FC<{pic: Pic, id: number}> = ( {pic, id} ) => {
     const [clicked, setClicked] = useState(false);
@@ -66,11 +85,14 @@ const Picture: React.FC<{pic: Pic, id: number}> = ( {pic, id} ) => {
                 )
             }
             {clicked && (
-                <div className='h-[985px] w-screen absolute flex justify-center items-center z-30 pt-[300px]'
+                <motion.div className='h-[985px] w-screen absolute flex justify-center items-center z-30 pt-[300px]'
                      style={{top: '-300px', left: `56.5%`, transform: `translateX(-50vw)`}}
                      onClick={() => {
                         setClicked(!clicked)
-                    }}>
+                    }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.2 }}>
                     <div className='picture cursor-pointer z-30' 
                         style={{
                             top: '300px', 
@@ -93,7 +115,7 @@ const Picture: React.FC<{pic: Pic, id: number}> = ( {pic, id} ) => {
                             <p className='font-semibold text-xl'> {pic.description} </p>
                         </span>
                     </div>
-                </div>
+                </motion.div>
                 )
             }
         </div>        

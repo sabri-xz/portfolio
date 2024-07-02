@@ -9,20 +9,7 @@ import TimeLine from "./components/TimeLine";
 import PicturePile from "./components/PicturePile";
 import { ScrollIcon } from '@/app/components/icons';
 import { getPlaiceholder } from 'plaiceholder';
-
-interface Pic {
-  src: string,
-  alt: string,
-  description: string
-}
-
-interface GridItem {
-  id: string,
-  photo: string,
-  drawing: string,
-  blurredPhoto?: string,
-  blurredDrawing?:string,
-}
+import { Pic, GridItem } from "../types";
 
 const getInfo = async (): Promise<any[]> => {
   const filePath = path.join(process.cwd(), 'app/data', 'aboutme.json');

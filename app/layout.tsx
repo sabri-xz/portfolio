@@ -27,7 +27,7 @@ export default function RootLayout({
           <div className="theme-switcher-container"> <ThemeSwitcher /> </div>
           <NewCursor />
           <Navbar />
-          {children} 
+          <main>{children}</main>
         </TSProvider>
       </body>
     </html>
