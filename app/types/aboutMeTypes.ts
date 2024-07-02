@@ -33,3 +33,11 @@ export type NewPic = Pic & {
     cWidth: number,
     cHeight: number
 }
+
+export type GridItem = {
+    id: string,
+    photo: string,
+    drawing: string,
+    blurredPhoto?: string,
+    blurredDrawing?:string,
+  }

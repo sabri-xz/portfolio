@@ -2,18 +2,18 @@
     "grid-items": [
         {
             "id": "1",
-            "photo": "https://media.githubusercontent.com/media/sabri-xz/portfolio/main/imgs/about-me/gradpic1.png",
-            "drawing": "https://media.githubusercontent.com/media/sabri-xz/portfolio/main/imgs/about-me/gradpic.png"
+            "photo": "https://media.githubusercontent.com/media/sabri-xz/portfolio/main/imgs/about-me/photo1.png",
+            "drawing": "https://media.githubusercontent.com/media/sabri-xz/portfolio/main/imgs/about-me/drawing1.png"
         },
         {
             "id": "2",
-            "photo": "https://media.githubusercontent.com/media/sabri-xz/portfolio/main/imgs/about-me/aboutme_pic.png",
-            "drawing": "https://media.githubusercontent.com/media/sabri-xz/portfolio/main/imgs/about-me/aboutme_draw.png"
+            "photo": "https://media.githubusercontent.com/media/sabri-xz/portfolio/main/imgs/about-me/photo2.png",
+            "drawing": "https://media.githubusercontent.com/media/sabri-xz/portfolio/main/imgs/about-me/drawing2.png"
         },
         {
             "id": "3",
-            "photo": "https://media.githubusercontent.com/media/sabri-xz/portfolio/main/imgs/about-me/gradpic1.png",
-            "drawing": "https://media.githubusercontent.com/media/sabri-xz/portfolio/main/imgs/about-me/gradpic.png"
+            "photo": "https://media.githubusercontent.com/media/sabri-xz/portfolio/main/imgs/about-me/photo3.png",
+            "drawing": "https://media.githubusercontent.com/media/sabri-xz/portfolio/main/imgs/about-me/drawing3.png"
         } 
     ],
     "education": [
