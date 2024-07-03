@@ -39,8 +39,8 @@ export default async function Home() {
     return (
       <div className="page-container flex md:items-center flex-col relative">
         <section className="md:h-[950px] sm:h-[1900px] md:w-[1028px] sm:w-[370px] flex flex-col items-center relative mt-10">
-          <section className="flex items-end md:w-[900px] sm:w-[370px] mr-4 my-16 mb-18">
-            <About className="mr-8 ml-2"/> <Me className="md:h-[108px] sm:h-[72px] my-2 mx-3"/>
+          <section className="flex items-end md:w-[900px] sm:w-[370px] sm:flex-col mr-4 my-16 mb-18">
+            <About className="md:mr-8 md:ml-2 sm:m-0"/> <Me className="md:h-[108px] sm:h-[72px] my-2 mx-3"/>
           </section>
           <AboutGrid gridItems={gridItems} />
           <div className="flex justify-center w-full absolute -bottom-[425px] left-0 right-0 shake pointer-events-none">

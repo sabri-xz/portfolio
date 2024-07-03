@@ -107,7 +107,10 @@ const TimeLine: React.FC<{info: any}> = ( {info} ) => {
     let i = 0;
 
     return (
-        <div className="flex flex-row h-auto relative justify-between pt-4">
+        <motion.div className="flex flex-row h-auto relative justify-between pt-4"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0}}
+            transition={{ duration: 0.4 }}>
             {/* experiences section */}
             <ul className={`flex flex-col relative w-1/2 h-[${total_months*h_per_month + 32}px] items-end`}>
                 {
@@ -175,16 +178,19 @@ const TimeLine: React.FC<{info: any}> = ( {info} ) => {
                         const [startLoc, height] = datesToStartLocHeight(edu.start_date, edu.end_date)
 
                         return (
-                            <li key={i++} 
+                            <motion.li key={i++} 
                                 className="timeline-item  hover:cursor-pointer"
                                 style={{height: `${height}px`, top: `${startLoc}px`}}
                                 onClick={() => {
-                                if (edu.id === "1") {
-                                    setShowCourses1(!showCourses1)
-                                } else {
-                                    setShowCourses2(!showCourses2)
-                                }
-                            }}>
+                                    if (edu.id === "1") {
+                                        setShowCourses1(!showCourses1)
+                                    } else {
+                                        setShowCourses2(!showCourses2)
+                                    }
+                                }}
+                                whileTap={{ scale: 0.95 }}
+                                transition={{ duration: 0.1, type: "spring" }}
+                                whileHover={{ scale: 1.1 }}>
                                 {/* front cover of this education */}
                                 <div className={`flex flex-col bg-th-background leading-loose timeline-item pointer-events-none transition-colors duration-500 z-10`}
                                     style={{height: `${height}px`, 
@@ -213,7 +219,7 @@ const TimeLine: React.FC<{info: any}> = ( {info} ) => {
                                         <span className="font-bold"> Courses: </span>
                                         <span className="whitespace-pre-line">{edu.coursework}</span>
                                 </div>
-                            </li>
+                            </motion.li>
                             )
                     })
                 }
@@ -226,20 +232,13 @@ const TimeLine: React.FC<{info: any}> = ( {info} ) => {
             </section>
 
             {/* details tab */}
-            {/* <section id="" className="absolute w-80 h-auto bg-th-background rounded-md p-4" 
-                style={{left: "-400px", top: "35px", visibility: showDetails.show ? "visible" : "hidden"}}>
-                    <motion.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{delay: 0.5}}>
-                    {getDisplayInfo(experiences.find(exp => exp.id === showDetails.id))}
-                    </motion.div>
-            </section> */}
-
             <motion.section className="absolute w-80 h-auto bg-th-background rounded-md p-4" 
                 style={{left: "-400px", top: "35px"}}
                 animate={showDetails.show ? "open" : "close"} variants={ani}>
                     {getDisplayInfo(experiences.find(exp => exp.id === showDetails.id))}
 
             </motion.section>
-        </div>
+        </motion.div>
     )
 }
 

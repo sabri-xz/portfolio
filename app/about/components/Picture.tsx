@@ -86,12 +86,11 @@ const Picture: React.FC<{pic: Pic, id: number}> = ( {pic, id} ) => {
             }
             {clicked && (
                 <motion.div className='h-[985px] w-screen absolute flex justify-center items-center z-30 pt-[300px]'
-                     style={{top: '-300px', left: `56.5%`, transform: `translateX(-50vw)`}}
                      onClick={() => {
                         setClicked(!clicked)
                     }}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
+                    initial={{ opacity: 0, scale: 0.9, top: "-350px", x: "460px" }}
+                    animate={{ opacity: 1, scale: 1, top: "-300px", x: "460px" }}
                     transition={{ duration: 0.2 }}>
                     <div className='picture cursor-pointer z-30' 
                         style={{
@@ -110,7 +109,7 @@ const Picture: React.FC<{pic: Pic, id: number}> = ( {pic, id} ) => {
                                 className='w-full h-full object-cover object-center' />
                         </div>
 
-                        <span className="absolute z-30"
+                        <span className="absolute z-30 text-[#3D4927]"
                             style={{top: 675, left: 20, width: newPic.cWidth - 40}}>
                             <p className='font-semibold text-xl'> {pic.description} </p>
                         </span>

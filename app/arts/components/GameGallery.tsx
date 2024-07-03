@@ -5,6 +5,7 @@ import ImageCard from "@/app/arts/components/ImageCard";
 import Link from "next/link";
 import { getImageDimensions } from '../../utils/getImageDim';
 import { ImageWithDim, Game, NewGame } from "@/app/types";
+import { motion } from "framer-motion";
 
 const GameGallery: React.FC<{gamesInfo: Game[]}> = ({ gamesInfo }) => {
     let [games, setGames] = useState<NewGame[]>();
@@ -45,7 +46,9 @@ const GameGallery: React.FC<{gamesInfo: Game[]}> = ({ gamesInfo }) => {
     let i = 0;
 
     return (
-        <div>
+        <motion.div initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1, duration: 0.3 }}>
             { games.map((game: NewGame, index: number) => {
                 return (
                     <div key={i++} className="py-2 flex flex-row">
@@ -63,7 +66,7 @@ const GameGallery: React.FC<{gamesInfo: Game[]}> = ({ gamesInfo }) => {
                     </div>
                 )
             }) }
-        </div>
+        </motion.div>
     );
 }
 

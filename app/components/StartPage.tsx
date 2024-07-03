@@ -39,9 +39,9 @@ const StartPage: React.FC<{ info: any }> = ({ info }) => {
     const logoRef = useRef<SVGSVGElement>(null);
     const [inView, setInView] = useState(false);
     const [finishedTyping, setFinishedTyping] = useState(false);
-    const [logoWidth, setLogoWidth] = useState(0);
     const [logoX, setLogoX] = useState(0);
     const [scrollable, setScrollable] = useState(false);
+    const logoWidth = 730;
 
     useEffect(() => {
       const observer = new IntersectionObserver(
@@ -67,9 +67,7 @@ const StartPage: React.FC<{ info: any }> = ({ info }) => {
     useEffect(() => {
         const updateLogoInfo = () => {
             if (logoRef.current) {
-                const w = logoRef.current.clientWidth;
                 const x = logoRef.current.getBoundingClientRect().x;
-                setLogoWidth(w);
                 setLogoX(x);
             }
         }
@@ -96,14 +94,16 @@ const StartPage: React.FC<{ info: any }> = ({ info }) => {
     return (
         <div className={`snap-y snap-mandatory h-screen ${scrollable? 'overflow-y-auto':'overflow-hidden'} relative`}> 
             <section className='h-screen flex snap-start justify-center relative'>
-                <CoverLogo className='text-th-foreground w-auto h-[180%] absolute'
+                <CoverLogo className={`text-th-foreground md:w-[${logoWidth}px] h-[180%] absolute
+                                       sm:w-[400px]`}
                            style={{ top: '12.5%'}}
                            ref={logoRef}/>
                 <Sparkles logoWidth={logoWidth} logoX={logoX}/>
             </section>
 
             <section ref={textSectionRef} className='h-screen flex snap-start'>
-                <div className='w-full relative pt-48' style={{ width: logoWidth, left: `${logoX}px` }}>
+                <div className={`w-full relative pt-48 md:w-[${logoWidth}px] sm:w-[290px] sm:text-xs`}
+                     style={{ left: `${logoX}px` }}>
                     <TypingEffect text={intro} inView={inView} setFinished={setFinishedTyping}/>
                     {finishedTyping &&
                     <div className='flex pt-4 px-1' style={{ animation: 'expandItems 0.3s forwards' }}>

@@ -23,8 +23,8 @@ const config: Config = {
         "th-art3": "var(--art-color3)",
       },
       screens: {
-        "sm": "300px",
-        "md": "600px",
+        "sm": { min: "300px", max: "600px" },
+        "md": { min: "600px" },
       },
       scale: {
         '25': '0.25',

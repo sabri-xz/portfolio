@@ -79,10 +79,3 @@ body {
   --art-color2: #FAE18F;
   --art-color3: #F7BABF;
 }
-
-.theme-switcher-container {
-  position: fixed;
-  top: 16px;
-  right: 64px;
-  z-index: 1000;
-}

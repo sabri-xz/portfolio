@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import ImageCard from "./ImageCard";
 import { getImageDimensions } from '../../utils/getImageDim';
 import { Image, ImageWithDim } from '../../types';
+import { motion } from "framer-motion";
 
 const Gallery: React.FC<{imgs: Image[], galleryName: string}> = ({ imgs, galleryName }) => {
   let [images, setImages] = useState<ImageWithDim[]>();
@@ -36,7 +37,10 @@ const Gallery: React.FC<{imgs: Image[], galleryName: string}> = ({ imgs, gallery
   }
 
   return (
-    <section className="grid grid-cols-gallery auto-rows-[10px] w-[900px] mx-auto">
+    <motion.section className="grid grid-cols-gallery auto-rows-[10px] w-[900px] mx-auto"
+      initial={{ opacity: 0, y: 25 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.05, duration: 0.3 }}>
         {images.map(image => (
           <ImageCard 
             id={i++} 
@@ -45,7 +49,7 @@ const Gallery: React.FC<{imgs: Image[], galleryName: string}> = ({ imgs, gallery
             img={image}
           />
         ))}
-    </section>
+    </motion.section>
   );
 }
 
