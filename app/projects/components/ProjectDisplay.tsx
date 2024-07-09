@@ -1,9 +1,16 @@
+"use client";
+
 import { Project } from "@/app/types";
+import { motion } from 'framer-motion';
 
 const ProjectDisplay: React.FC<{projects: Project[]}> = ( { projects } ) => {
 
     return (
-        <ul>
+        <motion.ul className="flex flex-col"
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1, duration: 0.3 }}>
+
             {projects.map( ( project, index ) => (
                 <li key={index} className='flex flex-col'>
                     <a className='text-2xl font-bold' href={project.link} target="_"> 
@@ -15,7 +22,8 @@ const ProjectDisplay: React.FC<{projects: Project[]}> = ( { projects } ) => {
                     </span>
                 </li>
             ) )}
-        </ul>
+            
+        </motion.ul>
     )
 }
 

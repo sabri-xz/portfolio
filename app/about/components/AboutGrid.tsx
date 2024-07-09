@@ -56,14 +56,16 @@ const AboutGrid: React.FC<{gridItems: GridItem[]}> = ({ gridItems }) => {
                     transition={{ duration: 0.3 }}>
 
                     <span className='text-[#3D4927] absolute z-20 pt-[360px] w-full text-center pointer-events-none font-bold text-xl'> education </span>
-                    <div className='bg-th-midground1 absolute w-full h-full hover:opacity-0 z-10 transition-opacity duration-200'>
+                    <motion.div className='bg-th-midground1 absolute w-full h-full z-10'
+                        whileHover={{ opacity: 0 }}
+                        transition={{ duration: 0.3, delay: 0.1 }}>
                         <div className='polaroid-frame absolute w-full h-full'/>
                         <Image src={drawing1}
                             alt="Grad Photo Drawing" 
                             width={600} height={400}
                             sizes="(max-width: 300px) 100vw, 300px"
                             className='w-full h-full object-cover object-center' />
-                    </div>
+                    </motion.div>
                     <div className='absolute w-full h-full'>
                         <div className='polaroid-frame absolute w-full h-full'/>
                         <Image src={photo1}
@@ -87,14 +89,16 @@ const AboutGrid: React.FC<{gridItems: GridItem[]}> = ({ gridItems }) => {
                     transition={{ duration: 0.3 }}>
 
                     <span className='text-[#3D4927] absolute z-20 pt-[360px] w-full text-center pointer-events-none font-bold text-xl'> hello world </span>
-                    <div className='bg-th-midground1 absolute w-full h-full hover:opacity-0 z-10 transition-opacity duration-200'>
+                    <motion.div className='bg-th-midground1 absolute w-full h-full z-10'
+                        whileHover={{ opacity: 0 }}
+                        transition={{ duration: 0.3, delay: 0.1 }}>
                         <div className='polaroid-frame absolute w-full h-full'/>
-                        <Image src={drawing2} 
-                            alt="Drawing" 
+                        <Image src={drawing2}
+                            alt="Grad Photo Drawing" 
                             width={600} height={400}
                             sizes="(max-width: 300px) 100vw, 300px"
                             className='w-full h-full object-cover object-center' />
-                    </div>
+                    </motion.div>
                     <div className='absolute w-full h-full'>
                         <div className='polaroid-frame absolute w-full h-full'/>
                         <Image src={photo2}
@@ -118,14 +122,16 @@ const AboutGrid: React.FC<{gridItems: GridItem[]}> = ({ gridItems }) => {
                     transition={{ duration: 0.3 }}>
 
                     <span className='text-[#3D4927] absolute z-20 pt-[360px] w-full text-center pointer-events-none font-bold text-xl'> aspirations </span>
-                    <div className='bg-th-midground1 absolute w-full h-full hover:opacity-0 z-10 transition-opacity duration-200'>
+                    <motion.div className='bg-th-midground1 absolute w-full h-full z-10'
+                        whileHover={{ opacity: 0 }}
+                        transition={{ duration: 0.3, delay: 0.1 }}>
                         <div className='polaroid-frame absolute w-full h-full'/>
                         <Image src={drawing3}
-                            alt="Drawing" 
+                            alt="Grad Photo Drawing" 
                             width={600} height={400}
                             sizes="(max-width: 300px) 100vw, 300px"
                             className='w-full h-full object-cover object-center' />
-                    </div>
+                    </motion.div>
                     <div className='absolute w-full h-full'>
                         <div className='polaroid-frame absolute w-full h-full'/>
                         <Image src={photo3}

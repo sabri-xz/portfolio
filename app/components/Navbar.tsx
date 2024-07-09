@@ -26,13 +26,13 @@ const Navbar: React.FC<{}> = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/files/resume.pdf" className="hover:text-th-secondary">
-                    <p>Resume</p>
+                  <Link href="/projects" className="hover:text-th-secondary">
+                    <p>Projects</p>
                   </Link>
                 </li>
                 <li>
-                  <Link href="/projects" className="hover:text-th-secondary">
-                    <p>Projects</p>
+                  <Link href="/files/resume.pdf" className="hover:text-th-secondary">
+                    <p>Resume</p>
                   </Link>
                 </li>
                 <li>
