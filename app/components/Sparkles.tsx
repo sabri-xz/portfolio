@@ -30,7 +30,7 @@ const Sparkles: React.FC<{logoX: number, logoWidth: number, logoY: number}> = ({
         <div className="">
                 <svg width="20" height="20" 
                      className={`text-th-foreground sparkle1 absolute ${showSparkles[0] ? '' : 'hidden'}`}
-                     style={{top:`${logoY}`, left:`${logoX + 0.39*logoWidth}px`}}>
+                     style={{top:`25%`, left:`${logoX + 0.39*logoWidth}px`}}>
                     <circle cx="10" cy="10" r="10" fill="currentColor" />
                 </svg>
 
