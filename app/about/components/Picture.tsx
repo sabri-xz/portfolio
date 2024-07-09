@@ -70,18 +70,22 @@ const Picture: React.FC<{pic: Pic, id: number}> = ( {pic, id} ) => {
     return (
         <div id={`pic-container-${id}`} className='flex justify-center items-center'>
             {!clicked && (
-                <div className='picture cursor-pointer z-0'
+                <motion.div className='picture cursor-pointer z-0'
                     id={`pic-${id}`} 
                     onClick={() => {
-                        setClicked(!clicked) }}
-                    style={{width: newPic.width, height: newPic.height}}>
+                        setClicked(!clicked) }
+                    }
+                    style={{width: newPic.width, height: newPic.height}}
+                    initial={{ opacity: 0}}
+                    whileInView={{ opacity: 1}}
+                    transition={{ duration: 0.4 }}>
                     <div className='polaroid-frame absolute w-full h-full z-0'/>
                     <Image src={pic.src} 
                         alt={pic.alt}
                         width={600} height={400}
                         sizes="(max-width: 420px) 100vw, 420px"
                         className='w-full h-full object-cover object-center z-0' />
-                </div>
+                </motion.div>
                 )
             }
             {clicked && (

@@ -21,7 +21,7 @@ const Directory: React.FC<{}> = () => {
             <p className="px-12 w-full font-semibold text-3xl underline"> directory </p>
             <div className="grid grid-cols-3 grid-rows-1 gap-12 w-full p-12 directory">
                 <a className="w-auto h-64 bg-th-art1 transition-colors duration-500" 
-                    href='#VisualArt'
+                    href='#Course-projects'
                     onClick={(e) => handleScroll(e, 'VisualArt')}/>
                 <a className="w-auto h-64 bg-th-art2 transition-colors duration-500" 
                     href='#Games'

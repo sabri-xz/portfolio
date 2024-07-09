@@ -1,4 +1,4 @@
-import Gallery from './Gallery';
+import Gallery from '../../projects/components/Gallery';
 import { Image } from "@/app/types";
 
 const GamePage: React.FC<{imgs: Image[]}> = ({imgs}) => {

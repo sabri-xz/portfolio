@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState, useRef, Dispatch, SetStateAction } from 'react';
+import { useEffect, useState, useRef, Dispatch, SetStateAction, use } from 'react';
 import Link from 'next/link';
 import "../styles/animation.css"
 import { GithubIcon, LinkedInIcon, GmailIcon } from './icons';
@@ -40,8 +40,9 @@ const StartPage: React.FC<{ info: any }> = ({ info }) => {
     const [inView, setInView] = useState(false);
     const [finishedTyping, setFinishedTyping] = useState(false);
     const [logoX, setLogoX] = useState(0);
+    const [logoY, setLogoY] = useState(0);
     const [scrollable, setScrollable] = useState(false);
-    const logoWidth = 730;
+    const [logoWidth, setLogoWidth] = useState(0);
 
     useEffect(() => {
       const observer = new IntersectionObserver(
@@ -67,8 +68,13 @@ const StartPage: React.FC<{ info: any }> = ({ info }) => {
     useEffect(() => {
         const updateLogoInfo = () => {
             if (logoRef.current) {
-                const x = logoRef.current.getBoundingClientRect().x;
+                const w = logoRef.current.clientWidth;
+                const boundingRec = logoRef.current.getBoundingClientRect();
+                const x = boundingRec.x;
+                const y = boundingRec.y;
+                setLogoWidth(w);
                 setLogoX(x);
+                setLogoY(y);
             }
         }
 
@@ -93,12 +99,12 @@ const StartPage: React.FC<{ info: any }> = ({ info }) => {
 
     return (
         <div className={`snap-y snap-mandatory h-screen ${scrollable? 'overflow-y-auto':'overflow-hidden'} relative`}> 
-            <section className='h-screen flex snap-start justify-center relative'>
+            <section className='h-screen flex snap-start justify-center'>
                 <CoverLogo className={`text-th-foreground md:w-[${logoWidth}px] h-[180%] absolute
                                        sm:w-[400px]`}
                            style={{ top: '12.5%'}}
                            ref={logoRef}/>
-                <Sparkles logoWidth={logoWidth} logoX={logoX}/>
+                <Sparkles logoWidth={logoWidth} logoX={logoX} logoY={logoY} />
             </section>
 
             <section ref={textSectionRef} className='h-screen flex snap-start'>

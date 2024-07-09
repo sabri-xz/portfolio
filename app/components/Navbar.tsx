@@ -36,11 +36,6 @@ const Navbar: React.FC<{}> = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/arts" className="hover:text-th-secondary">
-                    <p>Arts</p>
-                  </Link>
-                </li>
-                <li>
                   <ThemeSwitcher />
                 </li>
               </ul>

@@ -1,7 +1,7 @@
  'use client'
 
 import { useEffect, useState } from 'react';
-import ImageCard from "@/app/arts/components/ImageCard";
+import ImageCard from "@/app/projects/components/ImageCard";
 import Link from "next/link";
 import { getImageDimensions } from '../../utils/getImageDim';
 import { ImageWithDim, Game, NewGame } from "@/app/types";
@@ -48,20 +48,21 @@ const GameGallery: React.FC<{gamesInfo: Game[]}> = ({ gamesInfo }) => {
     return (
         <motion.div initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1, duration: 0.3 }}>
+            transition={{ delay: 0.1, duration: 0.3 }}
+            className='gap-8 flex flex-col'>
             { games.map((game: NewGame, index: number) => {
                 return (
                     <div key={i++} className="py-2 flex flex-row">
-                        <Link href={game.gameLink} className="">
+                        <Link href={game.link} className="">
                             <ImageCard id={index} 
                                 imageWidth={425}
                                 img={game.thumbnail}
                             />
                         </Link>
                         <section className="flex flex-col justify-center items-start px-6">
-                            <span className='font-bold text-xl underline'> {game.name} </span>
-                            <p className='text-sm pb-2'> {game.caption} </p>
-                            <p className='whitespace-pre-line'> {game.description} </p>
+                            <span className='font-bold text-2xl underline'> {game.name} </span>
+                            <p className='text-sm pb-2 italic'> {game.caption} </p>
+                            <p className='whitespace-pre-line text-md'> {game.description} </p>
                         </section>
                     </div>
                 )

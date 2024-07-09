@@ -8,12 +8,14 @@ export type ImageWithDim = Image & {
     height: number
 }
 
-export type Game = {
+export type Project = {
     name: string;
-    thumbnailSrc: string;
-    gameLink: string;
+    link: string;
     caption: string;
     description: string;
 }
 
+export type Game = Project & { thumbnailSrc: string }
+
 export type NewGame = Game & { thumbnail: ImageWithDim }
+

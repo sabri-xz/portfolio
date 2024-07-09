@@ -1,0 +1,66 @@
+{
+    "course-projects": [
+        {
+            "name": "Sports Betting Dashboard", 
+            "link": "https://github.com/AnthonyZalev/CS532_FinalProject",
+            "caption": "Dashboard providing analyzed information about sport bets for educational purposes (course project for CompSci520 - Principals of Software Engineering).",
+            "description": "Designed and built UI/UX with Figma and ReactJS, emphasizing accessibility and usability.\nCollaborated in a team of three, utilizing GitHub for version control and efficient collaborative coding efforts.\nGenerated comprehensive documentation from the initial design to README for each module of the software."
+        },
+        {
+            "name": "Store Interior Management Support in VR", 
+            "link": "https://github.com/sabri-xz/MIE597VR",
+            "caption": "VR experience built with Unity aiming to address interior design challenges faced by physical stores (course project for MIENG 597VR - S.T. Augmented and Virtual Reality Design).",
+            "description": "Researched simmilar products and interviewed store workers in the area to produce initial design.\nBuilt scene and interaction in Unity, weekly check-ins and presentations with the class to ensure project progress.\nPerformed some redesigns based on feedbacks from both peers and store workers."
+        },
+        {
+            "name": "MA Crime Database Visualization Dashboard", 
+            "link": "https://sabri-xz.github.io/571project-Crime-MA/",
+            "caption": "Dashboard providing analyzed information about sport bets for educational purposes (course project for CompSci520 - Principals of Software Engineering).",
+            "description": "Implemented dynamic visualization using the d3.js JavaScript library, enhancing user engagement.\nCollaborated with a team of three, leveraging GitHub for version control and efficient collaborative coding efforts.\nConducted data preprocessing to ensure crime data was accurate and suitable for visualization by addressing missing values, normalizing data formats, and ensuring data integrity."
+        },
+        {
+            "name": "Reinforcement Learning Algorithms Exploration", 
+            "link": "https://github.com/RobotGeissler/RLBenchmarkProblems",
+            "caption": "Research project focusing on state of the art reinforcement learning algorithms (course project for CompSci687 - Reinforcement Learning).",
+            "description": "Implemented various reinforcement learning algorithms (Max-Entropy, Stabilizing Q-Learning, PID Accelerated Value Iteration) in Python, including their variants.\nExplored the performance of each algorithm on a variety of benchmark problems (Mountain Car, Acrobot, Cartpole, etc.) and compared them against each other.\nProduced comprehensive writeup in LaTex in research paper format."
+        }
+    ],
+    "games": [
+        {
+            "name": "Retros-Bear-tic", 
+            "link": "https://async-fish.itch.io/retros-bear-tic",
+            "caption": "Puzzle game built in collaboration with one other person for Touhou Fan Game Jam 13 with extented time.",
+            "description": "Decided on aesthetics to fit the game jam theme.\nAll game sprites drawn using Procreate.\nYour job is to help Cirno figure out how to bring everyone back from being a bear before the day ends",
+            "thumbnailSrc": "https://raw.githubusercontent.com/sabri-xz/art-portfolio/main/imgs/game-thumbnails/retrobeartic-thumbnail.gif"
+        },
+        {
+            "name": "Cirno's Rythm Revenge", 
+            "link": "https://async-fish.itch.io/cirnos-rythm-revenge",
+            "caption": "Rythm game built in collaboration with one other person for Touhou Fan Game Jam 12.",
+            "description": "All Touhou characters are redesigned as round birds (inspired by the Long-tailed tit).\nGame built with Unity engine\nAll game sprites and anination drawn using Procreate.\nWas unable to complete in time due to external factors.",
+            "thumbnailSrc": "https://media.githubusercontent.com/media/sabri-xz/portfolio/main/imgs/game-thumbnails/cirnosrythmrevenge-thumbnail.png"
+        },
+        {
+            "name": "Cirno's Perfect Snowbash", 
+            "link": "https://async-fish.itch.io/cirnos-perfect-snowbash",
+            "caption": "Game built in collaboration with one other person for Touhou Fan Game Jam 10 within 72 hours.",
+            "description": "As the player you will play as a Touhou character of your choice and engage in a snowball fight with Cirno.\nOpponent is controlled by AI implemented within jam period.\nAll game sprites and anination drawn using Procreate.\nPlay with audio on :)",
+            "thumbnailSrc": "https://media.githubusercontent.com/media/sabri-xz/portfolio/main/imgs/game-thumbnails/cirnosperfectsnowbash-thumbnail.png"
+        },
+        {
+            "name": "Be Good", 
+            "link": "https://async-fish.itch.io/be-good",
+            "caption": "Puzzle simulation game made for Mini Jam 97 in collaboration with one other person.",
+            "description": "A game where you try to help the doggos not break the plant pots and get treats.\nAll assets drawn and designed during jam period using Procreate.",
+            "thumbnailSrc": "https://raw.githubusercontent.com/sabri-xz/art-portfolio/main/imgs/game-thumbnails/begood-thumbnail.gif"
+        }        
+    ],
+    "others": [
+        {
+            "name": "Retros-Bear-tic", 
+            "link": "https://async-fish.itch.io/retros-bear-tic",
+            "caption": "Puzzle game built in collaboration with one other person for Touhou Fan Game Jam 13 with extented time.",
+            "description": "Decided on aesthetics to fit the game jam theme.\nAll game sprites drawn using Procreate.\nYour job is to help Cirno figure out how to bring everyone back from being a bear before the day ends"
+        }
+    ]
+}

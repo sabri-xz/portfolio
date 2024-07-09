@@ -3,8 +3,10 @@
 import { useEffect, useState } from 'react';
 import "../styles/animation.css"
 
-const Sparkles: React.FC<{logoX: number, logoWidth: number}> = ({logoX, logoWidth}) => {
+const Sparkles: React.FC<{logoX: number, logoWidth: number, logoY: number}> = ({logoX, logoWidth, logoY}) => {
     const [showSparkles, setShowSparkles] = useState([false, false, false]);
+
+    console.log(logoY);
 
     useEffect(() => {
         const animationTimeout1 = setTimeout(() => {
@@ -25,10 +27,10 @@ const Sparkles: React.FC<{logoX: number, logoWidth: number}> = ({logoX, logoWidt
     }, []);
 
     return (
-        <div className="static">
+        <div className="">
                 <svg width="20" height="20" 
                      className={`text-th-foreground sparkle1 absolute ${showSparkles[0] ? '' : 'hidden'}`}
-                     style={{top:'25%', left:`${logoX + 0.39*logoWidth}px`}}>
+                     style={{top:`${logoY}`, left:`${logoX + 0.39*logoWidth}px`}}>
                     <circle cx="10" cy="10" r="10" fill="currentColor" />
                 </svg>
 
