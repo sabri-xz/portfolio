@@ -135,9 +135,6 @@ const StartPage: React.FC<{ info: any }> = ({ info }) => {
                         <Link href="/projects" replace> 
                             <div className='text-th-foreground hover:text-th-secondary font-normal'> Projects </div>
                         </Link>
-                        <Link href="/arts" replace> 
-                            <div className='text-th-foreground hover:text-th-secondary font-normal'> Arts </div>
-                        </Link>
                     </div>
                     } 
                 </div>
