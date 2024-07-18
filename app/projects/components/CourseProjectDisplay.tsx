@@ -3,7 +3,7 @@
 import { Project } from "@/app/types";
 import { motion } from 'framer-motion';
 
-const ProjectDisplay: React.FC<{projects: Project[]}> = ( { projects } ) => {
+const CourseProjectDisplay: React.FC<{projects: Project[]}> = ( { projects } ) => {
 
     return (
         <motion.ul className="flex flex-col"
@@ -14,7 +14,7 @@ const ProjectDisplay: React.FC<{projects: Project[]}> = ( { projects } ) => {
             {projects.map( ( project, index ) => (
                 <li key={index} className='flex flex-col py-3'>
                     <a className='text-2xl font-bold' href={project.link} target="_"> 
-                        &#8226; <span className="underline"> {project.name} </span> 
+                        &#8226;<span className="underline ml-2">{project.name} </span> 
                     </a>
                     <span className="ml-5 flex flex-col">
                         <span className="text-sm italic mb-1 pb-1"> {project.caption} </span>
@@ -28,4 +28,4 @@ const ProjectDisplay: React.FC<{projects: Project[]}> = ( { projects } ) => {
 }
 
 
-export default ProjectDisplay;
+export default CourseProjectDisplay;

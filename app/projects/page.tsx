@@ -1,12 +1,14 @@
 import path from 'path';
 import fs from "fs";
 import Directory from '../projects/components/Directory';
-import CourseProjectPage from './components/CourseProjectPage';
-import GamePage from '../projects/components/GamePage';
+import CourseProjectDisplay from './components/CourseProjectDisplay';
+import GameGallery from './components/GameGallery';
 import { ScrollIcon } from '@/app/components/icons';
 import '../styles/pages.css'
 import '../styles/animation.css'
-import React from 'react';
+import { Averia_Serif_Libre } from '@next/font/google'
+
+const averia = Averia_Serif_Libre({ subsets: ['latin'], weight: ['400'] });
 
 const getInfo = async ( jsonFile: string, section: string ): Promise<any[]> => {
     const filePath = path.join(process.cwd(), 'app/data', jsonFile);
@@ -24,7 +26,7 @@ export default async function Home() {
         <div className='page-container flex-col items-center'>
             <section className='h-[750px] flex flex-col items-center justify-center relative bg-th-midground1 w-[100vw]'
                 style={{top: "-40px"}}>
-                <h1 className='text-5xl font-bold'> Project Gallery </h1>
+                <h1 className={`${averia.className} text-8xl`}> Project Gallery </h1>
                 <h3 className='mt-4'> Here are some projects that I have made/helped make. </h3>
                 <div className="flex justify-center w-full absolute -bottom-[550px] left-0 right-0 shake pointer-events-none">
                     <ScrollIcon className="text-th-foreground scale-3.5 z-40"/>
@@ -32,19 +34,28 @@ export default async function Home() {
             </section>
             
             <section className='mb-16'>
+                <p className={`${averia.className} pt-32 px-12 w-full font-bold text-3xl underline`}> Directory </p>
                 <Directory/>
             </section>
 
-            <section className='h-auto flex items-center justify-center relative w-full py-24'
+            <section className='h-auto flex flex-col items-center justify-center relative w-full py-24 px-12'
                      id='Course-projects'>
                         <div className='bg-th-art1 w-[100vw] absolute h-full -z-10 transition-colors duration-500'></div>
-                        <CourseProjectPage projects={courseProjects}/>
+                        <div className='m-5 w-full'>
+                            <h1 className={`${averia.className} text-5xl`}> Course Projects </h1>
+                            <p className='mt-1'> Projects for various courses while being in school. </p>
+                        </div>
+                        <CourseProjectDisplay projects={courseProjects} />
             </section>
             
-            <section className='h-auto flex items-center justify-center relative w-full py-24'
+            <section className='h-auto flex flex-col items-center justify-center relative w-full py-24 px-12'
                      id='Games'>
                         <div className='bg-th-art2 w-[100vw] absolute h-full -z-10 transition-colors duration-500'></div>
-                        <GamePage gamesInfo={games}/>
+                        <div className="m-5 w-full">
+                            <h1 className={`${averia.className} text-5xl`}> Games </h1>
+                            <p className='mt-1'> Here are some games that I have made art for. </p>
+                        </div>
+                        <GameGallery gamesInfo={games}/>
             </section>
 
             {/* <section className='h-auto flex items-center justify-center relative w-full py-24'

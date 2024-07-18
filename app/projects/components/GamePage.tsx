@@ -5,9 +5,7 @@ import { Game } from "@/app/types";
 const GamePage: React.FC<{gamesInfo: Game[]}> = ({ gamesInfo }) => {
     return (
         <div className="m-5 px-12 w-full">
-            <h1 className='justify-self-center text-5xl font-medium'> Games </h1>
-            <p className='mt-2 mb-4 text-sm'> Here are some games that I have made art for. </p>
-            <GameGallery gamesInfo={gamesInfo}/>
+            
         </div>
     );
 }

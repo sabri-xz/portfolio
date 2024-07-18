@@ -5,9 +5,12 @@ import { TSProvider } from "./providers";
 import Navbar from "./components/Navbar";
 import NewCursor from "./components/NewCursor";
 import './styles/cursor.css'
+import { Noto_Sans_Mono, Gayathri } from '@next/font/google'
 
 const inter = Inter({ subsets: ["latin"] });
-
+const noto_mono = Noto_Sans_Mono({ subsets: ["latin"] });
+const gayathri = Gayathri({ subsets: ['latin'], weight: ['100', '400', '700'] });
+ 
 export const metadata: Metadata = {
   title: "Portfolio",
   description: ":D",
@@ -20,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.className} mx-auto min-h-screen justify-center items-center overflow-x-hidden hide-scrollbars
+      <body className={`${gayathri.className} mx-auto min-h-screen justify-center items-center overflow-x-hidden hide-scrollbars
       bg-th-background text-th-foreground transition-colors duration-500`}>
         <TSProvider> 
           <NewCursor />

@@ -4,12 +4,15 @@ import '../styles/pages.css'
 import AboutGrid from "./components/AboutGrid";
 import Me from "./components/MeText";
 import About from "./components/AboutText";
-import PageSparkles from "./components/PageSparkles";
+// import PageSparkles from "./components/PageSparkles";
 import TimeLine from "./components/TimeLine";
 import PicturePile from "./components/PicturePile";
 import { ScrollIcon } from '@/app/components/icons';
 import { getPlaiceholder } from 'plaiceholder';
 import { Pic, GridItem } from "../types";
+import { Averia_Serif_Libre } from '@next/font/google'
+
+const averia = Averia_Serif_Libre({ subsets: ['latin'], weight: ['400'] });
 
 const getInfo = async (): Promise<any[]> => {
   const filePath = path.join(process.cwd(), 'app/data', 'aboutme.json');
@@ -50,8 +53,8 @@ export default async function Home() {
         </section>
         
         <section className="h-auto w-[100vw] bg-th-midground1 flex flex-col items-center py-44">
-          <section className="flex flex-col md:w-[1028px] sm:w-[370px] ml-24 leading-loose">
-            <span className="text-3xl font-medium">hello, </span>
+          <section className="flex flex-col md:w-[1028px] sm:w-[370px] ml-24 leading-loose text-lg">
+            <span className={`${averia.className} text-4xl`}>hello, </span>
             <span>I draw, I program, and I enjoy both</span>
             <span>CS and Math gave me a strong technical background</span>
             <span>and Art History taught me the art of perception</span>
@@ -60,12 +63,12 @@ export default async function Home() {
           </section>
 
           <section className="flex flex-col md:w-[1028px] sm:w-[370px] mr-16 pl-[465px]">
-            <span className="w-full text-center text-3xl font-medium">my journey so far</span>
+            <span className={`${averia.className} w-full text-center text-4xl`}>my journey so far</span>
             <TimeLine info={info}/>
           </section>
 
           <section className="flex flex-col md:w-[1028px] sm:w-[370px] ml-24 -mt-8">
-            <span className="text-3xl font-medium"> skills </span>
+            <span className={`${averia.className} text-4xl`}> skills </span>
             <span className="w-[375px] mt-3 leading-loose">
               <span className="font-bold"> Technical: </span> R, JavaScript, Python, PostgreSQL, HTML, CSS, Git, Unity <br/>
               <span className="font-bold"> Design: </span> Latex, Microsoft Office, Adobe Illustrator, Figma, Procreate
