@@ -100,6 +100,14 @@
             "start_date":"2021-08",
             "end_date": "2022-05", 
             "description": "- Completed duty as instructed: visible in the office during instructed hours, answer questions that may arise from the residents, and being accessible at all hours through duty hours.\n- Facilitated 35 assigned residents as they adapt to dorm living, addressed conflicts and incidents arising between residents professionally.\n- Led, prepared, and programmed community building activities such as updating bulletin boards, hosting floor meetings, and conducting general check-ins"
+        },
+        {
+            "id": "8",
+            "role": "Front-End Software Engineer",
+            "company": "Splunk, a Cisco Company",
+            "start_date":"2024-08",
+            "end_date": "2024-12", 
+            "description": "- Develop and maintain features for Splunk Dashboard in an agile environment using the react framework in typescript.\n- Collaborate closely with designers, product managers, testing engineers, and sibling teams to deliver well-conceived and user-focused features.\n- Lead feature epics, breaking down components into granular tasks and producing detailed documentation for assigned features.\n- Build and maintain comprehensive test suites with Cypress, Jest, Storybook, and Loki - for visual, unit, and integration testing. Ensure visual consistency and functionality in all supported environments.\n- Automate documentation publication upon release with CI/CD pipelines using gitlab YAML, reducing engineering efforts while improving deployment reliability."
         }
     ],
     "art-displays": [

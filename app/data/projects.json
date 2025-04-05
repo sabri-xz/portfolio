@@ -27,6 +27,13 @@
     ],
     "games": [
         {
+            "name": "Marisa Stole The Precious Honey", 
+            "link": "https://async-fish.itch.io/marisa-stole-the-precious-honey",
+            "caption": "Rhythm game built in collaboration in a team of two for the Touhou Station Jam 2024.",
+            "description": "Decided on aesthetics to fit the game jam theme.\nAll game sprites drawn using Procreate.\nYour job is to help Cirno figure out how to bring everyone back from being a bear before the day ends",
+            "thumbnailSrc": "https://raw.githubusercontent.com/sabri-xz/art-portfolio/main/imgs/game-thumbnails/retrobeartic-thumbnail.gif"
+        },
+        {
             "name": "Retros-Bear-tic", 
             "link": "https://async-fish.itch.io/retros-bear-tic",
             "caption": "Puzzle game built in collaboration with one other person for Touhou Fan Game Jam 13 with extented time.",

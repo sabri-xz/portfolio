@@ -28,14 +28,19 @@ export default async function Home() {
                 style={{top: "-40px"}}>
                 <h1 className={`${averia.className} text-8xl`}> Project Gallery </h1>
                 <h3 className='mt-4'> Here are some projects that I have made/helped make. </h3>
-                <div className="flex justify-center w-full absolute -bottom-[550px] left-0 right-0 shake pointer-events-none">
+                <div className="flex justify-center w-full absolute -bottom-[535px] left-0 right-0 shake pointer-events-none">
                     <ScrollIcon className="text-th-foreground scale-3.5 z-40"/>
                 </div>
             </section>
-            
-            <section className='mb-16'>
-                <p className={`${averia.className} pt-32 px-12 w-full font-bold text-3xl underline`}> Directory </p>
-                <Directory/>
+
+            <section className='h-auto flex flex-col items-center justify-center relative w-full py-24 px-12'
+                     id='Games'>
+                        <div className='bg-th-art2 w-[100vw] absolute h-full -z-10 transition-colors duration-500'></div>
+                        <div className="m-5 w-full">
+                            <h1 className={`${averia.className} text-5xl`}> Games </h1>
+                            <p className={`${averia.className} mt-1`}> Here are some games that I have made art for. </p>
+                        </div>
+                        <GameGallery gamesInfo={games}/>
             </section>
 
             <section className='h-auto flex flex-col items-center justify-center relative w-full py-24 px-12'
@@ -43,19 +48,9 @@ export default async function Home() {
                         <div className='bg-th-art1 w-[100vw] absolute h-full -z-10 transition-colors duration-500'></div>
                         <div className='m-5 w-full'>
                             <h1 className={`${averia.className} text-5xl`}> Course Projects </h1>
-                            <p className='mt-1'> Projects for various courses while being in school. </p>
+                            <p className={`${averia.className} mt-1`}> Projects for various courses from school. </p>
                         </div>
                         <CourseProjectDisplay projects={courseProjects} />
-            </section>
-            
-            <section className='h-auto flex flex-col items-center justify-center relative w-full py-24 px-12'
-                     id='Games'>
-                        <div className='bg-th-art2 w-[100vw] absolute h-full -z-10 transition-colors duration-500'></div>
-                        <div className="m-5 w-full">
-                            <h1 className={`${averia.className} text-5xl`}> Games </h1>
-                            <p className='mt-1'> Here are some games that I have made art for. </p>
-                        </div>
-                        <GameGallery gamesInfo={games}/>
             </section>
 
             {/* <section className='h-auto flex items-center justify-center relative w-full py-24'

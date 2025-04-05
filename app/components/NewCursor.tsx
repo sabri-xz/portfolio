@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from'react';
-import { stagger, useAnimate, animate } from "framer-motion";
+import { useAnimate, animate } from "framer-motion";
 
 type AnimationSequence = Parameters<typeof animate>[0];
 
