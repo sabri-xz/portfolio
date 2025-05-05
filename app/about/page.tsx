@@ -4,13 +4,12 @@ import '../styles/pages.css'
 import AboutGrid from "./components/AboutGrid";
 import Me from "./components/MeText";
 import About from "./components/AboutText";
-// import PageSparkles from "./components/PageSparkles";
 import TimeLine from "./components/TimeLine";
 import PicturePile from "./components/PicturePile";
 import { ScrollIcon } from '@/app/components/icons';
 import { getPlaiceholder } from 'plaiceholder';
 import { Pic, GridItem } from "../types";
-import { Averia_Serif_Libre } from '@next/font/google'
+import { Averia_Serif_Libre } from 'next/font/google'
 
 const averia = Averia_Serif_Libre({ subsets: ['latin'], weight: ['400'] });
 

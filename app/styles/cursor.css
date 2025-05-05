@@ -9,7 +9,7 @@
     backdrop-filter: blur(1px);
     background-color: var(--tertiary-color);
     transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
-    /* cursor: none !important; hiding original cursor */
+    cursor: none !important; /* hiding original cursor */
 }
 
 @media screen and (max-width: 768px) {

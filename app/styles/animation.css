@@ -1,3 +1,30 @@
+.namecard {
+    perspective: 1000px;
+}
+
+.namecard-inner {
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease-in-out;
+}
+
+.namecard-front, .namecard-back {
+    position: absolute;
+    backface-visibility: hidden;
+    background-color: transparent;
+    transition: background-color 0.2s ease-in-out;
+    border-radius: 12px;
+    padding: 2px 6px;
+}
+
+.namecard-front:hover, .namecard-back:hover {
+    background-color: color-mix(in srgb, var(--midground-color1), transparent 70%);
+    transition: background-color 0.2s ease-in-out;
+}
+
+.namecard-back {
+    transform: rotateX(180deg);
+}
+
 @keyframes expandItems {
     from {
         gap: 5px;

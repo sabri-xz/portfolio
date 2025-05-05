@@ -20,22 +20,10 @@
 body {
   color: var(--foreground-color);
   background-color: var(--background-color);
-  min-width: 1028px;
 }
 
-/* Chrome, Safari, Opera */
-body ::-webkit-scrollbar { 
-  width: 0 !important 
-}  
-
-/* Firefox */
-body { 
-  scrollbar-width: none; 
-}
-
-/* Internet Explorer, Edge */
-body { 
-  -ms-overflow-style: none; 
+.button {
+  @apply text-th-foreground hover:text-th-secondary transition-colors duration-500 cursor-pointer;
 }
 
 @layer utilities {
@@ -43,14 +31,6 @@ body {
     text-wrap: balance;
   }
 }
-
-@media (max-width: 600px) {
-  body {
-    min-width: 100vw;
-    min-height: 100vh;
-  }
-}
-
 
 [data-theme="dark"] {
   --foreground-color: #F1E7D3;
@@ -78,4 +58,30 @@ body {
   --art-color1: #d4bdf0;
   --art-color2: #FAE18F;
   --art-color3: #F7BABF;
+}
+
+@layer components {
+  .intro-section {
+    @apply flex flex-row justify-center items-center h-screen;
+  }
+
+  .intro-text {
+    @apply flex flex-col justify-center;
+  }
+
+  .intro-paragraph {
+    @apply pt-4 mr-12 mt-6;
+  }
+
+  .portrait-section {
+    @apply max-w-80 w-full h-full mt-14 hidden lg:block;
+  }
+
+  .four-leaves-clover {
+    @apply w-80 h-80 bg-th-foreground hidden lg:block;
+  }
+
+  .more-section {
+    @apply flex h-screen bg-th-midground2;
+  }
 }
