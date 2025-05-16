@@ -23,7 +23,7 @@ body {
 }
 
 .button {
-  @apply text-th-foreground hover:text-th-secondary transition-colors duration-500 cursor-pointer;
+  @apply text-th-foreground hover:text-th-midground2 transition-colors duration-500 cursor-pointer;
 }
 
 @layer utilities {
