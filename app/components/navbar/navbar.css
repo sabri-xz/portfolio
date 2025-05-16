@@ -1,0 +1,64 @@
+.navbar {
+    @apply fixed top-5 left-1/2 transform -translate-x-1/2 transition-colors duration-500 z-50 rounded-3xl text-th-foreground font-semibold px-6;
+    background-color: color-mix(in srgb, var(--midground-color1) 30%, transparent 70%);
+    backdrop-filter: blur(9px);
+}
+
+.default-navbar {
+    @apply w-3/5 h-14 flex flex-row justify-between;
+}
+
+.collapsible-navbar {
+    @apply flex flex-col items-center justify-start transition-all duration-500 ease-in-out overflow-hidden;
+}
+
+.collapsed {
+    @apply w-1/5 h-14;
+}
+
+.uncollapsed {
+    @apply w-5/6 h-[90vh]; /* smoother expansion */
+}
+
+.navbar-content {
+    @apply w-full opacity-0 translate-y-[-20px] transition-all duration-300 ease-in-out flex flex-col items-start justify-between p-10 absolute top-20;
+    pointer-events: none;
+}
+
+.navbar-content.open {
+    @apply opacity-100 translate-y-0 pointer-events-auto;
+}
+
+.content-entry {
+    @apply hover:bg-th-midground1 rounded-2xl transition-all duration-200 cursor-pointer px-4 pt-3 pb-1 w-full;
+}
+
+.contact-icons {
+    @apply mt-auto flex gap-16 pb-4 opacity-0 transition-all duration-300 ease-in-out;
+    pointer-events: none;
+}
+
+.contact-icons.open {
+    @apply opacity-100 pointer-events-auto;
+}
+
+.icon {
+    @apply absolute top-3 left-1/2 -translate-x-1/2 w-8 h-8 flex flex-col justify-between cursor-pointer transition-transform duration-300;
+}
+
+.icon span {
+    @apply bg-[var(--foreground-color)] h-[5px] w-full rounded-md transition-all duration-500;
+}
+
+.icon.open span:nth-child(1) {
+    transform: rotate(45deg) translateY(19px);
+}
+
+.icon.open span:nth-child(2) {
+    @apply opacity-0;
+}
+
+.icon.open span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-19px);
+}
+  
