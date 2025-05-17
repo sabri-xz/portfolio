@@ -1,5 +1,4 @@
 import React from "react";
-import { ThemeSwitcher } from "../ThemeSwitcher";
 import Link from "next/link";
 import { MyLogo } from "../icons";
 import "./navbar.css";

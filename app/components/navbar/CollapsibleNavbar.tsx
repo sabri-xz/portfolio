@@ -1,7 +1,6 @@
 import React from "react";
 import "./navbar.css";
 import Link from "next/link";
-import { ThemeSwitcher } from "../ThemeSwitcher";
 import { GithubIcon, GmailIcon, LinkedInIcon } from "../icons";
 
 const NavBarIcon = ({ isOpen, onClick }: { isOpen: boolean; onClick: () => void }) => (

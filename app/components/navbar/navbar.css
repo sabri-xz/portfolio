@@ -17,7 +17,7 @@
 }
 
 .uncollapsed {
-    @apply w-5/6 h-[90vh]; /* smoother expansion */
+    @apply w-5/6 h-[40vh]; /* smoother expansion */
 }
 
 .navbar-content {
