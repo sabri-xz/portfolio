@@ -66,7 +66,7 @@ body {
   }
 
   .intro-text {
-    @apply flex flex-col justify-center;
+    @apply flex flex-col justify-center m-16 z-10;
   }
 
   .intro-paragraph {
@@ -78,10 +78,14 @@ body {
   }
 
   .four-leaves-clover {
-    @apply w-80 h-80 bg-th-foreground hidden lg:block;
+    @apply absolute w-80 h-80 bg-th-midground1 hidden lg:block z-0;
   }
 
   .more-section {
     @apply flex h-screen bg-th-midground2;
+  }
+
+  .timeline {
+    @apply flex flex-col items-center justify-center w-full h-full bg-th-midground2;
   }
 }
