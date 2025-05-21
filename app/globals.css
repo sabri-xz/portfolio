@@ -85,7 +85,8 @@ body {
     @apply flex h-screen bg-th-midground2;
   }
 
-  .timeline {
+  .about-section {
     @apply flex flex-col items-center justify-center w-full h-full bg-th-midground2;
+    position: relative;
   }
 }
