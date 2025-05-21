@@ -1,6 +1,8 @@
 import path from 'path';
 import fs from "fs";
 import { CoverPage } from "./components";
+import { AboutPage } from './components/pages/AboutPage';
+import { ContactSection } from './components/pages/ContactPage';
 
 const getInfo = async (): Promise<any[]> => {
   const filePath = path.join(process.cwd(), 'app/data', 'info.json');
@@ -15,6 +17,8 @@ export default async function Home() {
   return (
     <>
       <CoverPage info={ infomation }/>
+      <AboutPage info={ infomation }/>
+      <ContactSection/>
     </>
   );
 }
