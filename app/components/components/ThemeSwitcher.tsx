@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { useTheme } from 'next-themes';
-import { ThemeIcon } from './icons';
+import { ThemeIcon } from '../icons';
 
 
 export const ThemeSwitcher: React.FC<{}> = () => {

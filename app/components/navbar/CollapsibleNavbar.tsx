@@ -2,6 +2,7 @@ import React from "react";
 import "./navbar.css";
 import Link from "next/link";
 import { GithubIcon, GmailIcon, LinkedInIcon } from "../icons";
+import { ThemeSwitcher } from "../components/ThemeSwitcher";
 
 const NavBarIcon = ({ isOpen, onClick }: { isOpen: boolean; onClick: () => void }) => (
     <div className={`icon ${isOpen ? "open" : ""}`} onClick={onClick}>
@@ -18,7 +19,7 @@ export const CollapsibleNavbar: React.FC<{
     const handleClick = () => setIsOpen(!isOpen);
   
     return (
-      <div className={`navbar collapsible-navbar ${isOpen ? "uncollapsed" : "collapsed"}`}>
+      <div className={`collapsible-navbar ${isOpen ? "uncollapsed" : "collapsed"}`}>
         <NavBarIcon isOpen={isOpen} onClick={handleClick} />
   
         <div className={`navbar-content ${isOpen ? "open" : ""}`}>
@@ -46,7 +47,7 @@ export const CollapsibleNavbar: React.FC<{
             <Link href="mailto:xinzhi.liang34@gmail.com" target="_blank">
               <GmailIcon className="text-th-foreground hover:text-th-secondary" width={25} height={25} />
             </Link>
-          </div>
+        </div>
       </div>
     );
   };
