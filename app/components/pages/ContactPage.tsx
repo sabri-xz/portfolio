@@ -31,16 +31,25 @@ export const ContactSection = () => {
     const linkedinUrl = 'https://www.linkedin.com/in/xinzhi-liang/';
     const email = 'mailto:xinzhi.liang34@gmail.com';
     const [isExpanded, setIsOpen] = useState(false);
+    const [isHovered, setIsHovered] = useState(false);
+
+    const handleMouseEnter = () => {
+        setIsHovered(true);
+    };
+
+    const handleMouseLeave = () => {
+        setIsHovered(false);
+    };
 
     const handleClick = () => {
         setIsOpen(!isExpanded);
     };
 
     return (
-        <div className={`contact-section ${averia_thic.className}`} onClick={handleClick}>
+        <div className={`contact-section ${averia_thic.className} ${isExpanded ? "expanded" : ""}`} onClick={handleClick} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             contact me 
             <div className={`contact-icons-container`}>
-                <Period className={`period ${isExpanded ? "expanded" : ""}`} />
+                <Period className={`period ${isHovered ? "hovered" : ""} ${isExpanded ? "expanded" : ""}`} />
                 <Link className={`contact-icon github-icon ${isExpanded ? "expanded" : ""}`} href={githubUrl} target="_blank">
                     <GithubIcon className="text-th-foreground hover:text-th-secondary" width={35} height={35} />
                 </Link>
