@@ -1,5 +1,4 @@
-function GithubIcon(props) {
-  return (
+export const GithubIcon = (props) => (
     <svg
       width="256px"
       height="250px"
@@ -13,7 +12,4 @@ function GithubIcon(props) {
         fill="currentColor"
       />
     </svg>
-  )
-}
-
-export default GithubIcon;
+  );
