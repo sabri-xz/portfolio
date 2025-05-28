@@ -15,11 +15,12 @@ const NavBarIcon = ({ isOpen, onClick }: { isOpen: boolean; onClick: () => void 
 export const CollapsibleNavbar: React.FC<{
     isOpen: boolean;
     setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
-  }> = ({ isOpen, setIsOpen }) => {
+    navbarRef?: React.RefObject<HTMLDivElement>;
+  }> = ({ isOpen, setIsOpen, navbarRef }) => {
     const handleClick = () => setIsOpen(!isOpen);
   
     return (
-      <div className={`collapsible-navbar ${isOpen ? "uncollapsed" : "collapsed"}`}>
+      <div className={`collapsible-navbar ${isOpen ? "uncollapsed" : "collapsed"}`} ref={navbarRef}>
         <NavBarIcon isOpen={isOpen} onClick={handleClick} />
   
         <div className={`navbar-content ${isOpen ? "open" : ""}`}>
@@ -47,6 +48,7 @@ export const CollapsibleNavbar: React.FC<{
             <Link href="mailto:xinzhi.liang34@gmail.com" target="_blank">
               <GmailIcon className="text-th-foreground hover:text-th-secondary" width={25} height={25} />
             </Link>
+            <ThemeSwitcher />
         </div>
       </div>
     );
