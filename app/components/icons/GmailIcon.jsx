@@ -1,5 +1,4 @@
-function GmailIcon(props) {
-    return (
+export const GmailIcon = (props) => (
       <svg
         width="256px"
         height="193px"
@@ -29,7 +28,4 @@ function GmailIcon(props) {
           fill="currentColor"
         />
       </svg>
-    )
-  }
-  
-  export default GmailIcon
+    );
