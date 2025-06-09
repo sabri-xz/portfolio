@@ -1,0 +1,7 @@
+.about-section {
+    @apply flex flex-col absolute mt-[100vh] items-center justify-center w-full h-screen bg-transparent;
+}
+
+.about-paragraph {
+    @apply text-th-foreground text-lg max-w-3xl px-4;
+}

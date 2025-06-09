@@ -1,0 +1,4 @@
+.project-section {
+    @apply flex flex-col absolute mt-[200vh] items-center justify-center w-full h-screen bg-transparent;
+}
+

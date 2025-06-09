@@ -1,0 +1,57 @@
+.intro-section {
+    @apply flex flex-row fixed justify-center items-center h-screen w-full bg-th-background z-0;
+}
+
+.intro-text {
+    @apply flex flex-col justify-center m-16 z-10;
+    animation: disappear both;
+    animation-timeline: scroll();
+}
+
+.intro-paragraph {
+    @apply pt-4 mr-12 mt-6;
+    animation: disappear both;
+    animation-timeline: scroll();
+}
+
+.portrait-section {
+    @apply max-w-80 w-full h-full mt-14 hidden lg:block;
+}
+
+.four-leaves-clover {
+    @apply absolute w-80 h-80 bg-th-midground1 hidden lg:block z-0;
+    animation: disappear both;
+    animation-timeline: scroll();
+}
+
+@keyframes blurAnimations {
+    60% {
+        filter: blur(0px);
+    }
+    75% {
+        filter: blur(5px);
+    }
+    100% {
+        filter: blur(25px);
+    }
+}
+
+@keyframes disappear {
+    20% {
+        opacity: 1;
+    }
+    35% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.blurring {
+    animation: blurAnimations both;
+    animation-timeline: scroll();
+}
