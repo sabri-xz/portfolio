@@ -1,5 +1,5 @@
 .contact-section {
-    @apply flex flex-row justify-center items-end w-full h-full text-5xl transition-all duration-500 ml-[59px];
+    @apply flex flex-row absolute mt-[200vh] justify-center items-end w-full h-12 text-5xl transition-all duration-500 ml-[59px];
 }
 
 .contact-section:hover {

@@ -60,33 +60,19 @@ body {
   --art-color3: #F7BABF;
 }
 
-@layer components {
-  .intro-section {
-    @apply flex flex-row justify-center items-center h-screen;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    scale: 0.9;
+    translate: 0 50px;
   }
-
-  .intro-text {
-    @apply flex flex-col justify-center m-16 z-10;
-  }
-
-  .intro-paragraph {
-    @apply pt-4 mr-12 mt-6;
-  }
-
-  .portrait-section {
-    @apply max-w-80 w-full h-full mt-14 hidden lg:block;
-  }
-
-  .four-leaves-clover {
-    @apply absolute w-80 h-80 bg-th-midground1 hidden lg:block z-0;
-  }
-
-  .more-section {
-    @apply flex h-screen bg-th-midground2;
-  }
-
-  .about-section {
-    @apply flex flex-col items-center justify-center w-full h-full bg-th-midground2;
-    position: relative;
+  to {
+    opacity: 1;
+    scale: 1;
+    translate: 0 0;
   }
 }
+
+.template {
+  animation: fadeIn 0.5s ease-in-out;
+} 
