@@ -5,3 +5,24 @@
 .about-paragraph {
     @apply text-th-foreground text-lg max-w-3xl px-4;
 }
+
+@keyframes parallax {
+    to {
+        transform: translateY(calc(var(--par-speed) * -1000px));
+    }
+}
+
+@keyframes fadeout {
+    0% {
+        opacity: 1;
+    }
+    15% {
+        opacity: 0;
+    }
+}
+
+.chevron {
+    --par-speed: 1.5;
+    animation: parallax linear, fadeout ease-in-out;
+    animation-timeline: scroll();
+}

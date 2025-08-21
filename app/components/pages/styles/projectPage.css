@@ -1,4 +1,20 @@
 .project-section {
-    @apply flex flex-col absolute mt-[200vh] items-center justify-center w-full h-screen bg-transparent;
+    @apply flex flex-col absolute mt-[200vh] items-center justify-center w-full bg-th-tertiary;
+    height: calc(100vh - 48px);
 }
 
+.project-category {
+    @apply flex flex-col bg-th-midground1 h-full w-full rounded-xl;
+}
+
+.cards-container {
+    @apply overflow-y-auto h-96 w-screen relative border-black;
+}
+
+.card {
+    @apply max-w-40 w-full bg-th-secondary sticky top-0 h-72 m-auto;
+}
+
+.section-title {
+    @apply text-3xl font-extrabold p-4 self-start top-5 absolute;
+}
