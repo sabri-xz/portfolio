@@ -25,14 +25,14 @@
 }
 
 @keyframes blurAnimations {
-    60% {
+    20% {
         filter: blur(0px);
     }
-    75% {
-        filter: blur(5px);
+    45% {
+        filter: blur(10px);
     }
     100% {
-        filter: blur(25px);
+        filter: blur(15px);
     }
 }
 
@@ -40,10 +40,13 @@
     20% {
         opacity: 1;
     }
-    35% {
-        opacity: 0.6;
+    40% {
+        opacity: 0.4;
     }
     50% {
+        opacity: 0.1;
+    }
+    60% {
         opacity: 0;
     }
     100% {

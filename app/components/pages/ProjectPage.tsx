@@ -21,19 +21,18 @@ export const ProjectPage: React.FC<{ info: any }> = ({ info }) => {
 
     return (
         <div className={`project-section`} >
-            <section className={`project-card`}>
-                <div className='project-title'>
-                    Game Arts
+            <div className='section-title'>
+                Selected Projects
+            </div>
+            <section className={`cards-container m-12`}>
+                <div className='card'>
+                    1
                 </div>
-            </section>
-            <section className={`project-card`}>
-                <div className='project-title'>
-                    Course Projects
+                <div className='card'>
+                    2
                 </div>
-            </section>
-            <section className={`project-card`}>
-                <div className='project-title'>
-                    Game Arts
+                <div className='card'>
+                    3
                 </div>
             </section>
         </div>
