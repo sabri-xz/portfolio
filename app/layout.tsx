@@ -5,7 +5,7 @@ import { TSProvider } from "./providers";
 import Navbar from "./components/Navbar";
 import NewCursor from "./components/NewCursor";
 import './styles/cursor.css'
-import { Noto_Sans_Mono, Gayathri } from '@next/font/google'
+import { Noto_Sans_Mono, Gayathri } from 'next/font/google'
 
 const inter = Inter({ subsets: ["latin"] });
 const noto_mono = Noto_Sans_Mono({ subsets: ["latin"] });

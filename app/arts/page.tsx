@@ -15,8 +15,6 @@ export default async function Home() {
     return (
         <div className='page-container flex-col items-center'>
             <div> :D </div>
-            
-            
         </div>
     );
   }

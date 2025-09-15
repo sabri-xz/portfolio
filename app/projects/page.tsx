@@ -6,7 +6,7 @@ import GameGallery from './components/GameGallery';
 import { ScrollIcon } from '@/app/components/icons';
 import '../styles/pages.css'
 import '../styles/animation.css'
-import { Averia_Serif_Libre } from '@next/font/google'
+import { Averia_Serif_Libre } from 'next/font/google'
 
 const averia = Averia_Serif_Libre({ subsets: ['latin'], weight: ['400'] });
 

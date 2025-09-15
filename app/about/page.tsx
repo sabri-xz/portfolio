@@ -10,7 +10,7 @@ import PicturePile from "./components/PicturePile";
 import { ScrollIcon } from '@/app/components/icons';
 import { getPlaiceholder } from 'plaiceholder';
 import { Pic, GridItem } from "../types";
-import { Averia_Serif_Libre } from '@next/font/google'
+import { Averia_Serif_Libre } from 'next/font/google'
 
 const averia = Averia_Serif_Libre({ subsets: ['latin'], weight: ['400'] });
 
