@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { TSProvider } from "./providers";
-import Navbar from "./components/Navbar";
-import NewCursor from "./components/NewCursor";
+import { Navbar, NewCursor } from "./components";
 import './styles/cursor.css'
 import { Noto_Sans_Mono, Gayathri } from 'next/font/google'
 

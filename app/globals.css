@@ -20,22 +20,10 @@
 body {
   color: var(--foreground-color);
   background-color: var(--background-color);
-  min-width: 1028px;
 }
 
-/* Chrome, Safari, Opera */
-body ::-webkit-scrollbar { 
-  width: 0 !important 
-}  
-
-/* Firefox */
-body { 
-  scrollbar-width: none; 
-}
-
-/* Internet Explorer, Edge */
-body { 
-  -ms-overflow-style: none; 
+.button {
+  @apply text-th-foreground hover:text-th-midground2 transition-colors duration-500 cursor-pointer;
 }
 
 @layer utilities {
@@ -43,14 +31,6 @@ body {
     text-wrap: balance;
   }
 }
-
-@media (max-width: 600px) {
-  body {
-    min-width: 100vw;
-    min-height: 100vh;
-  }
-}
-
 
 [data-theme="dark"] {
   --foreground-color: #F1E7D3;
@@ -79,3 +59,20 @@ body {
   --art-color2: #FAE18F;
   --art-color3: #F7BABF;
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    scale: 0.9;
+    translate: 0 50px;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+    translate: 0 0;
+  }
+}
+
+.template {
+  animation: fadeIn 0.5s ease-in-out;
+} 
